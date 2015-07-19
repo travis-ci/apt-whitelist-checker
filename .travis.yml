@@ -10,7 +10,7 @@ before_install:
   - sudo apt-get update -qq
   - sudo apt-get install virtualbox-5.0 > virtualbox-install.log
   - VBoxManage --version
-  - sudo apt-get install linux-headers-3.16.0-30-generic
+  - sudo apt-get install linux-headers-3.16.0-30-generic > linux-headers-install.log
   - sudo /etc/init.d/vboxdrv setup
   - wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.4_x86_64.deb -O vagrant.deb
   - sudo dpkg -i vagrant.deb
