@@ -4,21 +4,21 @@ sudo: required
 
 dist: trusty
 
+env:
+  global:
+    - DEBIAN_FRONTEND=noninteractive
+
 before_install:
-  - echo "deb http://download.virtualbox.org/virtualbox/debian trusty contrib" | sudo tee -a /etc/apt/sources.list
-  - wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
-  - sudo apt-get update -qq
-  - sudo apt-get install virtualbox-5.0 > virtualbox-install.log
-  - sudo apt-get install linux-headers-3.16.0-30-generic > linux-headers-install.log
-  - sudo /etc/init.d/vboxdrv setup
-  - VBoxManage --version
-  - wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.4_x86_64.deb -O vagrant.deb
-  - sudo dpkg -i vagrant.deb
+  - apt-get update -y -qq
+  - apt-get install -yq lvm2 xfsprogs
+  - if ! command -v docker ; then curl -sSL https://get.docker.io | bash; fi
+  - sudo usermod -a -G docker travis
+  - docker pull quay.io/travisci/travis-ruby:latest
+  - [ jq --version ] || sudo curl -sSL -o /usr/local/bin/jq http://stedolan.github.io/jq/download/linux64/jq && sudo chmod 0755 /usr/local/bin/jq
+  - docker images | grep -q -E '^travis\\s+\\bruby\\b\\s+' || docker tag quay.io/travisci/travis-ruby:latest travis:ruby
 
 install:
-  - git clone https://github.com/travis-ci/apt-package-whitelist.git
-  - pushd apt-package-whitelist
-  - vagrant up
+  - true
 
 script:
   - true
