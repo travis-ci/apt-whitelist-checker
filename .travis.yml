@@ -30,7 +30,7 @@ install:
   - true
 
 script:
-  - echo -e "${HOME}/build/travis-ci/apt-package-whitelist/bin/travis-download-deb-sources ${PACKAGE}\nexit\n" | sshpass -p travis ssh -t -t -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no travis@$(< docker_ip_address)
+  - echo -e "mkdir -p /var/tmp/deb-sources ; cd /var/tmp/deb-sources\nsudo apt-get update -qq\napt-get source ${PACKAGE}\ngrep -R -i -E 'set(uid|euid|gid)' . || echo no setuid bits found\nmkdir -p /var/tmp/deb-sources ; cd /var/tmp/deb-sources\n${PACKAGE}\nexit\n" | sshpass -p travis ssh -t -t -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no travis@$(< docker_ip_address)
 
 notifications:
   email: false
