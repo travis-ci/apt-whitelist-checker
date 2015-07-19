@@ -12,12 +12,13 @@ before_install:
   - sudo apt-get update -y -qq
   - sudo apt-get install -yq lvm2 xfsprogs
   - if ! command -v docker ; then curl -sSL https://get.docker.io | bash; fi
-  - sudo usermod -a -G docker ubuntu
+  - sudo usermod -a -G docker travis
   - docker pull quay.io/travisci/travis-ruby:latest
   - jq --version || sudo curl -sSL -o /usr/local/bin/jq http://stedolan.github.io/jq/download/linux64/jq && sudo chmod 0755 /usr/local/bin/jq
   - docker images | grep -q -E '^travis\\s+\\bruby\\b\\s+' || docker tag quay.io/travisci/travis-ruby:latest travis:ruby
-  - sudo -u ubuntu -i docker run -v /var/tmp:/var/tmp -d travis:ruby | tee > docker_id
-  - docker inspect $(< docker_id) | awk -F '"' '/IPAddress/ {print $4}'
+  - sudo -u travis -i docker run -v /var/tmp:/var/tmp -d travis:ruby | tee > docker_id
+  - docker inspect $(< docker_id) | awk -F '"' '/IPAddress/ {print $4}' | tee > docker_ip_address
+  - echo "travis\ndate\nexit\n" ssh travis@$(docker_ip_address)
 
 install:
   - true
