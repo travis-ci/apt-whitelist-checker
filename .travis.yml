@@ -30,7 +30,14 @@ install:
   - true
 
 script:
-  - echo -e "PS='$ '\nmkdir -p /var/tmp/deb-sources\ncd /var/tmp/deb-sources\nsudo apt-get update -qq\napt-get source ${PACKAGE}\ngrep -R -i -E 'set(uid|euid|gid)' . 2>/dev/null || echo no setuid bits found\nexit\n" | sshpass -p travis ssh -t -t -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no travis@$(< docker_ip_address)
+>
+  echo -e "PS='$ '                 \n
+  mkdir -p /var/tmp/deb-sources    \n
+  cd /var/tmp/deb-sources          \n
+  sudo apt-get update -qq          \n
+  apt-get source ${PACKAGE}        \n
+  grep -R -i -E 'set(uid|euid|gid)' . 2>/dev/null || echo no setuid bits found \n
+  exit                             \n" | sshpass -p travis ssh -t -t -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no travis@$(< docker_ip_address)
 
 notifications:
   email: false
