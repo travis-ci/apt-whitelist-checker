@@ -7,8 +7,12 @@ dist: trusty
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
+    - PACKAGE=markdown
 
 before_install:
+  - pushd $HOME/build/travis-ci
+  - git clone https://github.com/travis-ci/apt-package-whitelist.git
+  - popd
   - sudo apt-get update -y -qq
   - sudo apt-get install -yqq lvm2 xfsprogs sshpass
   - if ! command -v docker ; then curl -sSL https://get.docker.io | bash; fi
@@ -26,7 +30,7 @@ install:
   - true
 
 script:
-  - echo -e "date\nexit\n" | sshpass -p travis ssh -t -t -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no travis@$(< docker_ip_address)
+  - echo -e "${HOME}/build/travis-ci/apt-package-whitelist/bin/travis-download-deb-sources ${PACKAGE}\nexit\n" | sshpass -p travis ssh -t -t -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no travis@$(< docker_ip_address)
 
 notifications:
   email: false
