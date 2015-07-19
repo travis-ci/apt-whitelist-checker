@@ -31,7 +31,7 @@ install:
 
 script:
 >
-  echo -e "PS1='$ '                \n
+  echo -e "export PS1='$ '         \n
   mkdir -p /var/tmp/deb-sources    \n
   cd /var/tmp/deb-sources          \n
   sudo apt-get update -qq          \n
