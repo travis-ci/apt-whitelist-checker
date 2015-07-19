@@ -126,39 +126,38 @@ loop do
     ) && next
 
     puts "#{title}, #{issue_number}; going to run test on #{pkg}"
+    next unless @run_it
 
-    if @run_it
-      # prepare Travis CI build request payload
-      message = "Run apt-source-whitelist check for #{pkg}; #{Time.now.utc.strftime('%Y-%m-%d-%H-%M-%S')}\n\nSee travis-ci/travis-ci##{issue_number}"
+    # prepare Travis CI build request payload
+    message = "Run apt-source-whitelist check for #{pkg}; #{Time.now.utc.strftime('%Y-%m-%d-%H-%M-%S')}\n\nSee travis-ci/travis-ci##{issue_number}"
 
-      payload = {
-        "request"=> {
-          "message" => message,
-          "branch"  => 'default',
-          "config"  => {
-            "env" => {
-              "global" => ["PACKAGE=#{pkg}"]
-            }
+    payload = {
+      "request"=> {
+        "message" => message,
+        "branch"  => 'default',
+        "config"  => {
+          "env" => {
+            "global" => ["PACKAGE=#{pkg}"]
           }
         }
       }
+    }
 
-      travis_response = travis_conn.post do |req|
-        req.url "/repo/BanzaiMan%2Fapt-whitelist-checker/requests"
-        req.headers['Content-Type'] = 'application/json'
-        req.headers['Travis-API-Version'] = '3'
-        req.headers['Authorization'] = "token #{ENV["TRAVIS_TOKEN"]}"
-        req.body = payload.to_json
-      end
+    travis_response = travis_conn.post do |req|
+      req.url "/repo/BanzaiMan%2Fapt-whitelist-checker/requests"
+      req.headers['Content-Type'] = 'application/json'
+      req.headers['Travis-API-Version'] = '3'
+      req.headers['Authorization'] = "token #{ENV["TRAVIS_TOKEN"]}"
+      req.body = payload.to_json
+    end
 
-      if travis_response.success?
-        # build request was accepted
-        comment = "Automated running a basic check to see if the package conatins suspicious setuid/setgid/seteuid calls."
+    if travis_response.success?
+      # build request was accepted
+      comment = "Automated running a basic check to see if the package conatins suspicious setuid/setgid/seteuid calls."
 
-        post_comment(conn: conn, repo: repo, issue: issue_number, comment: comment)
+      post_comment(conn: conn, repo: repo, issue: issue_number, comment: comment)
 
-        add_label(conn: conn, repo: repo, issue: issue_number, label: 'apt-whitelist-check-run')
-      end
+      add_label(conn: conn, repo: repo, issue: issue_number, label: 'apt-whitelist-check-run')
     end
 
   end
