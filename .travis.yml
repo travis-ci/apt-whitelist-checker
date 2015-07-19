@@ -9,8 +9,8 @@ env:
     - DEBIAN_FRONTEND=noninteractive
 
 before_install:
-  - apt-get update -y -qq
-  - apt-get install -yq lvm2 xfsprogs
+  - sudo apt-get update -y -qq
+  - sudo apt-get install -yq lvm2 xfsprogs
   - if ! command -v docker ; then curl -sSL https://get.docker.io | bash; fi
   - sudo usermod -a -G docker travis
   - docker pull quay.io/travisci/travis-ruby:latest
