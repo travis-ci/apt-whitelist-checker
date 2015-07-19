@@ -4,6 +4,12 @@ sudo: required
 
 dist: trusty
 
+before_install:
+  - echo "deb http://download.virtualbox.org/virtualbox/debian trusty contrib" | sudo tee -a /etc/apt/sources.d/virtualbox
+  - sudo apt-key add oracle_vbox.asc
+  - sudo apt-get update
+  - sudo apt-get install virtualbox-5.0
+
 install:
   - true
 
