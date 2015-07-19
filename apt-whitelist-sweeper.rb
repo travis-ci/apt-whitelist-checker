@@ -4,21 +4,10 @@ require 'json'
 require 'faraday'
 require 'uri'
 
-def next_link_in_headers(headers)
-  # "<https://api.github.com/repositories/1420493/issues?labels=apt-whitelist&page=2>; rel=\"next\", <https://api.github.com/repositories/1420493/issues?labels=apt-whitelist&page=6>; rel=\"last\""
-  next_link_text = headers['link'].split(',').find { |l| l.end_with? 'rel="next"' }
-  if next_link_text
-    match_data = next_link_text.match(/<(?<next>[^>]+)>/)
-    if match_data
-      match_data[:next]
-    end
-  end
-end
-
-run_it = false
-
+@run_it    = !ENV['RUN'].to_s.empty?
 github_api = "https://api.github.com"
 travis_api = 'https://api.travis-ci.org'
+repo       = 'travis-ci/travis-ci'
 
 conn = Faraday.new(:url => github_api) do |faraday|
   faraday.request  :url_encoded             # form-encode POST params
@@ -32,7 +21,64 @@ travis_conn = Faraday.new(:url => travis_api) do |faraday|
   faraday.adapter Faraday.default_adapter
 end
 
-repo   = 'travis-ci/travis-ci'
+
+def next_link_in_headers(headers)
+  # "<https://api.github.com/repositories/1420493/issues?labels=apt-whitelist&page=2>; rel=\"next\", <https://api.github.com/repositories/1420493/issues?labels=apt-whitelist&page=6>; rel=\"last\""
+  next_link_text = headers['link'].split(',').find { |l| l.end_with? 'rel="next"' }
+  if next_link_text
+    match_data = next_link_text.match(/<(?<next>[^>]+)>/)
+    if match_data
+      match_data[:next]
+    end
+  end
+end
+
+def reject_label(conn:, repo:, issue:, labels:, label:, reason:, should_comment: false)
+  rejected = false
+  if labels.any? { |l| l['name'] == label }
+    puts reason
+    rejected = true
+  else
+    return
+  end
+
+  if should_comment
+    post_comment(conn: conn, repo: repo, issue: issue, comment: "Did not run automated check because #{reason}")
+  end
+
+  add_label(conn: conn, repo: repo, issue: issue, label: 'apt-whitelist-check-run')
+
+  rejected
+end
+
+def post_comment(conn:, repo:, issue:, comment:)
+  unless @run_it
+    puts "Would have commented: #{comment}"
+    return
+  end
+
+  conn.post do |req|
+    req.url "/repos/#{repo}/issues/#{issue}/comments"
+    req.headers['Content-Type'] = 'application/json'
+    req.headers['Authorization'] = "token #{ENV["GITHUB_OAUTH_TOKEN"]}"
+    req.body = { "body" => comment }
+  end
+end
+
+def add_label(conn:, repo:, issue:, label:)
+  unless @run_it
+    puts "Would have added label #{label}"
+    return
+  end
+
+  conn.post do |req|
+    req.url "/repos/#{repo}/issues/#{issue}/labels"
+    req.headers['Content-Type'] = 'application/json'
+    req.headers['Authorization'] = "token #{ENV["GITHUB_OAUTH_TOKEN"]}"
+    req.body = [ label ]
+  end
+end
+
 next_page_url = "/repos/#{repo}/issues"
 
 loop do
@@ -48,43 +94,55 @@ loop do
   tickets.each do |t|
     issue_number = t["url"].split('/').last
 
-    unless match_data = /\A(?i:apt whitelist request for (?<package_name>\S+))\z/.match(t['title'])
-      puts "'#{t['title']}' is ambiguous; #{issue_number}"
-      next
+    labels = t['labels']
+    title  = t['title'].strip
+
+    next if labels.any? { |l| l['name'] == 'apt-whitelist-check-run' }
+
+    unless match_data = /\A(?i:apt(?<source> source)? whitelist request for (?<package_name>.+))\z/.match(title)
+      puts "Ambiguous title: '#{title}'"
+      add_label(conn: conn, repo: repo, issue: issue_number, label: 'apt-whitelist-ambiguous')
+      reject_label(
+        conn: conn, repo: repo, issue: issue_number, labels: labels, label: 'apt-whitelist-ambiguous', reason: "title '#{title}' is ambiguous. Please specify only one.", should_comment: true
+      )
     end
+
+    next unless match_data
 
     pkg = match_data[:package_name]
 
-    labels = t['labels'].tap {|x| puts "labels: #{x}"}
-    if labels.any? { |l| l['name'] == 'apt-source-whitelist' }
-      puts "#{pkg} needs source whitelisting"
-      next
+    if match_data[:source]
+      add_label(conn: conn, repo: repo, issue: issue_number, label: 'apt-source-whitelist')
     end
 
-    if labels.any? { |l| l['name'] == 'apt-whitelist-check-run' }
-      puts "#{pkg} has been checked already"
-      next
-    end
+    reject_label(
+      conn: conn, repo: repo, issue: issue_number, labels: labels, label: 'apt-source-whitelist', reason: "#{pkg} needs source whitelisting", should_comment: true
+    )
+    reject_label(
+      conn: conn, repo: repo, issue: issue_number, labels: labels, label: 'trusty', reason: "#{pkg} needs trusty", should_comment: true
+    )
+    reject_label(
+      conn: conn, repo: repo, issue: issue_number, labels: labels, label: 'apt-whitelist-check-run', reason: "#{pkg} has been checked already"
+    ) && next
 
-    puts "#{t['title']}, #{issue_number}"
+    puts "#{title}, #{issue_number}; going to run test on #{pkg}"
 
-    message = "Run apt-source-whitelist check for #{pkg}; #{Time.now.utc.strftime('%Y-%m-%d-%H-%M-%S')}\n\nSee travis-ci/travis-ci##{issue_number}"
+    if @run_it
+      # prepare Travis CI build request payload
+      message = "Run apt-source-whitelist check for #{pkg}; #{Time.now.utc.strftime('%Y-%m-%d-%H-%M-%S')}\n\nSee travis-ci/travis-ci##{issue_number}"
 
-    payload = {
-      "request"=> {
-        "message" => message,
-        "branch"  => 'default',
-        "config"  => {
-          "env" => {
-            "global" => ["PACKAGE=#{pkg}"]
+      payload = {
+        "request"=> {
+          "message" => message,
+          "branch"  => 'default',
+          "config"  => {
+            "env" => {
+              "global" => ["PACKAGE=#{pkg}"]
+            }
           }
         }
       }
-    }
 
-    puts "going to run test on #{pkg}"
-
-    if run_it
       travis_response = travis_conn.post do |req|
         req.url "/repo/BanzaiMan%2Fapt-whitelist-checker/requests"
         req.headers['Content-Type'] = 'application/json'
@@ -97,19 +155,9 @@ loop do
         # build request was accepted
         comment = "Automated running a basic check to see if the package conatins suspicious setuid/setgid/seteuid calls."
 
-        conn.post do |req|
-          req.url "/repos/#{repo}/issues/#{issue_number}/comments"
-          req.headers['Content-Type'] = 'application/json'
-          req.headers['Authorization'] = "token #{ENV["GITHUB_OAUTH_TOKEN"]}"
-          req.body = { "body" => comment }
-        end
+        post_comment(conn: conn, repo: repo, issue: issue_number, comment: comment)
 
-        conn.post do |req|
-          req.url "/repos/#{repo}/issues/#{issue_number}/labels"
-          req.headers['Content-Type'] = 'application/json'
-          req.headers['Authorization'] = "token #{ENV["GITHUB_OAUTH_TOKEN"]}"
-          req.body = [ 'apt-whitelist-check-run' ]
-        end
+        add_label(conn: conn, repo: repo, issue: issue_number, label: 'apt-whitelist-check-run')
       end
     end
 
