@@ -1,0 +1,9 @@
+language: ruby
+
+dist: trusty
+
+install:
+  - true
+
+script:
+  - true
