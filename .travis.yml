@@ -14,7 +14,7 @@ before_install:
   - if ! command -v docker ; then curl -sSL https://get.docker.io | bash; fi
   - sudo usermod -a -G docker travis
   - docker pull quay.io/travisci/travis-ruby:latest
-  - [ jq --version ] || sudo curl -sSL -o /usr/local/bin/jq http://stedolan.github.io/jq/download/linux64/jq && sudo chmod 0755 /usr/local/bin/jq
+  - jq --version || sudo curl -sSL -o /usr/local/bin/jq http://stedolan.github.io/jq/download/linux64/jq && sudo chmod 0755 /usr/local/bin/jq
   - docker images | grep -q -E '^travis\\s+\\bruby\\b\\s+' || docker tag quay.io/travisci/travis-ruby:latest travis:ruby
 
 install:
