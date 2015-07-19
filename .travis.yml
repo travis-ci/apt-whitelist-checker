@@ -10,7 +10,7 @@ env:
     - PACKAGE=markdown
 
 before_install:
-  - pushd $HOME/build/travis-ci
+  - pushd ..
   - git clone https://github.com/travis-ci/apt-package-whitelist.git
   - popd
   - sudo apt-get update -y -qq
