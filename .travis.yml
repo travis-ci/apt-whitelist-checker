@@ -7,9 +7,9 @@ dist: trusty
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=markdown
 
 before_install:
+  - test -z $PACKAGE && echo "\$PACKAGE not defined" && travis_terminate 2
   - pushd ..
   - git clone https://github.com/travis-ci/apt-package-whitelist.git
   - popd
