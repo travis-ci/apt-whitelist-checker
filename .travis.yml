@@ -26,7 +26,7 @@ install:
   - true
 
 script:
-  - echo "date\nexit\n" | sshpass -p travis ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no travis@$(< docker_ip_address)
+  - echo "date\nexit\n" | sshpass -p travis ssh -t -t -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no travis@$(< docker_ip_address)
 
 notifications:
   email: false
