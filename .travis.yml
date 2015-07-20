@@ -7,6 +7,7 @@ dist: trusty
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
+    - PACKAGE=gcc-arm-none-eabi
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
