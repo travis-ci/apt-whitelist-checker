@@ -8,6 +8,7 @@ env:
   global:
     - DEBIAN_FRONTEND=noninteractive
     - PACKAGE=gcc-arm-none-eabi
+    - SSH_OPTS='-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
@@ -31,8 +32,8 @@ install:
   - true
 
 script:
-  - sshpass -p travis scp build.sh travis@$(< docker_ip_address):.
-  - echo "bash -x build.sh ${PACKAGE}\nexit\n" | sshpass -p travis ssh -t -t -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no travis@$(< docker_ip_address)
+  - sshpass -p travis scp $SSH_OPTS build.sh travis@$(< docker_ip_address):.
+  - echo "bash -x build.sh ${PACKAGE}\nexit\n" | sshpass -p travis ssh -t -t $SSH_OPTS travis@$(< docker_ip_address)
 
 notifications:
   email: false
