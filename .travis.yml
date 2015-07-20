@@ -31,7 +31,7 @@ install:
   - true
 
 script:
-  - sshpass -p travis scp build.sh travis@$(< docker_ip_address)
+  - sshpass -p travis scp build.sh travis@$(< docker_ip_address):.
   - echo "bash -x build.sh ${PACKAGE}\nexit\n" | sshpass -p travis ssh -t -t -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no travis@$(< docker_ip_address)
 
 notifications:
