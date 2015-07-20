@@ -61,7 +61,7 @@ def post_comment(conn:, repo:, issue:, comment:)
     req.url "/repos/#{repo}/issues/#{issue}/comments"
     req.headers['Content-Type'] = 'application/json'
     req.headers['Authorization'] = "token #{ENV["GITHUB_OAUTH_TOKEN"]}"
-    req.body = { "body" => comment }
+    req.body = { "body" => comment }.to_json
   end
 end
 
@@ -75,7 +75,7 @@ def add_label(conn:, repo:, issue:, label:)
     req.url "/repos/#{repo}/issues/#{issue}/labels"
     req.headers['Content-Type'] = 'application/json'
     req.headers['Authorization'] = "token #{ENV["GITHUB_OAUTH_TOKEN"]}"
-    req.body = [ label ]
+    req.body = [ label ].to_json
   end
 end
 
@@ -116,20 +116,22 @@ loop do
     end
 
     reject_label(
-      conn: conn, repo: repo, issue: issue_number, labels: labels, label: 'apt-source-whitelist', reason: "#{pkg} needs source whitelisting", should_comment: true
+      conn: conn, repo: repo, issue: issue_number, labels: labels, label: 'apt-source-whitelist', reason: "'#{pkg}' needs source whitelisting", should_comment: true
     )
     reject_label(
-      conn: conn, repo: repo, issue: issue_number, labels: labels, label: 'trusty', reason: "#{pkg} needs trusty", should_comment: true
+      conn: conn, repo: repo, issue: issue_number, labels: labels, label: 'trusty', reason: "'#{pkg}' needs trusty", should_comment: true
     )
     reject_label(
-      conn: conn, repo: repo, issue: issue_number, labels: labels, label: 'apt-whitelist-check-run', reason: "#{pkg} has been checked already"
-    ) && next
+      conn: conn, repo: repo, issue: issue_number, labels: labels, label: 'apt-whitelist-check-run', reason: "'#{pkg}' has been checked already"
+    )
 
     puts "#{title}, #{issue_number}; going to run test on #{pkg}"
     next unless @run_it
 
+    next if labels.any? { |l| l['name'] == 'apt-source-whitelist' || l['name'] == 'trusty' || l['name'] == 'apt-whitelist-ambiguous' }
+
     # prepare Travis CI build request payload
-    message = "Run apt-source-whitelist check for #{pkg}; #{Time.now.utc.strftime('%Y-%m-%d-%H-%M-%S')}\n\nSee travis-ci/travis-ci##{issue_number}"
+    message = "Run apt-package-whitelist check for #{pkg}; #{Time.now.utc.strftime('%Y-%m-%d-%H-%M-%S')}\n\nSee travis-ci/travis-ci##{issue_number}"
 
     payload = {
       "request"=> {
@@ -153,7 +155,7 @@ loop do
 
     if travis_response.success?
       # build request was accepted
-      comment = "Automated running a basic check to see if the package conatins suspicious setuid/setgid/seteuid calls."
+      comment = "Running a basic check to see if the package conatins suspicious setuid/setgid/seteuid calls."
 
       post_comment(conn: conn, repo: repo, issue: issue_number, comment: comment)
 
