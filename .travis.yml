@@ -1,6 +1,6 @@
-language: ruby
+language: bash
 
-sudo: required
+sudo: 9000
 
 dist: trusty
 
