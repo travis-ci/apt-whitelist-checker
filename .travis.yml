@@ -31,17 +31,8 @@ install:
   - true
 
 script:
->
-  echo -e "export PS1='$ '         \n
-  export DEBIAN_FRONTEND=noninteractive \n
-  wget https://raw.githubusercontent.com/travis-ci/apt-source-whitelist/master/ubuntu.json \n
-  ruby -rjson -e 'json=JSON.parse(File.read("ubuntu.json")); json.each {|src| system "curl -sSL #{src["key_url"]} | sudo apt-key add -" if src["key_url"]; system "sudo -E apt-add-repository -y #{src["sourceline"]}" }' \n
-  mkdir -p /var/tmp/deb-sources    \n
-  cd /var/tmp/deb-sources          \n
-  sudo apt-get update -qq          \n
-  apt-get source ${PACKAGE}        \n
-  grep -R -i -E 'set(uid|euid|gid)' . 2>/dev/null || echo -e '\n\nno setuid bits found\n\n' \n
-  exit                             \n" | sshpass -p travis ssh -t -t -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no travis@$(< docker_ip_address)
+  - sshpass -p travis scp build.sh travis@$(< docker_ip_address)
+  - echo "bash -x build.sh ${PACKAGE}\nexit\n" | sshpass -p travis ssh -t -t -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no travis@$(< docker_ip_address)
 
 notifications:
   email: false

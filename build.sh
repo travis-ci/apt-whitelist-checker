@@ -1,18 +1,17 @@
 #! /usr/bin/env bash
 
 PKG=$1
-HOST=$2
 
 ANSI_RED="\033[31;1m"
 ANSI_GREEN="\033[32;1m"
 ANSI_RESET="\033[0m"
 ANSI_CLEAR="\033[0K"
 
-echo <<EOF | sshpass -p travis ssh -t -t -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no travis@${HOST}
+export DEBIAN_FRONTEND=noninteractive
+wget https://raw.githubusercontent.com/travis-ci/apt-source-whitelist/master/ubuntu.json
+ruby -rjson -e 'json=JSON.parse(File.read("ubuntu.json")); json.each {|src| system "curl -sSL #{src["key_url"]} | sudo apt-key add -" if src["key_url"]; system "sudo -E apt-add-repository -y #{src["sourceline"]}" }'
 mkdir -p /var/tmp/deb-sources
 cd /var/tmp/deb-sources
 sudo apt-get update -qq
 apt-get source ${PKG}
-grep -R -i -E 'set(uid|euid|gid)' . || echo no setuid bits found
-exit
-EOF
+grep -R -i -E 'set(uid|euid|gid)' . 2>/dev/null || echo -e "\n\n${ANSI_GREEN}no setuid bits found${ANSI_CLEAR}\n\n"
