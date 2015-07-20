@@ -33,7 +33,7 @@ install:
 
 script:
   - sshpass -p travis scp $SSH_OPTS build.sh travis@$(< docker_ip_address):.
-  - echo "bash -x build.sh ${PACKAGE}\nexit\n" | sshpass -p travis ssh -t -t $SSH_OPTS travis@$(< docker_ip_address)
+  - echo -e "export 'PS1=$ '\nbash -x build.sh ${PACKAGE}\nexit\n" | sshpass -p travis ssh -t -t $SSH_OPTS travis@$(< docker_ip_address)
 
 notifications:
   email: false
