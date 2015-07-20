@@ -144,7 +144,7 @@ loop do
     }
 
     travis_response = travis_conn.post do |req|
-      req.url "/repo/BanzaiMan%2Fapt-whitelist-checker/requests"
+      req.url "/repo/travis-ci%2Fapt-whitelist-checker/requests"
       req.headers['Content-Type'] = 'application/json'
       req.headers['Travis-API-Version'] = '3'
       req.headers['Authorization'] = "token #{ENV["TRAVIS_TOKEN"]}"
