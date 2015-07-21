@@ -3,6 +3,7 @@
 require 'json'
 require 'faraday'
 require 'uri'
+require 'logger'
 
 @run_it    = !ENV['RUN'].to_s.empty?
 github_api = "https://api.github.com"
@@ -13,13 +14,13 @@ SINCE      = '2015-07-07'
 
 conn = Faraday.new(:url => github_api) do |faraday|
   faraday.request  :url_encoded             # form-encode POST params
-  faraday.response :logger                  # log requests to STDOUT
+  faraday.use Faraday::Response::Logger, Logger.new('github.log')                  # log requests to STDOUT
   faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
 end
 
 travis_conn = Faraday.new(:url => travis_api) do |faraday|
   faraday.request :url_encoded
-  faraday.response :logger
+  faraday.use Faraday::Response::Logger, Logger.new('travis-ci.log')
   faraday.adapter Faraday.default_adapter
 end
 
