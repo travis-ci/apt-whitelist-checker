@@ -20,7 +20,7 @@ cd /var/tmp/deb-sources
 sudo apt-get update -qq
 
 echo "Fetching source package for ${PKG}"
-apt-get source ${PKG} &> apt-get-result.log
+apt-get source ${PKG} 2>&1 | tee apt-get-result.log
 
 if egrep 'Unable to find a source package for' apt-get-result.log 2>/dev/null; then
 	exit $EXIT_SOURCE_NOT_FOUND
