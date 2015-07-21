@@ -8,6 +8,7 @@ ANSI_CLEAR="\033[0K"
 EXIT_SUCCSS=0
 EXIT_SOURCE_NOT_FOUND=1
 EXIT_SOURCE_HAS_SETUID=2
+SSH_OPTS='-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 
 BUILD_URL="https://travis-ci.org/${TRAVIS_REPO_SLUG}/builds/${TRAVIS_BUILD_ID}"
 GITHUB_ISSUES_URL="https://api.github.com/repos/travis-ci/travis-ci/issues/${ISSUE_NUMBER}"
