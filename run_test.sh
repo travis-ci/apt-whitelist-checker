@@ -33,7 +33,7 @@ case $CHECK_RESULT in
 		COMMENT="Ran tests and found no setuid bits.\n\nSee${BUILD_URL}"
 		curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
 			-d "{\"title\":\"Pull request for ${PACKAGE}\",\"body\":\"${COMMENT}\",\"head\":\"${BRANCH}\",\"base\":\"master\"}" \
-			https://api.github.com/repos/${TRAVIS_REPO_SLUG}/pulls
+			https://api.github.com/repos/travis-ci/apt-package-whitelist/pulls
 		;;
 	$EXIT_SOURCE_HAS_SETUID)
 		echo -e "${ANSI_RED}Found occurrences of setuid.${ANSI_RESET}"
