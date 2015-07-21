@@ -9,6 +9,8 @@ github_api = "https://api.github.com"
 travis_api = 'https://api.travis-ci.org'
 repo       = 'travis-ci/travis-ci'
 
+SINCE      = '2015-06-30'
+
 conn = Faraday.new(:url => github_api) do |faraday|
   faraday.request  :url_encoded             # form-encode POST params
   faraday.response :logger                  # log requests to STDOUT
@@ -61,6 +63,8 @@ def post_comment(conn:, repo:, issue:, comment:)
     req.headers['Authorization'] = "token #{ENV["GITHUB_OAUTH_TOKEN"]}"
     req.body = { "body" => comment }.to_json
   end
+
+  add_label(conn: conn, repo: repo, issue: issue, label: 'apt-whitelist-check-commented')
 end
 
 def add_label(conn:, repo:, issue:, label:)
@@ -80,7 +84,7 @@ end
 next_page_url = "/repos/#{repo}/issues"
 
 loop do
-  response = conn.get do |req|
+  list_response = conn.get do |req|
     req.url next_page_url
     req.headers['Content-Type'] = 'application/json'
     req.headers['Authorization'] = "token #{ENV["GITHUB_OAUTH_TOKEN"]}"
@@ -88,7 +92,7 @@ loop do
     req.params['direction'] = 'asc'
   end
 
-  tickets = JSON.parse(response.body)
+  tickets = JSON.parse(list_response.body)
 
   tickets.each do |t|
     issue_number = t["url"].split('/').last
@@ -96,14 +100,19 @@ loop do
     labels = t['labels']
     title  = t['title'].strip
 
-    next if labels.any? { |l| l['name'] == 'apt-whitelist-check-run' || l['name'] == 'apt-whitelist-check-commented' }
+    if labels.any? { |l| l['name'] == 'apt-whitelist-check-run' || l['name'] == 'apt-whitelist-check-commented' }
+      puts "Skip\nTitle: #{title}\nNumber: #{t['number']}\nLabels: #{labels.inspect}"
+      next
+    end
 
-    next unless match_data = /\A(?i:apt(?<source> source)? whitelist request for (?<package_name>.+))\z/.match(title)
+    match_data = /\A(?i:apt(?<source> source)? whitelist request for (?<package_name>.+))\z/.match(title)
 
-    labels.none? { |l| l['name'] == label } && add_label(conn: conn, repo: repo, issue: issue_number, label: 'apt-whitelist')
+    next unless match_data
 
-    pkg = match_data[:package_name]
-    if pkg.include? ' ' && labels.none? { |l| l['name'] == 'apt-whitelist-ambiguous' }
+    labels.none? { |l| l['name'] == 'apt-whitelist' } && match_data[:source] && add_label(conn: conn, repo: repo, issue: issue_number, label: 'apt-whitelist')
+
+    pkg = match_data.tap{ |x| puts x.inspect }[:package_name]
+    if pkg.include?(' ') && labels.none? { |l| l['name'] == 'apt-whitelist-ambiguous' }
       add_label(conn: conn, repo: repo, issue: issue_number, label: 'apt-whitelist-ambiguous')
     end
 
@@ -171,9 +180,9 @@ loop do
       if travis_response.success?
         # build request was accepted
 
-        comment = "Running a basic check to see if the package conatins suspicious setuid/setgid/seteuid calls."
+        # comment = "Running a basic check to see if the package conatins suspicious setuid/setgid/seteuid calls."
 
-        post_comment(conn: conn, repo: repo, issue: issue_number, comment: comment)
+        # post_comment(conn: conn, repo: repo, issue: issue_number, comment: comment)
 
         add_label(conn: conn, repo: repo, issue: issue_number, label: 'apt-whitelist-check-run')
 
@@ -185,5 +194,5 @@ loop do
 
   end
 
-  break unless next_page_url = next_link_in_headers(response.headers).tap {|x| puts x}
+  break unless next_page_url = next_link_in_headers(list_response.headers).tap {|x| puts x}
 end
