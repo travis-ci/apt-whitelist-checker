@@ -46,7 +46,7 @@ case $CHECK_RESULT in
 		ISSUE_PACKAGE=${PACKAGE}
 		for p in $(sshpass -p travis ssh -n -t -t $SSH_OPTS travis@$(< ${TRAVIS_BUILD_DIR}/docker_ip_address) "for d in \$(find /var/tmp/deb-sources -type d -name debian) ; do pushd \$d &>/dev/null && grep ^Package control | awk -F: '{ print \$2 }' | xargs echo ; popd &>/dev/null ; done"); do
 			echo "Adding ${p}"
-			env TICKET=${ISSUE_REPO} PACKAGE=${p} make resolve
+			env TICKET=${ISSUE_NUMBER} PACKAGE=${p} make resolve
 		done
 		# env TICKET=${ISSUE_NUMBER} make resolve
 		git push origin $BRANCH
