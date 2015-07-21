@@ -11,7 +11,8 @@ EXIT_SOURCE_HAS_SETUID=2
 SSH_OPTS='-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 
 BUILD_URL="https://travis-ci.org/${TRAVIS_REPO_SLUG}/builds/${TRAVIS_BUILD_ID}"
-GITHUB_ISSUES_URL="https://api.github.com/repos/travis-ci/travis-ci/issues/${ISSUE_NUMBER}"
+ISSUE_REPO=${ISSUE_REPO:-"travis-ci"}
+GITHUB_ISSUES_URL="https://api.github.com/repos/travis-ci/${ISSUE_REPO}/issues/${ISSUE_NUMBER}"
 
 echo "Pushing build.sh"
 sshpass -p travis scp $SSH_OPTS build.sh travis@$(< docker_ip_address):.

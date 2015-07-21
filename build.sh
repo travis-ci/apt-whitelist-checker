@@ -34,5 +34,10 @@ if grep -i -H -C5 -E --color 'set(uid|euid|gid)' --exclude install-sh . 2>/dev/n
 	exit $EXIT_SOURCE_HAS_SETUID
 else
 	echo -e "${ANSI_GREEN}No setuid bits found${ANSI_RESET}"
+	for d in $(find . -name debian) ; do
+	  pushd $d &>/dev/null && \
+	    grep ^Package control | awk -F: '{ print $2 }' | xargs echo ;
+	  popd &>/dev/null ;
+	done | xargs echo
 	exit 0
 fi
