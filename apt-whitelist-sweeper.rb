@@ -9,7 +9,7 @@ github_api = "https://api.github.com"
 travis_api = 'https://api.travis-ci.org'
 repo       = 'travis-ci/travis-ci'
 
-SINCE      = '2015-06-30'
+SINCE      = '2015-07-07'
 
 conn = Faraday.new(:url => github_api) do |faraday|
   faraday.request  :url_encoded             # form-encode POST params
@@ -90,6 +90,7 @@ loop do
     req.headers['Authorization'] = "token #{ENV["GITHUB_OAUTH_TOKEN"]}"
     req.params['sort'] = 'created'
     req.params['direction'] = 'asc'
+    # req.params['since'] = SINCE
   end
 
   tickets = JSON.parse(list_response.body)
@@ -100,7 +101,7 @@ loop do
     labels = t['labels']
     title  = t['title'].strip
 
-    if labels.any? { |l| l['name'] == 'apt-whitelist-check-run' || l['name'] == 'apt-whitelist-check-commented' }
+    if labels.any? { |l| l['name'] == 'apt-whitelist-check-commented' }
       puts "Skip\nTitle: #{title}\nNumber: #{t['number']}\nLabels: #{labels.inspect}"
       next
     end
@@ -112,7 +113,7 @@ loop do
     labels.none? { |l| l['name'] == 'apt-whitelist' } && match_data[:source] && add_label(conn: conn, repo: repo, issue: issue_number, label: 'apt-whitelist')
 
     pkg = match_data.tap{ |x| puts x.inspect }[:package_name]
-    if pkg.include?(' ') && labels.none? { |l| l['name'] == 'apt-whitelist-ambiguous' }
+    if pkg.include?(' ') && !pkg.include?(':') && labels.none? { |l| l['name'] == 'apt-whitelist-ambiguous' }
       add_label(conn: conn, repo: repo, issue: issue_number, label: 'apt-whitelist-ambiguous')
     end
 
@@ -130,19 +131,20 @@ loop do
     labels = ticket['labels']
 
     reject_label(
-      conn: conn, repo: repo, issue: issue_number, labels: labels, label: 'apt-source-whitelist', reason: "'#{pkg}' needs source whitelisting", should_comment: true
+      conn: conn, repo: repo, issue: issue_number, labels: labels, label: 'apt-source-whitelist', reason: "'#{pkg}' needs source whitelisting"
     )
     reject_label(
-      conn: conn, repo: repo, issue: issue_number, labels: labels, label: 'trusty', reason: "'#{pkg}' needs trusty", should_comment: true
+      conn: conn, repo: repo, issue: issue_number, labels: labels, label: 'trusty', reason: "'#{pkg}' needs trusty"
     )
     reject_label(
-      conn: conn, repo: repo, issue: issue_number, labels: labels, label: 'apt-whitelist-ambiguous', reason: "title '#{title}' is ambiguous. Please specify only one.", should_comment: true
+      conn: conn, repo: repo, issue: issue_number, labels: labels, label: 'apt-whitelist-ambiguous', reason: "title '#{title}' is ambiguous. Please specify only one."
     )
     reject_label(
       conn: conn, repo: repo, issue: issue_number, labels: labels, label: 'apt-whitelist-check-run', reason: "'#{pkg}' has been checked already"
     )
 
-    puts "#{title}, #{issue_number}; going to run test on #{pkg}"
+    puts "#{title}, https://github.com/travis-ci/travis-ci/issues/#{issue_number}; going to run test on #{pkg}"
+
     next unless @run_it
 
     next if labels.any? { |l| l['name'] == 'apt-source-whitelist' || l['name'] == 'trusty' || l['name'] == 'apt-whitelist-ambiguous' || l['name'] == 'apt-whitelist-check-commented' }
@@ -164,19 +166,19 @@ loop do
 
     puts "Starting build for #{pkg}; https://github.com/travis-ci/travis-ci/issues/#{issue_number}. Run it (y/n)?"
     answer = gets
-    next unless answer =~ /^yes/i
-
-    travis_response = travis_conn.post do |req|
-      req.url "/repo/travis-ci%2Fapt-whitelist-checker/requests"
-      req.headers['Content-Type'] = 'application/json'
-      req.headers['Travis-API-Version'] = '3'
-      req.headers['Authorization'] = "token #{ENV["TRAVIS_TOKEN"]}"
-      req.body = payload.to_json
-    end
+    next unless answer =~ /^y/i
 
     started = false
 
     begin
+      travis_response = travis_conn.post do |req|
+        req.url "/repo/travis-ci%2Fapt-whitelist-checker/requests"
+        req.headers['Content-Type'] = 'application/json'
+        req.headers['Travis-API-Version'] = '3'
+        req.headers['Authorization'] = "token #{ENV["TRAVIS_TOKEN"]}"
+        req.body = payload.to_json
+      end
+
       if travis_response.success?
         # build request was accepted
 
@@ -188,9 +190,13 @@ loop do
 
         started = true
       else
-        sleep 300
+        raise
       end
-    end while ! started
+    rescue
+      puts "Build request failed. Retrying in 300 seconds."
+      sleep 300
+      retry
+    end
 
   end
 
