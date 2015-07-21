@@ -7,11 +7,14 @@ dist: trusty
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gcc-arm-none-eabi
     - SSH_OPTS='-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
+  - git config credential.helper "store --file=.git/credentials"
+  - echo "https://${GITHUB_OAUTH_TOKEN}:@github.com" > .git/credentials 2>/dev/null
+  - git config --global user.email "contact@travis-ci.com"
+  - git config --global user.name "Travis CI APT package tester"
   - pushd ..
   - git clone https://github.com/travis-ci/apt-package-whitelist.git
   - popd
@@ -32,8 +35,7 @@ install:
   - true
 
 script:
-  - sshpass -p travis scp $SSH_OPTS build.sh travis@$(< docker_ip_address):.
-  - echo -e "export 'PS1=$ '\nbash -x build.sh ${PACKAGE}\nexit\n" | sshpass -p travis ssh -t -t $SSH_OPTS travis@$(< docker_ip_address)
+  - ./run_test.sh
 
 notifications:
   email: false
