@@ -27,9 +27,9 @@ if egrep 'Unable to find a source package for' apt-get-result.log 2>/dev/null; t
 fi
 
 if find . ! -name install.sh -a -type f -exec grep -i -H -C5 -E --color 'set(uid|euid|gid)' {} \; 2>/dev/null; then
-	echo -e "${ANSI_GREEN}No setuid bits found${ANSI_RESET}"
-	exit 0
-else
 	echo -e "${ANSI_RED}Suspicious bits found${ANSI_RESET}"
 	exit $EXIT_SOURCE_HAS_SETUID
+else
+	echo -e "${ANSI_GREEN}No setuid bits found${ANSI_RESET}"
+	exit 0
 fi
