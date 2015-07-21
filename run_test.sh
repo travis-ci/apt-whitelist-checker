@@ -19,7 +19,7 @@ case $? in
 	$EXIT_SUCCSS)
 		BRANCH="apt-package-whitelist-test-${ISSUE_NUMBER}"
 		pushd ../apt-package-whitelist
-		git checkout -b
+		git checkout -b $BRANCH
 		env TICKET=${ISSUE_NUMBER} make resolve
 		git push origin $BRANCH
 		popd
