@@ -53,7 +53,11 @@ case $CHECK_RESULT in
 		;;
 	$EXIT_SOURCE_NOT_FOUND)
 		warn "Source not found."
-		COMMENT="Ran tests, but could not found source package. Either the source package for ${PACKAGE} does not exist, or needs an APT source.\n\nSee ${BUILD_URL}."
+		COMMENT="Ran tests, but could not found source package. Either the source package for ${PACKAGE} does not exist, or needs an APT source.
+
+If you wisht to add an APT source, please follow the directions on https://github.com/travis-ci/apt-source-whitelist#source-approval-process.
+
+Build results: ${BUILD_URL}."
 		curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
 			-d "{\"body\":\"${COMMENT}\"}" \
 			${GITHUB_ISSUES_URL}/comments
