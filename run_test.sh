@@ -1,13 +1,7 @@
 #! /usr/bin/env bash
 
-ANSI_RED="\033[31;1m"
-ANSI_GREEN="\033[32;1m"
-ANSI_RESET="\033[0m"
-ANSI_CLEAR="\033[0K"
+source `dirname $0`/common.sh
 
-EXIT_SUCCSS=0
-EXIT_SOURCE_NOT_FOUND=1
-EXIT_SOURCE_HAS_SETUID=2
 SSH_OPTS='-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 
 BUILD_URL="https://travis-ci.org/${TRAVIS_REPO_SLUG}/builds/${TRAVIS_BUILD_ID}"
@@ -15,21 +9,12 @@ ISSUE_REPO=${ISSUE_REPO:-"travis-ci"}
 GITHUB_ISSUES_URL="https://api.github.com/repos/travis-ci/${ISSUE_REPO}/issues/${ISSUE_NUMBER}"
 
 echo "Pushing build.sh"
-sshpass -p travis scp $SSH_OPTS build.sh travis@$(< docker_ip_address):.
+sshpass -p travis scp $SSH_OPTS build.sh  travis@$(< docker_ip_address):.
+sshpass -p travis scp $SSH_OPTS common.sh travis@$(< docker_ip_address):.
 echo "Running build.sh"
 sshpass -p travis ssh -n -t -t $SSH_OPTS travis@$(< docker_ip_address) "bash build.sh ${PACKAGE}"
 
 CHECK_RESULT=$?
-
-function notice() {
-	msg=$1
-	echo -e "${ANSI_GREEN}${msg}${ANSI_RESET}"
-}
-
-function warn() {
-	msg=$1
-	echo -e "${ANSI_RED}${msg}${ANSI_RESET}"
-}
 
 case $CHECK_RESULT in
 	$EXIT_SUCCSS)
