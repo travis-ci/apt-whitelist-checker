@@ -12,7 +12,9 @@ EXIT_SOURCE_HAS_SETUID=2
 BUILD_URL="https://travis-ci.org/${TRAVIS_REPO_SLUG}/builds/${TRAVIS_BUILD_ID}"
 GITHUB_ISSUES_URL="https://api.github.com/repos/travis-ci/travis-ci/issues/${ISSUE_NUMBER}"
 
+echo "Pushing build.sh"
 sshpass -p travis scp $SSH_OPTS build.sh travis@$(< docker_ip_address):.
+echo "Running build.sh"
 sshpass -p travis ssh -n -t -t $SSH_OPTS travis@$(< docker_ip_address) "bash build.sh ${PACKAGE}"
 
 CHECK_RESULT=$?
@@ -56,7 +58,7 @@ case $CHECK_RESULT in
 			${GITHUB_ISSUES_URL}/labels
 		;;
 	*)
-		echo "${ANSI_RED}Something unexpected happened${ANSI_RESET}"
-		exit 1
+		echo "${ANSI_RED}Something unexpected happened.${ANSI_RESET}"
+		exit $CHECK_RESULT
 		;;
 esac
