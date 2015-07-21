@@ -43,11 +43,15 @@ case $CHECK_RESULT in
 		git config --global user.email "contact@travis-ci.com"
 		git config --global user.name "Travis CI APT package tester"
 		git checkout -b $BRANCH
-		env TICKET=${ISSUE_NUMBER} make resolve
+		ISSUE_PACKAGE=${PACKAGE}
+		for p in $(sshpass -p travis ssh -n -t -t $SSH_OPTS travis@$(< docker_ip_address) "for d in \$(find /var/tmp/deb-sources -type d -name debian) ; do pushd \$d &>/dev/null && grep ^Package control | awk -F: '{ print \$2 }' | xargs echo ; popd &>/dev/null ; done | xargs echo done"); do
+			env TICKET=${ISSUE_REPO} PACKAGE=${p} make resolve
+		done
+		# env TICKET=${ISSUE_NUMBER} make resolve
 		git push origin $BRANCH
 		COMMENT="For travis-ci/travis-ci#${ISSUE_NUMBER}.\n\nRan tests and found no setuid bits.\n\n See ${BUILD_URL}"
 		curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
-			-d "{\"title\":\"Pull request for ${PACKAGE}\",\"body\":\"${COMMENT}\",\"head\":\"${BRANCH}\",\"base\":\"master\"}" \
+			-d "{\"title\":\"Pull request for ${ISSUE_PACKAGE}\",\"body\":\"${COMMENT}\",\"head\":\"${BRANCH}\",\"base\":\"master\"}" \
 			https://api.github.com/repos/travis-ci/apt-package-whitelist/pulls
 		popd
 		;;
