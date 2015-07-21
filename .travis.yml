@@ -10,13 +10,6 @@ env:
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
-  - git config credential.helper "store --file=.git/credentials"
-  - echo "https://${GITHUB_OAUTH_TOKEN}:@github.com" > .git/credentials 2>/dev/null
-  - git config --global user.email "contact@travis-ci.com"
-  - git config --global user.name "Travis CI APT package tester"
-  - pushd ..
-  - git clone https://github.com/travis-ci/apt-package-whitelist.git
-  - popd
   - sudo apt-get update -y -qq
   - sudo apt-get install -yqq lvm2 xfsprogs sshpass
   - if ! command -v docker ; then curl -sSL https://get.docker.io | bash; fi

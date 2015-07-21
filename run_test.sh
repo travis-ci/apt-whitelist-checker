@@ -44,9 +44,9 @@ case $CHECK_RESULT in
 		git checkout -b $BRANCH
 		env TICKET=${ISSUE_NUMBER} make resolve
 		git push origin $BRANCH
-		COMMENT="Ran tests and found no setuid bits.\n\n See${BUILD_URL}"
+		COMMENT="For travis-ci/travis-ci##{ISSUE_NUMBER}.\n\nRan tests and found no setuid bits.\n\n See${BUILD_URL}"
 		curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
-			-d "{\"title\":\"Pull request for ${PACKAGE}; closes travis-ci/travis-ci##{ISSUE_NUMBER}\",\"body\":\"${COMMENT}\",\"head\":\"${BRANCH}\",\"base\":\"master\"}" \
+			-d "{\"title\":\"Pull request for ${PACKAGE}\",\"body\":\"${COMMENT}\",\"head\":\"${BRANCH}\",\"base\":\"master\"}" \
 			https://api.github.com/repos/travis-ci/apt-package-whitelist/pulls
 		popd
 		;;
