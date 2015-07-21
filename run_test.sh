@@ -1,4 +1,4 @@
-#! /usr/bin/env bash -e
+#! /usr/bin/env bash
 
 ANSI_RED="\033[31;1m"
 ANSI_GREEN="\033[32;1m"
