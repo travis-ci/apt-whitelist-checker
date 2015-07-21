@@ -15,7 +15,7 @@ GITHUB_ISSUES_URL="https://api.github.com/repos/travis-ci/travis-ci/issues/${ISS
 echo "Pushing build.sh"
 sshpass -p travis scp $SSH_OPTS build.sh travis@$(< docker_ip_address):.
 echo "Running build.sh"
-sshpass -p travis ssh -n -t -t $SSH_OPTS travis@$(< docker_ip_address) "bash build.sh ${PACKAGE}"
+sshpass -p travis ssh -v -n -t -t $SSH_OPTS travis@$(< docker_ip_address) "bash build.sh ${PACKAGE}"
 
 CHECK_RESULT=$?
 

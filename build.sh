@@ -10,16 +10,14 @@ ANSI_CLEAR="\033[0K"
 EXIT_SOURCE_NOT_FOUND=1
 EXIT_SOURCE_HAS_SETUID=2
 
-echo -e "${ANSI_GREEN}Install RVM & Ruby${ANSI_RESET}"
-gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-\curl -sSL https://get.rvm.io | bash -s stable
-rvm use --binary --fuzzy --install 2.1.5
+echo -e "${ANSI_GREEN}Installing Ruby 1.9.1${ANSI_RESET}"
+sudo apt-get install ruby1.9.1 -qq
 
 export DEBIAN_FRONTEND=noninteractive
 echo -e "${ANSI_GREEN}Fetching apt-source-whitelist data${ANSI_RESET}"
 wget https://raw.githubusercontent.com/travis-ci/apt-source-whitelist/master/ubuntu.json
 echo -e "${ANSI_GREEN}Applying apt-source-whitelist data"
-ruby -rjson -e 'json=JSON.parse(File.read("ubuntu.json")); json.each {|src| puts "Adding #{src["key_url"].untaint.inspect}"; system "curl -sSL #{src["key_url"].untaint.inspect} | sudo apt-key add - &>/dev/null" || puts("Failed") if src["key_url"]; puts "Adding repository #{src["sourceline"].untaint.inspect}"; system("sudo -E apt-add-repository -y #{src["sourceline"].untaint.inspect}) || puts("failed")" }'
+ruby1.9.1 -rjson -e 'json=JSON.parse(File.read("ubuntu.json")); json.each {|src| puts "Adding #{src["key_url"].untaint.inspect}"; system "curl -sSL #{src["key_url"].untaint.inspect} | sudo apt-key add - &>/dev/null" || puts("Failed") if src["key_url"]; puts "Adding repository #{src["sourceline"].untaint.inspect}"; system("sudo -E apt-add-repository -y #{src["sourceline"].untaint.inspect}) || puts("failed")" }'
 mkdir -p /var/tmp/deb-sources
 cd /var/tmp/deb-sources
 sudo apt-get update -qq
