@@ -20,24 +20,38 @@ sshpass -p travis ssh -n -t -t $SSH_OPTS travis@$(< docker_ip_address) "bash bui
 
 CHECK_RESULT=$?
 
+function notice() {
+	msg=$1
+	echo -e "${ANSI_GREEN}${msg}${ANSI_RESET}"
+}
+
+function warn() {
+	msg=$1
+	echo -e "${ANSI_RED}${msg}${ANSI_RESET}"
+}
+
 case $CHECK_RESULT in
 	$EXIT_SUCCSS)
-		echo -e "${ANSI_GREEN}No suspicious bits found. Creating a PR.${ANSI_RESET}"
-		echo https://api.github.com/repos/${TRAVIS_REPO_SLUG}/pulls
+		notice "No suspicious bits found. Creating a PR."
 		BRANCH="apt-package-whitelist-test-${ISSUE_NUMBER}"
-		pushd ../apt-package-whitelist
+		notice "Setting up Git"
+		git clone https://github.com/travis-ci/apt-package-whitelist.git
+		pushd apt-package-whitelist
+		git config credential.helper "store --file=.git/credentials"
+		echo "https://${GITHUB_OAUTH_TOKEN}:@github.com" > .git/credentials 2>/dev/null
+		git config --global user.email "contact@travis-ci.com"
+		git config --global user.name "Travis CI APT package tester"
 		git checkout -b $BRANCH
 		env TICKET=${ISSUE_NUMBER} make resolve
 		git push origin $BRANCH
-		popd
 		COMMENT="Ran tests and found no setuid bits.\n\nSee${BUILD_URL}"
 		curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
 			-d "{\"title\":\"Pull request for ${PACKAGE}\",\"body\":\"${COMMENT}\",\"head\":\"${BRANCH}\",\"base\":\"master\"}" \
 			https://api.github.com/repos/travis-ci/apt-package-whitelist/pulls
+		popd
 		;;
 	$EXIT_SOURCE_HAS_SETUID)
-		echo -e "${ANSI_RED}Found occurrences of setuid.${ANSI_RESET}"
-		echo ${GITHUB_ISSUES_URL}/comments
+		warn "Found occurrences of setuid."
 		COMMENT="Ran tests and found setuid bits.\n\nSee ${BUILD_URL}."
 		curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
 			-d "{\"body\":\"${COMMENT}\"}" \
@@ -47,9 +61,7 @@ case $CHECK_RESULT in
 			${GITHUB_ISSUES_URL}/labels
 		;;
 	$EXIT_SOURCE_NOT_FOUND)
-		echo -e "${ANSI_RED}Source not found.${ANSI_RESET}"
-		echo ${GITHUB_ISSUES_URL}/comments
-		echo ${GITHUB_ISSUES_URL}/labels
+		warn "Source not found."
 		COMMENT="Ran tests, but could not found source package. Either the source package for ${PACKAGE} does not exist, or needs an APT source.\n\nSee ${BUILD_URL}."
 		curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
 			-d "{\"body\":\"${COMMENT}\"}" \
@@ -59,7 +71,7 @@ case $CHECK_RESULT in
 			${GITHUB_ISSUES_URL}/labels
 		;;
 	*)
-		echo -e "${ANSI_RED}Something unexpected happened.${ANSI_RESET}"
+		warn "Something unexpected happened."
 		exit $CHECK_RESULT
 		;;
 esac
