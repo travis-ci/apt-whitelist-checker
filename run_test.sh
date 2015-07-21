@@ -10,7 +10,7 @@ EXIT_SOURCE_NOT_FOUND=1
 EXIT_SOURCE_HAS_SETUID=2
 
 BUILD_URL="https://travis-ci.org/${TRAVIS_REPO_SLUG}/builds/${TRAVIS_BUILD_ID}"
-GITHUB_ISSUES_URL="https://api.github.com/repos/${TRAVIS_REPO_SLUG}/issues/${ISSUE_NUMBER}"
+GITHUB_ISSUES_URL="https://api.github.com/repos/travis-ci/travis-ci/issues/${ISSUE_NUMBER}"
 
 echo "GITHUB_ISSUES_URL: ${GITHUB_ISSUES_URL}"
 
