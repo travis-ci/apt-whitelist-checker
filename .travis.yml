@@ -5,9 +5,9 @@ sudo: 9000
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsoqt4-dev
+    - PACKAGE=libxerces-c-dev
     - ISSUE_REPO=travis-ci/travis-ci
-    - ISSUE_NUMBER=4450
+    - ISSUE_NUMBER=4451
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
