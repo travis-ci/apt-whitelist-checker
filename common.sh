@@ -11,10 +11,10 @@ EXIT_SOURCE_HAS_SETUID=2
 
 function notice() {
 	msg=$1
-	echo -e "${ANSI_GREEN}${msg}${ANSI_RESET}"
+	echo -e "\n${ANSI_GREEN}${msg}${ANSI_RESET}\n"
 }
 
 function warn() {
 	msg=$1
-	echo -e "${ANSI_RED}${msg}${ANSI_RESET}"
+	echo -e "\n${ANSI_RED}${msg}${ANSI_RESET}\n"
 }
