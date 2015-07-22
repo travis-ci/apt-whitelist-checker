@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=xdot
+    - PACKAGE=pwgen
     - ISSUE_REPO=travis-ci/travis-ci
-    - ISSUE_NUMBER=4356
+    - ISSUE_NUMBER=4379
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
