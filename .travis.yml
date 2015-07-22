@@ -5,9 +5,9 @@ sudo: 9000
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libgraphviz4
+    - PACKAGE=camlp5
     - ISSUE_REPO=travis-ci/travis-ci
-    - ISSUE_NUMBER=4444
+    - ISSUE_NUMBER=4443
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
