@@ -5,9 +5,9 @@ sudo: 9000
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-pandas
+    - PACKAGE=python-numexpr
     - ISSUE_REPO=travis-ci/travis-ci/travis-ci
-    - ISSUE_NUMBER=4313
+    - ISSUE_NUMBER=4314
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
