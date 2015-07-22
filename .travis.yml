@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=bash-completion
+    - PACKAGE=socklog
     - ISSUE_REPO=travis-ci/travis-ci
-    - ISSUE_NUMBER=4386
+    - ISSUE_NUMBER=4434
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
