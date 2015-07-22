@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-samba
+    - PACKAGE=liblablgtksourceview2-ocaml-dev
     - ISSUE_REPO=travis-ci/travis-ci
-    - ISSUE_NUMBER=4448
+    - ISSUE_NUMBER=4447
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
