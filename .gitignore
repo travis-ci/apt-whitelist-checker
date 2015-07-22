@@ -35,5 +35,6 @@ build/
 .rvmrc
 
 *.log
+*.log.[0-9]
 token
 
