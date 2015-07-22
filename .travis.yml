@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=camlp5
+    - PACKAGE=liblablgtk2-ocaml-dev
     - ISSUE_REPO=travis-ci/travis-ci
-    - ISSUE_NUMBER=4443
+    - ISSUE_NUMBER=4446
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
