@@ -8,6 +8,8 @@ env:
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
+  - sudo apt-get update -y -qq
+  - sudo apt-get install -yqq sshpass
   - if ! command -v docker ; then curl -sSL https://get.docker.io | bash; fi
   - sudo usermod -a -G docker travis
   - docker pull quay.io/travisci/travis-node-js:latest
