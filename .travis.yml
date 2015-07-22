@@ -5,9 +5,9 @@ sudo: 9000
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libavcodec-extra-53
+    - PACKAGE=xdot
     - ISSUE_REPO=travis-ci/travis-ci
-    - ISSUE_NUMBER=4349
+    - ISSUE_NUMBER=4356
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
