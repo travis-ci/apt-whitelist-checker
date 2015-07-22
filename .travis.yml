@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libcoq-ocaml-dev
+    - PACKAGE=python-pexpect
     - ISSUE_REPO=travis-ci/travis-ci
-    - ISSUE_NUMBER=4441
+    - ISSUE_NUMBER=4442
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
