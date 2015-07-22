@@ -5,9 +5,9 @@ sudo: 9000
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-all-dbg
+    - PACKAGE=python-all-dev
     - ISSUE_REPO=travis-ci/travis-ci
-    - ISSUE_NUMBER=4237
+    - ISSUE_NUMBER=4238
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
