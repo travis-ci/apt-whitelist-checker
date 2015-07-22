@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-pexpect
+    - PACKAGE=libocamlgraph-ocaml-dev
     - ISSUE_REPO=travis-ci/travis-ci
-    - ISSUE_NUMBER=4442
+    - ISSUE_NUMBER=4445
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
