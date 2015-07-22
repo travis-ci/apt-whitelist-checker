@@ -5,9 +5,9 @@ sudo: 9000
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=sox
+    - PACKAGE=libsmi2ldbl
     - ISSUE_REPO=travis-ci/travis-ci
-    - ISSUE_NUMBER=4351
+    - ISSUE_NUMBER=4344
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
