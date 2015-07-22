@@ -7,7 +7,7 @@ env:
     - DEBIAN_FRONTEND=noninteractive
     - PACKAGE=libhdf4-dev
     - ISSUE_REPO=travis-ci/travis-ci
-    - ISSUE_NUMBER=4402
+    - ISSUE_NUMBER=4403
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
