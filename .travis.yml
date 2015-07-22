@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-numexpr
-    - ISSUE_REPO=travis-ci/travis-ci/travis-ci
-    - ISSUE_NUMBER=4314
+    - PACKAGE=libavahi-compat-libdnssd-dev
+    - ISSUE_REPO=travis-ci/travis-ci
+    - ISSUE_NUMBER=4335
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
