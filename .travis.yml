@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=transfig
+    - PACKAGE=dh-autoreconf
     - ISSUE_REPO=travis-ci/travis-ci
-    - ISSUE_NUMBER=4429
+    - ISSUE_NUMBER=4439
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
