@@ -5,9 +5,9 @@ sudo: 9000
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libhdfeos-dev
+    - PACKAGE=libcfitsio3-dev
     - ISSUE_REPO=travis-ci/travis-ci
-    - ISSUE_NUMBER=4404
+    - ISSUE_NUMBER=4405
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
