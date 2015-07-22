@@ -5,9 +5,9 @@ sudo: 9000
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=postgis
-    - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=20
+    - PACKAGE=bash-completion
+    - ISSUE_REPO=travis-ci/travis-ci
+    - ISSUE_NUMBER=4386
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
