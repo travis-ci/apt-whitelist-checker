@@ -5,9 +5,9 @@ sudo: 9000
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libdnet-dev
-    - ISSUE_REPO=travis-ci/travis-ci
-    - ISSUE_NUMBER=4296
+    - PACKAGE=python-pandas
+    - ISSUE_REPO=travis-ci/travis-ci/travis-ci
+    - ISSUE_NUMBER=4313
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
