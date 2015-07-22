@@ -12,6 +12,8 @@ docker exec -i -t $(< docker_id) $TRAVIS_BUILD_DIR/build.sh ${PACKAGE}
 
 CHECK_RESULT=$?
 
+echo $CHECK_RESULT
+
 # case $CHECK_RESULT in
 # 	$EXIT_SUCCSS)
 # 		notice "No suspicious bits found."
