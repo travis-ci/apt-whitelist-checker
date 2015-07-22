@@ -2,6 +2,9 @@ language: ruby
 
 sudo: 9000
 
+git:
+  depth: 99999
+
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
