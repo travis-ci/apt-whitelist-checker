@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=fglrx
+    - PACKAGE=python-all
     - ISSUE_REPO=travis-ci/travis-ci
-    - ISSUE_NUMBER=4228
+    - ISSUE_NUMBER=4236
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
