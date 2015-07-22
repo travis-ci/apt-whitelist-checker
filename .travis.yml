@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libraw-dev
+    - PACKAGE=libcaca-dev
     - ISSUE_REPO=travis-ci/travis-ci
-    - ISSUE_NUMBER=4491
+    - ISSUE_NUMBER=4492
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
