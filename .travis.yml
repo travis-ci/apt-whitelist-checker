@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=fglrx-dev
+    - PACKAGE=python-jinja2
     - ISSUE_REPO=travis-ci/travis-ci
-    - ISSUE_NUMBER=4229
+    - ISSUE_NUMBER=4242
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
