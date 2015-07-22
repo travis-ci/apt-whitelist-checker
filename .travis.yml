@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libdbus-1-dev
-    - ISSUE_REPO=travis-ci/travis-ci/travis-ci
-    - ISSUE_NUMBER=4483
+    - PACKAGE=bash-completion
+    - ISSUE_REPO=travis-ci/travis-ci
+    - ISSUE_NUMBER=4386
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
