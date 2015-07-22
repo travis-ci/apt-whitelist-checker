@@ -27,17 +27,17 @@ case $CHECK_RESULT in
 		echo "https://${GITHUB_OAUTH_TOKEN}:@github.com" > .git/credentials 2>/dev/null
 		git config --global user.email "contact@travis-ci.com"
 		git config --global user.name "Travis CI APT package tester"
-		info "Creating commit"
+		notice "Creating commit"
 		git checkout -b $BRANCH
 		ISSUE_PACKAGE=${PACKAGE}
 		for p in $(sshpass -p travis ssh -n -t -t $SSH_OPTS travis@$(< ${TRAVIS_BUILD_DIR}/docker_ip_address) "for d in \$(find /var/tmp/deb-sources -type d -name debian) ; do pushd \$d &>/dev/null && grep ^Package control | awk -F: '{ print \$2 }' | xargs echo ; popd &>/dev/null ; done"); do
-			info "Adding ${p}"
+			notice "Adding ${p}"
 			env PACKAGE=${p} make add
 		done
 		env TICKET=${ISSUE_NUMBER} PACKAG=${ISSUE_PACKAGE} make resolve
-		info "Pushing commit"
+		notice "Pushing commit"
 		git push origin $BRANCH
-		info "Creating PR"
+		notice "Creating PR"
 		COMMENT="For ${ISSUE_REPO}#${ISSUE_NUMBER}.\n\nRan tests and found no setuid bits.\n\n See ${BUILD_URL}"
 		curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
 			-d "{\"title\":\"Pull request for ${ISSUE_PACKAGE}\",\"body\":\"${COMMENT}\",\"head\":\"${BRANCH}\",\"base\":\"master\"}" \
