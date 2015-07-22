@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libspnav-dev
+    - PACKAGE=iptables-dev
     - ISSUE_REPO=travis-ci/travis-ci
-    - ISSUE_NUMBER=4462
+    - ISSUE_NUMBER=4465
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
