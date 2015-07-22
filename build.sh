@@ -23,7 +23,7 @@ if egrep 'Unable to find a source package for' apt-get-result.log 2>/dev/null; t
 	exit $EXIT_SOURCE_NOT_FOUND
 fi
 
-if grep -i -H -C5 -E --color 'set(uid|euid|gid)' --exclude install-sh . 2>/dev/null; then
+if grep -R -i -H -C5 -E --color 'set(uid|euid|gid)' --exclude install-sh . 2>/dev/null; then
 	warn "Suspicious bits found"
 	exit $EXIT_SOURCE_HAS_SETUID
 else
