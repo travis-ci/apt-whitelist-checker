@@ -5,9 +5,9 @@ sudo: 9000
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libcoin60-doc
+    - PACKAGE=libspnav-dev
     - ISSUE_REPO=travis-ci/travis-ci
-    - ISSUE_NUMBER=4461
+    - ISSUE_NUMBER=4462
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
