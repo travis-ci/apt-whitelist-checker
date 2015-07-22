@@ -5,9 +5,9 @@ sudo: 9000
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libnfnetlink-dev
+    - PACKAGE=libdbus-glib-1-dev
     - ISSUE_REPO=travis-ci/travis-ci
-    - ISSUE_NUMBER=4466
+    - ISSUE_NUMBER=4467
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
