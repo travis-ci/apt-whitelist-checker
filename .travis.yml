@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libcfitsio3-dev
+    - PACKAGE=libqrencode3
     - ISSUE_REPO=travis-ci/travis-ci
-    - ISSUE_NUMBER=4405
+    - ISSUE_NUMBER=4407
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
