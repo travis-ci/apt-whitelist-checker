@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libode-dev
-    - ISSUE_REPO=travis-ci/travis-ci
-    - ISSUE_NUMBER=4456
+    - PACKAGE=libzipios++-dev
+    - ISSUE_REPO=travis-ci/travis-ci/travis-ci
+    - ISSUE_NUMBER=4457
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
