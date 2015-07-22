@@ -8,7 +8,7 @@ require 'logger'
 @run_it    = !ENV['RUN'].to_s.empty?
 github_api = "https://api.github.com"
 travis_api = 'https://api.travis-ci.org'
-repo       = 'travis-ci/travis-ci'
+repo       = ENV['REPO'] || 'travis-ci/apt-package-whitelist'
 
 SINCE      = '2015-07-07'
 
@@ -122,6 +122,10 @@ loop do
       add_label(conn: conn, repo: repo, issue: issue_number, label: 'apt-source-whitelist')
     end
 
+    if match_data[:source] && labels.none? { |l| l['name'] == 'apt-whitelist' }
+      add_label(conn: conn, repo: repo, issue: issue_number, label: 'apt-whitelist')
+    end
+
     ## refresh ticket data
     response = conn.get do |req|
       req.url "/repos/#{repo}/issues/#{issue_number}"
@@ -144,14 +148,14 @@ loop do
       conn: conn, repo: repo, issue: issue_number, labels: labels, label: 'apt-whitelist-check-run', reason: "'#{pkg}' has been checked already"
     )
 
-    puts "#{title}, https://github.com/travis-ci/travis-ci/issues/#{issue_number}; going to run test on #{pkg}"
+    puts "#{title}, https://github.com/#{repo}/issues/#{issue_number}; going to run test on #{pkg}"
 
     next unless @run_it
 
     next if labels.any? { |l| l['name'] == 'apt-source-whitelist' || l['name'] == 'trusty' || l['name'] == 'apt-whitelist-ambiguous' || l['name'] == 'apt-whitelist-check-commented' }
 
     # prepare Travis CI build request payload
-    message = "Run apt-package-whitelist check for #{pkg}; #{Time.now.utc.strftime('%Y-%m-%d-%H-%M-%S')}\n\nSee travis-ci/travis-ci##{issue_number}"
+    message = "Run apt-package-whitelist check for #{pkg}; #{Time.now.utc.strftime('%Y-%m-%d-%H-%M-%S')}\n\nSee #{repo}##{issue_number}"
 
     payload = {
       "request"=> {
@@ -159,15 +163,15 @@ loop do
         "branch"  => 'default',
         "config"  => {
           "env" => {
-            "global" => ["PACKAGE=#{pkg}","ISSUE_NUMBER=#{issue_number}"],
+            "global" => ["PACKAGE=#{pkg}","ISSUE_NUMBER=#{issue_number}","ISSUE_REPO=#{repo}"],
           }
         }
       }
     }
 
-    puts "Starting build for #{pkg}; https://github.com/travis-ci/travis-ci/issues/#{issue_number}. Run it (y/n)?"
-    answer = gets
-    next unless answer =~ /^y/i
+    # puts "Starting build for #{pkg}; https://github.com/#{repo}/issues/#{issue_number}. Run it (y/n)?"
+    # answer = gets
+    # next unless answer =~ /^y/i
 
     started = false
 
