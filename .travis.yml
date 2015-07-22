@@ -1,8 +1,6 @@
-language: bash
+language: ruby
 
 sudo: 9000
-
-dist: trusty
 
 env:
   global:
