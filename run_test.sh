@@ -38,7 +38,7 @@ case $CHECK_RESULT in
 		notice "Pushing commit"
 		git push origin $BRANCH
 		notice "Creating PR"
-		COMMENT="For ${ISSUE_REPO}#${ISSUE_NUMBER}.\n\nRan tests and found no setuid bits.\n\n See ${BUILD_URL}"
+		COMMENT="For ${ISSUE_REPO}#${ISSUE_NUMBER}. Ran tests and found no setuid bits. See ${BUILD_URL}"
 		curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
 			-d "{\"title\":\"Pull request for ${ISSUE_PACKAGE}\",\"body\":\"${COMMENT}\",\"head\":\"${BRANCH}\",\"base\":\"master\"}" \
 			https://api.github.com/repos/travis-ci/apt-package-whitelist/pulls
@@ -46,9 +46,15 @@ case $CHECK_RESULT in
 		;;
 	$EXIT_SOURCE_HAS_SETUID)
 		warn "Found occurrences of setuid."
-		COMMENT="Ran tests and found setuid bits.\n\nSee ${BUILD_URL}."
+		echo <<-EOF > comment_payload
+{
+	"body" : "Ran tests and found setuid bits.
+
+See ${BUILD_URL}."
+}
+		EOF
 		curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
-			-d "{\"body\":\"${COMMENT}\"}" \
+			-d @comment_payload \
 			${GITHUB_ISSUES_URL}/comments
 		curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
 			-d "[\"apt-whitelist-check-run\"]" \
@@ -56,13 +62,17 @@ case $CHECK_RESULT in
 		;;
 	$EXIT_SOURCE_NOT_FOUND)
 		warn "Source not found."
-		COMMENT="Ran tests, but could not found source package. Either the source package for ${PACKAGE} does not exist, or the package needs an APT source.
+		echo <<-EOF > comment_payload
+{
+	"body" : "Ran tests, but could not found source package. Either the source package for ${PACKAGE} does not exist, or the package needs an APT source.
 
 If you wisht to add an APT source, please follow the directions on https://github.com/travis-ci/apt-source-whitelist#source-approval-process.
 
 Build results: ${BUILD_URL}."
+}
+		EOF
 		curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
-			-d "{\"body\":\"${COMMENT}\"}" \
+			-d @comment_payload \
 			${GITHUB_ISSUES_URL}/comments
 		curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
 			-d "[\"apt-source-whitelist\",\"apt-whitelist-check-run\"]" \
