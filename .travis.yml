@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=qtbase5-dev
+    - PACKAGE=qtdeclarative5-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=313
+    - ISSUE_NUMBER=314
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
