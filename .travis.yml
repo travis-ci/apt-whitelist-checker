@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=nsis-common
+    - PACKAGE=lam-runtime
     - ISSUE_REPO=travis-ci
-    - ISSUE_NUMBER=4506
+    - ISSUE_NUMBER=4507
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
