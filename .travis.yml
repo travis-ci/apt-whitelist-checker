@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libnewlib-arm-none-eabi
+    - PACKAGE=libstdc++-arm-none-eabi-newlib
     - ISSUE_REPO=travis-ci
-    - ISSUE_NUMBER=4539
+    - ISSUE_NUMBER=4540
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
