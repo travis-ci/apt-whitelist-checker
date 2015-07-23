@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-pygments
+    - PACKAGE=bzr-fastimport
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=175
+    - ISSUE_NUMBER=192
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
