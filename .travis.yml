@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=g++-4.9-multilib
+    - PACKAGE=hunspell-en-us
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=95
+    - ISSUE_NUMBER=99
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
