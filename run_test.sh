@@ -46,7 +46,7 @@ case $CHECK_RESULT in
 		;;
 	$EXIT_SOURCE_HAS_SETUID)
 		warn "Found occurrences of setuid."
-		echo <<-EOF > comment_payload
+		cat <<-EOF > comment_payload
 {
 	"body" : "Ran tests and found setuid bits.
 
@@ -62,7 +62,7 @@ See ${BUILD_URL}."
 		;;
 	$EXIT_SOURCE_NOT_FOUND)
 		warn "Source not found."
-		echo <<-EOF > comment_payload
+		cat <<-EOF > comment_payload
 {
 	"body" : "Ran tests, but could not found source package. Either the source package for ${PACKAGE} does not exist, or the package needs an APT source.
 
