@@ -51,18 +51,16 @@ case $CHECK_RESULT in
 		warn "Found occurrences of setuid."
 		echo -e "\n\n"
 		echo -e "If these occurrences of \`setuid\`/\`seteuid\`/\`setgid\` are deemed harmless, add the following packages:\n"
-		pushd apt-package-whitelist
 		for p in $(sshpass -p travis ssh -n -t -t $SSH_OPTS travis@$(< ${TRAVIS_BUILD_DIR}/docker_ip_address) "for d in \$(find /var/tmp/deb-sources -type d -name debian) ; do pushd \$d &>/dev/null && grep ^Package control 2>&/dev/null | awk -F: '{ print \$2 }' | xargs echo ; popd &>/dev/null ; done"); do
 			echo $p >> packages
 		done
-		popd
 		cat <<-EOF > comment_payload
 {
 	"body" : "Ran tests and found setuid bits by purely textual search. Further analysis is required.
 
-If these are found to be benign, add $(< apt-package-whitelist/packages).
+	If these are found to be benign, add $(< apt-package-whitelist/packages).
 
-See ${BUILD_URL}."
+	See ${BUILD_URL}."
 }
 		EOF
 		curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
