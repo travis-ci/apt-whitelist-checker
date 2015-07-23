@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libcap-ng-dev
+    - PACKAGE=mongodb-org-server
     - ISSUE_REPO=travis-ci
-    - ISSUE_NUMBER=4298
+    - ISSUE_NUMBER=4214
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
