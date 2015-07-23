@@ -48,9 +48,7 @@ case $CHECK_RESULT in
 		warn "Found occurrences of setuid."
 		cat <<-EOF > comment_payload
 {
-	"body" : "Ran tests and found setuid bits.
-
-See ${BUILD_URL}."
+	"body" : "Ran tests and found setuid bits. See ${BUILD_URL}."
 }
 		EOF
 		curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
@@ -64,11 +62,7 @@ See ${BUILD_URL}."
 		warn "Source not found."
 		cat <<-EOF > comment_payload
 {
-	"body" : "Ran tests, but could not found source package. Either the source package for ${PACKAGE} does not exist, or the package needs an APT source.
-
-If you wisht to add an APT source, please follow the directions on https://github.com/travis-ci/apt-source-whitelist#source-approval-process.
-
-Build results: ${BUILD_URL}."
+	"body" : "Ran tests, but could not found source package. Either the source package for ${PACKAGE} does not exist, or the package needs an APT source. If you wisht to add an APT source, please follow the directions on https://github.com/travis-ci/apt-source-whitelist#source-approval-process. Build results: ${BUILD_URL}."
 }
 		EOF
 		curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
