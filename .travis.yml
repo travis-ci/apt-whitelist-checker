@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=aria2
+    - PACKAGE=awesome
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=218
+    - ISSUE_NUMBER=220
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
