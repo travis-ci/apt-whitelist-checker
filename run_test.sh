@@ -5,7 +5,7 @@ source `dirname $0`/common.sh
 SSH_OPTS='-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 
 BUILD_URL="https://travis-ci.org/${TRAVIS_REPO_SLUG}/builds/${TRAVIS_BUILD_ID}"
-ISSUE_REPO=${ISSUE_REPO:-"travis-ci"}
+ISSUE_REPO=${ISSUE_REPO:-"travis-ci"} # name of the repo that has issues, under "travis-ci"
 GITHUB_ISSUES_URL="https://api.github.com/repos/travis-ci/${ISSUE_REPO}/issues/${ISSUE_NUMBER}"
 
 echo "Pushing build.sh"
@@ -38,7 +38,7 @@ case $CHECK_RESULT in
 		notice "Pushing commit"
 		git push origin $BRANCH
 		notice "Creating PR"
-		COMMENT="For ${ISSUE_REPO}#${ISSUE_NUMBER}. Ran tests and found no setuid bits. See ${BUILD_URL}"
+		COMMENT="For travis-ci/${ISSUE_REPO}#${ISSUE_NUMBER}. Ran tests and found no setuid bits. See ${BUILD_URL}"
 		curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
 			-d "{\"title\":\"Pull request for ${ISSUE_PACKAGE}\",\"body\":\"${COMMENT}\",\"head\":\"${BRANCH}\",\"base\":\"master\"}" \
 			https://api.github.com/repos/travis-ci/apt-package-whitelist/pulls
