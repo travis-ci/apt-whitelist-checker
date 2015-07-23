@@ -8,7 +8,7 @@ notice "Installing Ruby 1.9.1"
 sudo apt-get install ruby1.9.1 -qq
 
 export DEBIAN_FRONTEND=noninteractive
-notice "Fetching apt-source-whitelist data$"
+notice "Fetching apt-source-whitelist data"
 wget https://raw.githubusercontent.com/travis-ci/apt-source-whitelist/master/ubuntu.json
 notice "Applying apt-source-whitelist data"
 ruby1.9.1 -rjson add_sources.rb
