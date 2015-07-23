@@ -99,7 +99,7 @@ loop do
       next
     end
 
-    if pkg =~ /[\s:,]/
+    if pkg =~ /[\s:,]/ && pkg !~ /:i386/
       comment = <<-COMMENT
 `#{pkg}` does not appear to a package name on which our automation process can handle.
 
