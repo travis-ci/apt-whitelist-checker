@@ -42,6 +42,9 @@ case $CHECK_RESULT in
 		curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
 			-d "{\"title\":\"Pull request for ${ISSUE_PACKAGE}\",\"body\":\"${COMMENT}\",\"head\":\"${BRANCH}\",\"base\":\"master\"}" \
 			https://api.github.com/repos/travis-ci/apt-package-whitelist/pulls
+		curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
+			-d "[\"apt-whitelist-check-run\"]" \
+			${GITHUB_ISSUES_URL}/labels
 		popd
 		;;
 	$EXIT_SOURCE_HAS_SETUID)
