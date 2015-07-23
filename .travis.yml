@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libgconf2-dev
+    - PACKAGE=octave
     - ISSUE_REPO=travis-ci
-    - ISSUE_NUMBER=4484
+    - ISSUE_NUMBER=4486
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
