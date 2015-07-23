@@ -17,6 +17,8 @@ sshpass -p travis ssh -n -t -t $SSH_OPTS travis@$(< docker_ip_address) "bash bui
 
 CHECK_RESULT=$?
 
+sshpass -p travis scp $SSH_OPTS travis@$(< ${TRAVIS_BUILD_DIR}/docker_ip_address):/var/tmp/deb-sources/packages .
+
 case $CHECK_RESULT in
 	$EXIT_SUCCSS)
 		notice "No suspicious bits found."
@@ -31,7 +33,7 @@ case $CHECK_RESULT in
 		notice "Creating commit"
 		git checkout -b $BRANCH
 		ISSUE_PACKAGE=${PACKAGE}
-		for p in $(sshpass -p travis ssh -n -t -t $SSH_OPTS travis@$(< ${TRAVIS_BUILD_DIR}/docker_ip_address) "for d in \$(find /var/tmp/deb-sources -type d -name debian) ; do pushd \$d &>/dev/null && grep ^Package control 2>&/dev/null | awk -F: '{ print \$2 }' | xargs echo ; popd &>/dev/null ; done"); do
+		for p in $(< ../packages); do
 			notice "Adding ${p}"
 			env PACKAGE=${p} make add
 		done
@@ -51,9 +53,7 @@ case $CHECK_RESULT in
 	$EXIT_SOURCE_HAS_SETUID)
 		warn "Found occurrences of setuid."
 		echo -e "\n\n"
-		echo -e "If these occurrences of \`setuid\`/\`seteuid\`/\`setgid\` are deemed harmless, add the following packages:\n"
-		sshpass -p travis ssh -n -t -t $SSH_OPTS travis@$(< ${TRAVIS_BUILD_DIR}/docker_ip_address) "for d in \$(find /var/tmp/deb-sources -type d -name debian) ; do pushd \$d &>/dev/null && grep ^Package control 2>&/dev/null | awk -F: '{ print \$2 }' | xargs echo ; popd &>/dev/null ; done" &> packages
-		cat packages
+		echo -e "If these occurrences of \`setuid\`/\`seteuid\`/\`setgid\` are deemed harmless, add the following packages: $(< packages)\n"
 		cat <<-EOF > comment_payload
 {
 	"body" : "Ran tests and found setuid bits by purely textual search. Further analysis is required.
