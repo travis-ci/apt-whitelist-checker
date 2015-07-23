@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libesd0-dev
+    - PACKAGE=liblcms-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=328
+    - ISSUE_NUMBER=329
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
