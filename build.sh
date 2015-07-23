@@ -11,7 +11,7 @@ export DEBIAN_FRONTEND=noninteractive
 notice "Fetching apt-source-whitelist data$"
 wget https://raw.githubusercontent.com/travis-ci/apt-source-whitelist/master/ubuntu.json
 notice "Applying apt-source-whitelist data"
-ruby1.9.1 -rjson -e 'json=JSON.parse(File.read("ubuntu.json")); json.each {|src| puts "Adding #{src["key_url"].untaint.inspect}"; system("curl -sSL #{src["key_url"].untaint.inspect} | sudo apt-key add - &>/dev/null") || puts("Failed") if src["key_url"]; puts "Adding repository #{src["sourceline"].untaint.inspect}"; system("sudo -E apt-add-repository -y #{src["sourceline"].untaint.inspect}") || puts("failed") }'
+ruby1.9.1 -rjson add_sources.rb
 mkdir -p /var/tmp/deb-sources
 cd /var/tmp/deb-sources
 sudo apt-get update -qq
