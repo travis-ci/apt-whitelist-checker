@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=fonts-texgyre
+    - PACKAGE=nsis-common
     - ISSUE_REPO=travis-ci
-    - ISSUE_NUMBER=4504
+    - ISSUE_NUMBER=4506
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
