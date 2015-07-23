@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=octave
+    - PACKAGE=python-pil
     - ISSUE_REPO=travis-ci
-    - ISSUE_NUMBER=4486
+    - ISSUE_NUMBER=4420
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
