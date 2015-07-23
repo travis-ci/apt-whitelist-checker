@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=bisonc++
+    - PACKAGE=xpdf
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=41
+    - ISSUE_NUMBER=43
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
