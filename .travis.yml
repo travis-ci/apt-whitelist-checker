@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libc6:i386
+    - PACKAGE=g++-4.9-multilib:i386
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=89
+    - ISSUE_NUMBER=97
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
