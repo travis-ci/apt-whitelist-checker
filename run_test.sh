@@ -58,7 +58,7 @@ case $CHECK_RESULT in
 {
 	"body" : "Ran tests and found setuid bits by purely textual search. Further analysis is required.
 
-	If these are found to be benign, add $(< apt-package-whitelist/packages).
+	If these are found to be benign, add $(< packages).
 
 	See ${BUILD_URL}."
 }
