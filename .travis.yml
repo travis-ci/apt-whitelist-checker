@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libgstreamer-plugins-base0.10-dev
-    - ISSUE_REPO=travis-ci/travis-ci
-    - ISSUE_NUMBER=4468
+    - PACKAGE=libluajit-5.1
+    - ISSUE_REPO=travis-ci
+    - ISSUE_NUMBER=4479
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
