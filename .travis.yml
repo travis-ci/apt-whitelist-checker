@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libqt5webkit5-dev
+    - PACKAGE=libsword-dev
     - ISSUE_REPO=travis-ci
-    - ISSUE_NUMBER=4519
+    - ISSUE_NUMBER=4522
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
