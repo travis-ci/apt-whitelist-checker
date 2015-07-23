@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libclang-3.5-dev
+    - PACKAGE=python-mysqldb
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=225
+    - ISSUE_NUMBER=39
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
