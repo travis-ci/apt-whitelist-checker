@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libgtop2-7
+    - PACKAGE=cvs
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=110
+    - ISSUE_NUMBER=153
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
