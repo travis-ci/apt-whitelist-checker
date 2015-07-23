@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=glib2.0-dev
+    - PACKAGE=python3-cairo-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=68
+    - ISSUE_NUMBER=69
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
