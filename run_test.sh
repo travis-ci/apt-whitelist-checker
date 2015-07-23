@@ -77,6 +77,7 @@ case $CHECK_RESULT in
 		;;
 	*)
 		warn "Something unexpected happened. Status: ${CHECK_RESULT}"
-		exit $CHECK_RESULT
 		;;
 esac
+
+exit $CHECK_RESULT
