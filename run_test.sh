@@ -38,7 +38,7 @@ case $CHECK_RESULT in
 		notice "Pushing commit"
 		git push origin $BRANCH
 		notice "Creating PR"
-		COMMENT="For ${ISSUE_REPO}#${ISSUE_NUMBER}. Ran tests and found no setuid bits. See ${BUILD_URL}"
+		COMMENT="For travis-ci/${ISSUE_REPO}#${ISSUE_NUMBER}. Ran tests and found no setuid bits. See ${BUILD_URL}"
 		curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
 			-d "{\"title\":\"Pull request for ${ISSUE_PACKAGE}\",\"body\":\"${COMMENT}\",\"head\":\"${BRANCH}\",\"base\":\"master\"}" \
 			https://api.github.com/repos/travis-ci/apt-package-whitelist/pulls
