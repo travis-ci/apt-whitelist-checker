@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=bisonc++
+    - PACKAGE=libfaad2
     - ISSUE_REPO=travis-ci
-    - ISSUE_NUMBER=4535
+    - ISSUE_NUMBER=4537
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
