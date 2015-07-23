@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libtiff-dev
-    - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=331
+    - PACKAGE=boost1.48
+    - ISSUE_REPO=travis-ci
+    - ISSUE_NUMBER=4438
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
