@@ -56,11 +56,7 @@ case $CHECK_RESULT in
 		echo -e "If these occurrences of \`setuid\`/\`seteuid\`/\`setgid\` are deemed harmless, add the following packages: $(< packages)\n"
 		cat <<-EOF > comment_payload
 {
-	"body" : "Ran tests and found setuid bits by purely textual search. Further analysis is required.
-
-	If these are found to be benign, add $(< packages).
-
-	See ${BUILD_URL}."
+	"body" : "Ran tests and found setuid bits by purely textual search. Further analysis is required.\r\n\r\nIf these are found to be benign, add:\r\n\r\n $(< packages).\r\n\r\n See ${BUILD_URL}."
 }
 		EOF
 		curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
