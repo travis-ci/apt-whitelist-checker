@@ -14,7 +14,7 @@ notice "Applying apt-source-whitelist data"
 ruby1.9.1 -rjson add_sources.rb
 mkdir -p /var/tmp/deb-sources
 cd /var/tmp/deb-sources
-sudo apt-get update -qq
+sudo apt-get update -qq &>/dev/null
 
 notice "Fetching source package for ${PKG}"
 apt-get source ${PKG} 2>&1 | tee apt-get-result.log
