@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=scala
+    - PACKAGE=qpdf
     - ISSUE_REPO=travis-ci
-    - ISSUE_NUMBER=4511
+    - ISSUE_NUMBER=4512
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
