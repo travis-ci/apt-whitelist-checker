@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=mongodb-org-server
+    - PACKAGE=rpm-build
     - ISSUE_REPO=travis-ci
-    - ISSUE_NUMBER=4214
+    - ISSUE_NUMBER=4475
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
