@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=liboctave-dev
+    - PACKAGE=fonts-texgyre
     - ISSUE_REPO=travis-ci
-    - ISSUE_NUMBER=4487
+    - ISSUE_NUMBER=4504
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
