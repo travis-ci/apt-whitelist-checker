@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libftdi1
+    - PACKAGE=liblo-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=196
+    - ISSUE_NUMBER=198
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
