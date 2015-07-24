@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libboost1.48-all-dev
+    - PACKAGE=python-pyside
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=432
+    - ISSUE_NUMBER=433
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
