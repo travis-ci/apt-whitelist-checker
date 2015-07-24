@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=texlive-lang-cjk
+    - PACKAGE=mongodb-org-server
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=380
+    - ISSUE_NUMBER=381
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
