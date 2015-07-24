@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libnewlib-arm-none-eabi
+    - PACKAGE=cmake=3.2.3-5ppa5~precise1
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=435
+    - ISSUE_NUMBER=436
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
