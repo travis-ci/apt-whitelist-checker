@@ -25,7 +25,7 @@ case $CHECK_RESULT in
 		BRANCH="apt-package-whitelist-test-${ISSUE_NUMBER}"
 		notice "Setting up Git"
 		git clone https://github.com/travis-ci/apt-package-whitelist.git
-		cp package apt-package-whitelist # so make_pr.sh can find it
+		cp packages apt-package-whitelist # so make_pr.sh can find it
 		pushd apt-package-whitelist
 		./make_pr.sh ${ISSUE_REPO} ${ISSUE_NUMBER}
 		popd
