@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=fp-compiler-2.4.4
+    - PACKAGE=libgtop2-7
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=109
+    - ISSUE_NUMBER=110
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
