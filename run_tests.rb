@@ -123,9 +123,9 @@ have to open another one for those.
 
     gets # comment out (or replace with a short sleep) when the script is good enough to run uninterrupted
 
-    system("sed -i.bak1 -e 's/PACKAGE=.*/PACKAGE=#{pkg}/' .travis.yml")
-    system("sed -i.bak2 -e 's|ISSUE_REPO=.*|ISSUE_REPO=#{repo}|' .travis.yml")
-    system("sed -i.bak3 -e 's/ISSUE_NUMBER=.*/ISSUE_NUMBER=#{issue_number}/' .travis.yml")
+    system("sed -i -e 's/PACKAGE=.*/PACKAGE=#{pkg}/' .travis.yml")
+    system("sed -i -e 's|ISSUE_REPO=.*|ISSUE_REPO=#{repo}|' .travis.yml")
+    system("sed -i -e 's/ISSUE_NUMBER=.*/ISSUE_NUMBER=#{issue_number}/' .travis.yml")
 
     comment = "Run test for #{owner}/#{repo}##{issue_number}."
 
