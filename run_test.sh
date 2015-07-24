@@ -25,29 +25,9 @@ case $CHECK_RESULT in
 		BRANCH="apt-package-whitelist-test-${ISSUE_NUMBER}"
 		notice "Setting up Git"
 		git clone https://github.com/travis-ci/apt-package-whitelist.git
+		cp package apt-package-whitelist # so make_pr.sh can find it
 		pushd apt-package-whitelist
-		git config credential.helper "store --file=.git/credentials"
-		echo "https://${GITHUB_OAUTH_TOKEN}:@github.com" > .git/credentials 2>/dev/null
-		git config --global user.email "contact@travis-ci.com"
-		git config --global user.name "Travis CI APT package tester"
-		notice "Creating commit"
-		git checkout -b $BRANCH
-		ISSUE_PACKAGE=${PACKAGE}
-		for p in $(< ../packages); do
-			notice "Adding ${p}"
-			env PACKAGE=${p} make add
-		done
-		env TICKET=${ISSUE_NUMBER} PACKAG=${ISSUE_PACKAGE} make resolve
-		notice "Pushing commit"
-		git push origin $BRANCH
-		notice "Creating PR"
-		COMMENT="For travis-ci/${ISSUE_REPO}#${ISSUE_NUMBER}. Ran tests and found no setuid bits. See ${BUILD_URL}"
-		curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
-			-d "{\"title\":\"Pull request for ${ISSUE_PACKAGE}\",\"body\":\"${COMMENT}\",\"head\":\"${BRANCH}\",\"base\":\"master\"}" \
-			https://api.github.com/repos/travis-ci/apt-package-whitelist/pulls
-		curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
-			-d "[\"apt-whitelist-check-run\"]" \
-			${GITHUB_ISSUES_URL}/labels
+		./make_pr.sh ${ISSUE_REPO} ${ISSUE_NUMBER}
 		popd
 		;;
 	$EXIT_SOURCE_HAS_SETUID)
@@ -56,7 +36,7 @@ case $CHECK_RESULT in
 		echo -e "If these occurrences of \`setuid\`/\`seteuid\`/\`setgid\` are deemed harmless, add the following packages: $(< packages)\n"
 		cat <<-EOF > comment_payload
 {
-	"body" : "Ran tests and found setuid bits by purely textual search. Further analysis is required.\r\n\r\nIf these are found to be benign, add:\r\n\r\n $(< packages).\r\n\r\n See ${BUILD_URL}."
+	"body" : "Ran tests and found setuid bits by purely textual search. Further analysis is required.\r\n\r\nIf these are found to be benign, add:\r\n\r\n $(< packages)\r\n\r\n See ${BUILD_URL}."
 }
 		EOF
 		curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
