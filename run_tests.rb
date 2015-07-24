@@ -65,7 +65,7 @@ loop do
     req.headers['Authorization'] = "token #{ENV["GITHUB_OAUTH_TOKEN"]}"
     req.params['sort'] = 'created'
     req.params['direction'] = 'asc'
-    req.params['since'] = SINCE
+  # req.params['since'] = SINCE
   end
 
   tickets = JSON.parse(list_response.body)
