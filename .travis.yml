@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=stunnel4
+    - PACKAGE=qq
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=403
+    - ISSUE_NUMBER=404
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
