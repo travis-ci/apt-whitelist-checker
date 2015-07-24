@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-all-dbg
+    - PACKAGE=python-all-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=386
+    - ISSUE_NUMBER=387
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
