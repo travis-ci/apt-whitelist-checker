@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=iceweasel
+    - PACKAGE=libqt5gui5
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=407
+    - ISSUE_NUMBER=408
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
