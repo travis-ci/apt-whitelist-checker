@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gir1.2-networkmanager-1.0
+    - PACKAGE=libgstreamer1.0-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=372
+    - ISSUE_NUMBER=373
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
