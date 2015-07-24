@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libcap-ng-dev
+    - PACKAGE=sagemath-upstream-binary
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=423
+    - ISSUE_NUMBER=424
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
