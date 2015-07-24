@@ -27,7 +27,7 @@ case $CHECK_RESULT in
 		git clone https://github.com/travis-ci/apt-package-whitelist.git
 		cp packages apt-package-whitelist # so make_pr.sh can find it
 		pushd apt-package-whitelist
-		./make_pr.sh ${ISSUE_REPO} ${ISSUE_NUMBER}
+		env GITHUB_OAUTH_TOKEN=${GITHUB_OAUTH_TOKEN} ./make_pr.sh ${ISSUE_REPO} ${ISSUE_NUMBER}
 		popd
 		;;
 	$EXIT_SOURCE_HAS_SETUID)
