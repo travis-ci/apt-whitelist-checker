@@ -17,7 +17,9 @@ sshpass -p travis ssh -n -t -t $SSH_OPTS travis@$(< docker_ip_address) "bash bui
 
 CHECK_RESULT=$?
 
-sshpass -p travis scp $SSH_OPTS travis@$(< ${TRAVIS_BUILD_DIR}/docker_ip_address):/var/tmp/deb-sources/packages .
+if [ $CHECK_RESULT -ne $EXIT_SOURCE_NOT_FOUND ]; then
+	sshpass -p travis scp $SSH_OPTS travis@$(< ${TRAVIS_BUILD_DIR}/docker_ip_address):/var/tmp/deb-sources/packages .
+fi
 
 case $CHECK_RESULT in
 	$EXIT_SUCCSS)
