@@ -18,6 +18,7 @@ sudo apt-get update -qq &>/dev/null
 fold_end apt_src
 
 fold_start fetch_src_pkg "Fetching source package for ${PKG}"
+apt-cache policy ${PKG}
 apt-get source ${PKG} 2>&1 | tee apt-get-result.log
 fold_end fetch_src_pkg
 
