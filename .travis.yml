@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=ta-lib
+    - PACKAGE=libboost1.48-all-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=431
+    - ISSUE_NUMBER=432
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
