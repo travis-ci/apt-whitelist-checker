@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libnspr4-dev
+    - PACKAGE=libc++-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=355
+    - ISSUE_NUMBER=359
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
