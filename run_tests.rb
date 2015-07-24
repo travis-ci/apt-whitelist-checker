@@ -83,7 +83,7 @@ loop do
 
     next unless match_data
 
-    if labels.any? { |l| l['name'] == 'apt-whitelist-check-run' }
+    if labels.any? { |l| l['name'] == 'apt-whitelist-check-run' || l['name'] == 'apt-whitelist-ambiguous' || l['name'] == 'apt-source-whitelist' }
       puts ">> We have run a check already\n"
       next
     end
