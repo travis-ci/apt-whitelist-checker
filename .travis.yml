@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=latex2html
+    - PACKAGE=php-gnupg
     - ISSUE_REPO=travis-ci
-    - ISSUE_NUMBER=4550
+    - ISSUE_NUMBER=4062
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
