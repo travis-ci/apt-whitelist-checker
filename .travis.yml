@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=qtbase5-dev
+    - PACKAGE=libqt5gui5
     - ISSUE_REPO=travis-ci
-    - ISSUE_NUMBER=3765
+    - ISSUE_NUMBER=4352
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
