@@ -2,7 +2,7 @@
 
 source `dirname $0`/common.sh
 
-SSH_OPTS='-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
+SSH_OPTS='-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -q'
 
 BUILD_URL="https://travis-ci.org/${TRAVIS_REPO_SLUG}/builds/${TRAVIS_BUILD_ID}"
 ISSUE_REPO=${ISSUE_REPO:-"travis-ci"} # name of the repo that has issues, under "travis-ci"
