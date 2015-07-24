@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libqt5webkit5-dev
+    - PACKAGE=libtiff-tools
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=443
+    - ISSUE_NUMBER=444
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
