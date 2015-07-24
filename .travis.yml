@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gcc-arm-linux-gnueabihf
+    - PACKAGE=python-pandas
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=400
+    - ISSUE_NUMBER=401
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
