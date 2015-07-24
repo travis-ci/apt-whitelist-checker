@@ -29,6 +29,12 @@ case $CHECK_RESULT in
 		cp packages apt-package-whitelist # so make_pr.sh can find it
 		pushd apt-package-whitelist
 		env GITHUB_OAUTH_TOKEN=${GITHUB_OAUTH_TOKEN} ./make_pr.sh ${ISSUE_REPO} ${ISSUE_NUMBER}
+		if [ $? -eq $EXIT_NOTHING_TO_COMMIT ]; then
+			COMMIT=$(git blame ubuntu-precise | grep ${PACKAGE} | cut -f1 -d' ')
+			curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
+				-d "Failed to create a commit and a PR. This usually means that there has been a commit that resolved this request.\r\nInparticular, check https://github.com/travis-ci/apt-package-whitelist/commit/${COMMIT}" \
+				${GITHUB_ISSUES_URL}/comments
+		fi
 		popd
 		;;
 	$EXIT_SOURCE_HAS_SETUID)
