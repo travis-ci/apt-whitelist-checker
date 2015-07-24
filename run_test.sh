@@ -22,7 +22,6 @@ sshpass -p travis scp $SSH_OPTS travis@$(< ${TRAVIS_BUILD_DIR}/docker_ip_address
 case $CHECK_RESULT in
 	$EXIT_SUCCSS)
 		notice "No suspicious bits found."
-		BRANCH="apt-package-whitelist-test-${ISSUE_NUMBER}"
 		notice "Setting up Git"
 		git clone https://github.com/travis-ci/apt-package-whitelist.git
 		cp packages apt-package-whitelist # so make_pr.sh can find it
