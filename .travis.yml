@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libwxgtk3.0-dev
+    - PACKAGE=libnspr4-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=417
+    - ISSUE_NUMBER=409
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
