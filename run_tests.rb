@@ -19,7 +19,7 @@ SINCE      = '2015-07-01'
 
 conn = Faraday.new(:url => github_api) do |faraday|
   faraday.request  :url_encoded             # form-encode POST params
-  faraday.use Faraday::Response::Logger, Logger.new('github.log')
+  faraday.use Faraday::Response::Logger, Logger.new('/dev/null')
   faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
 end
 
