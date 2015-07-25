@@ -5,7 +5,7 @@ source `dirname $0`/common.sh
 SSH_OPTS='-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -q'
 
 BUILD_URL="https://travis-ci.org/${TRAVIS_REPO_SLUG}/builds/${TRAVIS_BUILD_ID}"
-ISSUE_REPO=${ISSUE_REPO:-"travis-ci"} # name of the repo that has issues, under "travis-ci"
+ISSUE_REPO=${ISSUE_REPO:-"apt-package-whitelist"} # name of the repo that has issues, under "travis-ci"
 GITHUB_ISSUES_URL="https://api.github.com/repos/travis-ci/${ISSUE_REPO}/issues/${ISSUE_NUMBER}"
 
 echo "Pushing build.sh"
@@ -28,7 +28,7 @@ case $CHECK_RESULT in
 		git clone https://github.com/travis-ci/apt-package-whitelist.git
 		cp packages apt-package-whitelist # so make_pr.sh can find it
 		pushd apt-package-whitelist
-		env GITHUB_OAUTH_TOKEN=${GITHUB_OAUTH_TOKEN} ./make_pr.sh ${ISSUE_REPO} ${ISSUE_NUMBER}
+		env GITHUB_OAUTH_TOKEN=${GITHUB_OAUTH_TOKEN} ./make_pr.sh -y ${ISSUE_REPO} ${ISSUE_NUMBER}
 		if [ $? -eq $EXIT_NOTHING_TO_COMMIT ]; then
 			COMMIT=$(git blame ubuntu-precise | grep ${PACKAGE} | cut -f1 -d' ' | sort | uniq | head -1)
 			curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
@@ -41,9 +41,10 @@ case $CHECK_RESULT in
 		warn "Found occurrences of setuid."
 		echo -e "\n\n"
 		echo -e "If these occurrences of \`setuid\`/\`seteuid\`/\`setgid\` are deemed harmless, add the following packages: $(< packages)\n"
+		env GITHUB_OAUTH_TOKEN=${GITHUB_OAUTH_TOKEN} ./make_pr.sh -y ${ISSUE_REPO} ${ISSUE_NUMBER}
 		cat <<-EOF > comment_payload
 {
-	"body" : "Ran tests and found setuid bits by purely textual search. Further analysis is required.\r\n\r\nIf these are found to be benign, add:\r\n\r\n $(< packages)\r\n\r\n See ${BUILD_URL}."
+	"body" : "Ran tests and found setuid bits by purely textual search. Further analysis is required.\r\n\r\nIf these are found to be benign, examine http://github.com/travis-ci/apt-package-whitelist/tree/test-apt-package-whitelist-${ISSUE_NUMBER} and its PR.\r\n\r\nPackages found: $(< packages)\r\n\r\nSee ${BUILD_URL} for details."
 }
 		EOF
 		curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
