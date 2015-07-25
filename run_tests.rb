@@ -17,6 +17,9 @@ owner      = 'travis-ci'
 repo       = ENV['REPO'] || begin; puts "ENV['REPO'] undefined"; exit; end
 SINCE      = '2015-07-01'
 
+logger = Logger.new(STDOUT)
+logger.level = Logger.const_get(ENV['LOG_LEVEL'].upcase) || Logger::WARN
+
 conn = Faraday.new(:url => github_api) do |faraday|
   faraday.request  :url_encoded             # form-encode POST params
   faraday.use Faraday::Response::Logger, Logger.new('/dev/null')
@@ -33,7 +36,7 @@ end
 
 def post_comment(conn:, issue:, comment:)
   unless @run_it
-    puts ">> Would have commented: #{comment}"
+    loggeer.debug ">> Would have commented: #{comment}"
     return
   end
 
@@ -47,7 +50,7 @@ end
 
 def add_labels(conn:, issue:, labels:, new_labels:)
   unless @run_it
-    puts ">> Would have added labels #{new_labels.inspect}"
+    logger.debug ">> Would have added labels #{new_labels.inspect}"
     return
   end
 
@@ -83,22 +86,22 @@ loop do
     labels = t['labels']
     title  = t['title'].strip
 
-    puts "checking #{t['html_url']}"
-    puts "title: #{title}"
+    logger.info "checking #{t['html_url']}"
+    logger.debug "title: #{title}"
 
     match_data = /\A(?i:APT(?<source> source)? whitelist request for (?<package_name>.+))\z/.match(title)
 
     next unless match_data
 
     if labels.any? { |l| l['name'] == 'apt-whitelist-check-run' || l['name'] == 'apt-whitelist-ambiguous' || l['name'] == 'apt-source-whitelist' }
-      puts ">> We have run a check already\n"
+      logger.debug ">> We have run a check already\n"
       next
     end
 
     pkg = match_data[:package_name]
 
     if match_data[:source]
-      puts ">> source request detected"
+      logger.debug ">> source request detected"
       add_labels(conn: conn, issue: t, labels: labels, new_labels: 'apt-source-whitelist')
 
       next
@@ -122,12 +125,12 @@ have to open another one for those.
       next
     end
 
-    puts "\n\n About to create git commit with PACKAGE=#{pkg} ISSUE_REPO=#{repo} ISSUE_NUMBER=#{issue_number}"
+    logger.info "\n\nCreating git commit with PACKAGE=#{pkg} ISSUE_REPO=#{repo} ISSUE_NUMBER=#{issue_number}"
 
     sleep 2 # comment out (or replace with a short sleep) when the script is good enough to run uninterrupted
 
     unless system("git checkout default")
-      puts "Unable to switch to `default` branch"
+      logger.warn "Unable to switch to `default` branch"
       next
     end
 
