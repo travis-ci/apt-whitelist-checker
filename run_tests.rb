@@ -126,6 +126,11 @@ have to open another one for those.
 
     sleep 2 # comment out (or replace with a short sleep) when the script is good enough to run uninterrupted
 
+    unless system("git checkout default")
+      puts "Unable to switch to `default` branch"
+      next
+    end
+
     system("sed -i -e 's/PACKAGE=.*/PACKAGE=#{pkg}/' .travis.yml")
     system("sed -i -e 's|ISSUE_REPO=.*|ISSUE_REPO=#{repo}|' .travis.yml")
     system("sed -i -e 's/ISSUE_NUMBER=.*/ISSUE_NUMBER=#{issue_number}/' .travis.yml")
