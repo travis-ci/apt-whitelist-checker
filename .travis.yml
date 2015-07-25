@@ -5,15 +5,14 @@ rvm:
 
 sudo: false
 
+cache: bundler
+
 env:
   global:
     - RUN=1
 
-install:
-  - true
-
 script:
-  - ./run_tests.rb
+  - bundle exec ./run_tests.rb
 
 notifications:
   email: false
