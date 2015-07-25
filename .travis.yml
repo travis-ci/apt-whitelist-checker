@@ -1,35 +1,19 @@
 language: ruby
 
-sudo: 9000
+rvm:
+  - 2.1.5
 
-git:
-  depth: 99999
+sudo: false
 
 env:
   global:
-    - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=botan1.10
-    - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=446
-
-before_install:
-  - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
-  - sudo apt-get update -y -qq
-  - sudo apt-get install -yqq sshpass
-  - if ! command -v docker ; then curl -sSL https://get.docker.io | bash; fi
-  - sudo usermod -a -G docker travis
-  - docker pull quay.io/travisci/travis-node-js:latest
-  - jq --version || sudo curl -sSL -o /usr/local/bin/jq http://stedolan.github.io/jq/download/linux64/jq && sudo chmod 0755 /usr/local/bin/jq
-  - docker images | grep -q -E '^travis\\s+\\bnode-js\\b\\s+' || docker tag quay.io/travisci/travis-node-js:latest travis:node-js
-  - docker run -v /var/tmp:/var/tmp -v /home/travis/build:/home/travis/build -d travis:node-js | tee docker_id
-  - docker inspect $(< docker_id) | awk -F '"' '/IPAddress/ {print $4}' | tee docker_ip_address
-  - docker ps
+    - RUN=1
 
 install:
   - true
 
 script:
-  - ./run_test.sh
+  - ./run_tests.rb
 
 notifications:
   email: false

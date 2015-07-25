@@ -5,6 +5,11 @@ require 'faraday'
 require 'logger'
 require 'uri'
 
+unless ENV['GITHUB_OAUTH_TOKEN']
+  puts "No GitHub token set"
+  exit
+end
+
 @run_it    = !ENV['RUN'].to_s.empty?
 github_api = "https://api.github.com"
 travis_api = 'https://api.travis-ci.org'
