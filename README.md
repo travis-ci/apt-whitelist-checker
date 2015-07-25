@@ -15,7 +15,7 @@ This is useful for only the maintainers of Travis CI repositories.
 
 First, you need to set up:
 
-1. `GITHUB_OAUTH_TOKEN`: You'd probably want to create one especially for use with this repo; https://github.com/settings/tokens
+    `GITHUB_OAUTH_TOKEN`: You'd probably want to create one especially for use with this repo; https://github.com/settings/tokens
 
 Then, run:
 
@@ -23,15 +23,16 @@ Then, run:
 $ env REPO=travis-ci ruby run_tests.rb
 ```
 
-This would go through the list of [open GitHub issues](https://github.com/travis-ci/travis-ci/issues)
-in `travis-ci/travis-ci` and print out what it intends to do.
+This would go through the list of open GitHub issues in `REPO`:
+https://github.com/travis-ci/travis-ci/issues
+and print out what it intends to do.
 
 Specifically, it looks for tickets with the title of the form: `APT whitelist request for X`
 or `APT source whitelist request for Y`.
 For the latter, it will add a label and move on.
-For the former, it will make a commit to this repository, and pushes.
+For the former, it will make a commit to this repository, and make a push to this repository.
 
-This will trigger a build, as defined in `.travis.yml`.
+The push, then, will trigger a build, as defined in `.travis.yml`.
 
 The build, in turn, adds the APT sources to a Docker container,
 downloads the source package in question and run:
@@ -50,6 +51,12 @@ packages the source package provides, and the build URL showing the problem.
 
 If no source package matching the given name is found, the label `apt-source-whitelist` is
 added to the issue, and a comment is posted.
+
+#### CI setup
+
+This repository's `run` branch is configured to automate the execution of the check
+described above.
+See https://travis-ci.org/travis-ci/apt-whitelist-checker/branches.
 
 ### REPO environment variable
 
