@@ -3,6 +3,7 @@
 require 'json'
 require 'faraday'
 require 'logger'
+require 'uri'
 
 @run_it    = !ENV['RUN'].to_s.empty?
 github_api = "https://api.github.com"
@@ -20,39 +21,40 @@ end
 def next_link_in_headers(headers)
   # "<https://api.github.com/repositories/1420493/issues?labels=apt-whitelist&page=2>; rel=\"next\", <https://api.github.com/repositories/1420493/issues?labels=apt-whitelist&page=6>; rel=\"last\""
   next_link_text = headers['link'].split(',').find { |l| l.end_with? 'rel="next"' }
-  if next_link_text
-    match_data = next_link_text.match(/<(?<next>[^>]+)>/)
-    if match_data
-      match_data[:next]
-    end
+  if next_link_text && match_data = next_link_text.match(/<(?<next>[^>]+)>/)
+    match_data[:next]
   end
 end
 
-def post_comment(conn:, owner:, repo:, issue:, comment:)
+def post_comment(conn:, issue:, comment:)
   unless @run_it
     puts ">> Would have commented: #{comment}"
     return
   end
 
   conn.post do |req|
-    req.url "/repos/#{owner}/#{repo}/issues/#{issue}/comments"
+    req.url "#{URI.parse(issue['comment_url']).path}"
     req.headers['Content-Type'] = 'application/json'
     req.headers['Authorization'] = "token #{ENV["GITHUB_OAUTH_TOKEN"]}"
     req.body = { "body" => comment }.to_json
   end
 end
 
-def add_label(conn:, owner:, repo:, issue:, labels:)
+def add_labels(conn:, issue:, labels:, new_labels:)
   unless @run_it
-    puts ">> Would have added labels #{labels.inspect}"
+    puts ">> Would have added labels #{new_labels.inspect}"
     return
   end
 
-  conn.post do |req|
-    req.url "/repos/#{owner}/#{repo}/issues/#{issue}/labels"
-    req.headers['Content-Type'] = 'application/json'
-    req.headers['Authorization'] = "token #{ENV["GITHUB_OAUTH_TOKEN"]}"
-    req.body = Array(labels).to_json
+  Array(new_labels).each do |new_label|
+    next if labels.any? { |l| l['name'] == new_label }
+
+    conn.post do |req|
+      req.url "#{URI.parse(issue['url']).path}/labels"
+      req.headers['Content-Type'] = 'application/json'
+      req.headers['Authorization'] = "token #{ENV["GITHUB_OAUTH_TOKEN"]}"
+      req.body = Array(new_label).to_json
+    end
   end
 end
 
@@ -92,9 +94,7 @@ loop do
 
     if match_data[:source]
       puts ">> source request detected"
-      if labels.none? {|l| l['name'] == 'apt-source-whitelist'}
-        add_label(conn: conn, owner: owner, repo: repo, issue: issue_number, labels: 'apt-source-whitelist')
-      end
+      add_labels(conn: conn, issue: t, labels: labels, new_labels: 'apt-source-whitelist')
 
       next
     end
@@ -110,11 +110,9 @@ If the source package of your requested package contains other related packages,
 have to open another one for those.
 (When in doubt, do.)
       COMMENT
-      if labels.none? {|l| l['name'] == 'apt-whitelist-ambiguous'}
-        add_label(conn: conn, owner: owner, repo: repo, issue: issue_number, labels: 'apt-whitelist-ambiguous')
-      end
+      add_labels(conn: conn, issue: t, labels: 'apt-whitelist-ambiguous')
 
-      post_comment(conn: conn, owner: owner, repo: repo, issue: issue_number, comment: comment)
+      post_comment(conn: conn, issue: t, comment: comment)
 
       next
     end
