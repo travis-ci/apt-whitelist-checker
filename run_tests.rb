@@ -18,7 +18,8 @@ repo       = ENV['REPO'] || begin; puts "ENV['REPO'] undefined"; exit; end
 SINCE      = '2015-07-01'
 
 logger = Logger.new(STDOUT)
-logger.level = Logger.const_get(ENV['LOG_LEVEL'].upcase) || Logger::WARN
+log_level = ENV['LOG_LEVEL'] || 'warn'
+logger.level = Logger.const_get(log_level.upcase)
 
 conn = Faraday.new(:url => github_api) do |faraday|
   faraday.request  :url_encoded             # form-encode POST params
