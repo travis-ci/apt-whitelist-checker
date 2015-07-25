@@ -124,7 +124,7 @@ have to open another one for those.
 
     puts "\n\n About to create git commit with PACKAGE=#{pkg} ISSUE_REPO=#{repo} ISSUE_NUMBER=#{issue_number}"
 
-    gets # comment out (or replace with a short sleep) when the script is good enough to run uninterrupted
+    sleep 2 # comment out (or replace with a short sleep) when the script is good enough to run uninterrupted
 
     system("sed -i -e 's/PACKAGE=.*/PACKAGE=#{pkg}/' .travis.yml")
     system("sed -i -e 's|ISSUE_REPO=.*|ISSUE_REPO=#{repo}|' .travis.yml")
