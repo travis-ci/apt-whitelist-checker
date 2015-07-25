@@ -37,7 +37,7 @@ end
 
 def post_comment(conn:, issue:, comment:)
   unless @run_it
-    loggeer.debug ">> Would have commented: #{comment}"
+    loggeer.debug "action=comment comment=#{comment}"
     return
   end
 
@@ -51,7 +51,7 @@ end
 
 def add_labels(conn:, issue:, labels:, new_labels:)
   unless @run_it
-    logger.debug ">> Would have added labels #{new_labels.inspect}"
+    logger.debug "action=add_labels labels=#{new_labels.inspect}"
     return
   end
 
@@ -87,22 +87,22 @@ loop do
     labels = t['labels']
     title  = t['title'].strip
 
-    logger.info "checking #{t['html_url']}"
-    logger.debug "title: #{title}"
+    logger.info "issue=#{t['html_url']}"
+    logger.debug "title=#{title}"
 
     match_data = /\A(?i:APT(?<source> source)? whitelist request for (?<package_name>.+))\z/.match(title)
 
     next unless match_data
 
     if labels.any? { |l| l['name'] == 'apt-whitelist-check-run' || l['name'] == 'apt-whitelist-ambiguous' || l['name'] == 'apt-source-whitelist' }
-      logger.debug ">> We have run a check already\n"
+      logger.debug "action=skip_check"
       next
     end
 
     pkg = match_data[:package_name]
 
     if match_data[:source]
-      logger.debug ">> source request detected"
+      logger.debug "message=source_request"
       add_labels(conn: conn, issue: t, labels: labels, new_labels: 'apt-source-whitelist')
 
       next
@@ -126,7 +126,7 @@ have to open another one for those.
       next
     end
 
-    logger.info "\n\nCreating git commit with PACKAGE=#{pkg} ISSUE_REPO=#{repo} ISSUE_NUMBER=#{issue_number}"
+    logger.info "action=git_commit_create package=#{pkg} repo=#{repo} number=#{issue_number}"
 
     sleep 2 # comment out (or replace with a short sleep) when the script is good enough to run uninterrupted
 
