@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libpoppler-glib-dev
+    - PACKAGE=unrar
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=576
+    - ISSUE_NUMBER=577
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
