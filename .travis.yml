@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=qttools5-dev-tools
+    - PACKAGE=libsqlite3-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=518
+    - ISSUE_NUMBER=519
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
