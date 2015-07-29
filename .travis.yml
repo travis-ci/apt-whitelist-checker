@@ -11,6 +11,11 @@ before_install:
   - git config credential.helper "store --file=.git/credentials"; echo "https://${GITHUB_OAUTH_TOKEN}:@github.com" > .git/credentials 2>/dev/null
   - git config --global user.email "contact@travis-ci.com"
   - git config --global user.name "Travis CI APT package tester"
+  - git remote add github https://github.com/travis-ci/apt-whitelist-checker.git
+  - git fetch github
+  - git checkout github/default
+  - git checkout -b default
+  - git checkout run
 
 script:
   - bundle exec ./run_tests.rb
