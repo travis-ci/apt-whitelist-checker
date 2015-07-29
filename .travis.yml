@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libhiredis-dev
+    - PACKAGE=libksba-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=506
+    - ISSUE_NUMBER=507
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
