@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=exuberant-ctags
+    - PACKAGE=htmldoc
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=500
+    - ISSUE_NUMBER=501
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
