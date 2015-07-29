@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=oce-draw
+    - PACKAGE=postgresql-plpython-9.3
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=484
+    - ISSUE_NUMBER=485
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
