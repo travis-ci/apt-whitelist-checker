@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=sshpass
+    - PACKAGE=mongodb-org-server
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=515
+    - ISSUE_NUMBER=516
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
