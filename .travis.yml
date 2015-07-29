@@ -19,6 +19,7 @@ before_install:
 
 script:
   - bundle exec ./run_tests.rb
+  - git checkout run
 
 notifications:
   email: false
