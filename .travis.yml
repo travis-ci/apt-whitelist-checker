@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=postgresql-plpython3-9.3
+    - PACKAGE=postgresql-plpython-9.4
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=486
+    - ISSUE_NUMBER=487
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
