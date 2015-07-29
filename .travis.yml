@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=postgresql-plpython3-9.4
+    - PACKAGE=gstreamer0.10-plugins-good
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=488
+    - ISSUE_NUMBER=489
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
