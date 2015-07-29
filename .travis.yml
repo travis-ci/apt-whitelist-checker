@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=liboce-visualization-dev
+    - PACKAGE=libxmu-headers
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=480
+    - ISSUE_NUMBER=481
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
