@@ -110,6 +110,8 @@ loop do
 
     if pkg =~ /[\s:,]/ && pkg !~ /:i386/
       comment = <<-COMMENT
+***This is an automated comment***
+
 `#{pkg}` does not appear to a package name on which our automation process can handle.
 
 APT packag request should be made for exactly one package, according to the form specified in
