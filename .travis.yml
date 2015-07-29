@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libllvm3.8
+    - PACKAGE=llvm-3.8-runtime
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=511
+    - ISSUE_NUMBER=512
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
