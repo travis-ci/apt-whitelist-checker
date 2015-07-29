@@ -41,6 +41,10 @@ case $CHECK_RESULT in
 		warn "Found occurrences of setuid."
 		echo -e "\n\n"
 		echo -e "If these occurrences of \`setuid\`/\`seteuid\`/\`setgid\` are deemed harmless, add the following packages: $(< packages)\n"
+		notice "Setting up Git"
+		git clone https://github.com/travis-ci/apt-package-whitelist.git
+		cp packages apt-package-whitelist # so make_pr.sh can find it
+		pushd apt-package-whitelist
 		env GITHUB_OAUTH_TOKEN=${GITHUB_OAUTH_TOKEN} ./make_pr.sh -y ${ISSUE_REPO} ${ISSUE_NUMBER}
 		cat <<-EOF > comment_payload
 {
@@ -53,6 +57,7 @@ case $CHECK_RESULT in
 		curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
 			-d "[\"apt-whitelist-check-run\"]" \
 			${GITHUB_ISSUES_URL}/labels
+		pushd
 		;;
 	$EXIT_SOURCE_NOT_FOUND)
 		warn "Source not found."
