@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=chromium-chromedriver
+    - PACKAGE=python-tk
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=574
+    - ISSUE_NUMBER=575
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
