@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=botan1.10
-    - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=446
+    - PACKAGE=
+    - ISSUE_REPO=
+    - ISSUE_NUMBER=
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi

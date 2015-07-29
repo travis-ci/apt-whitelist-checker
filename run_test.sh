@@ -32,7 +32,7 @@ case $CHECK_RESULT in
 		if [ $? -eq $EXIT_NOTHING_TO_COMMIT ]; then
 			COMMIT=$(git blame ubuntu-precise | grep ${PACKAGE} | cut -f1 -d' ' | sort | uniq | head -1)
 			curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
-				-d "{ \"body\": \"Failed to create a commit and a PR. This usually means that there has been a commit that resolved this request.\r\nInparticular, check https://github.com/travis-ci/apt-package-whitelist/commit/${COMMIT}\" }" \
+				-d "{ \"body\": \"***This is an automated comment.***\r\n\r\nFailed to create a commit and a PR. This usually means that there has been a commit that resolved this request.\r\nInparticular, check https://github.com/travis-ci/apt-package-whitelist/commit/${COMMIT}\" }" \
 				${GITHUB_ISSUES_URL}/comments
 		fi
 		popd
@@ -44,7 +44,7 @@ case $CHECK_RESULT in
 		env GITHUB_OAUTH_TOKEN=${GITHUB_OAUTH_TOKEN} ./make_pr.sh -y ${ISSUE_REPO} ${ISSUE_NUMBER}
 		cat <<-EOF > comment_payload
 {
-	"body" : "Ran tests and found setuid bits by purely textual search. Further analysis is required.\r\n\r\nIf these are found to be benign, examine http://github.com/travis-ci/apt-package-whitelist/tree/test-apt-package-whitelist-${ISSUE_NUMBER} and its PR.\r\n\r\nPackages found: $(< packages)\r\n\r\nSee ${BUILD_URL} for details."
+	"body" : "***This is an automated comment.***\r\n\r\nRan tests and found setuid bits by purely textual search. Further analysis is required.\r\n\r\nIf these are found to be benign, examine http://github.com/travis-ci/apt-package-whitelist/tree/test-apt-package-whitelist-${ISSUE_NUMBER} and its PR.\r\n\r\nPackages found: $(< packages)\r\n\r\nSee ${BUILD_URL} for details."
 }
 		EOF
 		curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
@@ -58,7 +58,7 @@ case $CHECK_RESULT in
 		warn "Source not found."
 		cat <<-EOF > comment_payload
 {
-	"body" : "Ran tests, but could not found source package. Either the source package for ${PACKAGE} does not exist, or the package needs an APT source. If you wisht to add an APT source, please follow the directions on https://github.com/travis-ci/apt-source-whitelist#source-approval-process. Build results: ${BUILD_URL}."
+	"body" : "***This is an automated comment.***\r\n\r\nRan tests, but could not found source package. Either the source package for ${PACKAGE} does not exist, or the package needs an APT source. If you wisht to add an APT source, please follow the directions on https://github.com/travis-ci/apt-source-whitelist#source-approval-process. Build results: ${BUILD_URL}."
 }
 		EOF
 		curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
