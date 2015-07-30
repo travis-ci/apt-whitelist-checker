@@ -42,6 +42,7 @@ def post_comment(conn:, issue:, comment:)
   end
 
   conn.post do |req|
+    logger.debug "comment_url=#{issue['comment_url']}"
     req.url "#{URI.parse(issue['comment_url']).path}"
     req.headers['Content-Type'] = 'application/json'
     req.headers['Authorization'] = "token #{ENV["GITHUB_OAUTH_TOKEN"]}"
@@ -59,6 +60,7 @@ def add_labels(conn:, issue:, labels:, new_labels:)
     next if labels.any? { |l| l['name'] == new_label }
 
     conn.post do |req|
+      logger.debug "url=#{issue['url']}"
       req.url "#{URI.parse(issue['url']).path}/labels"
       req.headers['Content-Type'] = 'application/json'
       req.headers['Authorization'] = "token #{ENV["GITHUB_OAUTH_TOKEN"]}"
