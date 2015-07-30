@@ -27,6 +27,10 @@ conn = Faraday.new(:url => github_api) do |faraday|
   faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
 end
 
+def logger
+  @logger
+end
+
 def next_link_in_headers(headers)
   # "<https://api.github.com/repositories/1420493/issues?labels=apt-whitelist&page=2>; rel=\"next\", <https://api.github.com/repositories/1420493/issues?labels=apt-whitelist&page=6>; rel=\"last\""
   next_link_text = headers['link'].split(',').find { |l| l.end_with? 'rel="next"' }
@@ -35,7 +39,7 @@ def next_link_in_headers(headers)
   end
 end
 
-def post_comment(conn:, issue:, comment:, logger: @logger)
+def post_comment(conn:, issue:, comment:)
   unless @run_it
     loggeer.debug "action=comment comment=#{comment}"
     return
@@ -50,7 +54,7 @@ def post_comment(conn:, issue:, comment:, logger: @logger)
   end
 end
 
-def add_labels(conn:, issue:, labels:, new_labels:, logger: @logger)
+def add_labels(conn:, issue:, labels:, new_labels:)
   unless @run_it
     logger.debug "action=add_labels labels=#{new_labels.inspect}"
     return
