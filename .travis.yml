@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=binutils-mingw-w64-i686
+    - PACKAGE=gcc-mingw-w64-i686
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=608
+    - ISSUE_NUMBER=609
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
