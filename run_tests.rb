@@ -121,7 +121,7 @@ If the source package of your requested package contains other related packages,
 have to open another one for those.
 (When in doubt, do.)
       COMMENT
-      add_labels(conn: conn, issue: t, labels: 'apt-whitelist-ambiguous')
+      add_labels(conn: conn, issue: t, labels: labels, new_labels: 'apt-whitelist-ambiguous')
 
       post_comment(conn: conn, issue: t, comment: comment)
 
