@@ -10,8 +10,6 @@ unless ENV['GITHUB_OAUTH_TOKEN']
   exit
 end
 
-attr_reader :logger
-
 @run_it    = !ENV['RUN'].to_s.empty?
 github_api = "https://api.github.com"
 travis_api = 'https://api.travis-ci.org'
@@ -37,7 +35,7 @@ def next_link_in_headers(headers)
   end
 end
 
-def post_comment(conn:, issue:, comment:)
+def post_comment(conn:, issue:, comment:, logger: @logger)
   unless @run_it
     loggeer.debug "action=comment comment=#{comment}"
     return
@@ -52,7 +50,7 @@ def post_comment(conn:, issue:, comment:)
   end
 end
 
-def add_labels(conn:, issue:, labels:, new_labels:)
+def add_labels(conn:, issue:, labels:, new_labels:, logger: @logger)
   unless @run_it
     logger.debug "action=add_labels labels=#{new_labels.inspect}"
     return
