@@ -46,8 +46,8 @@ def post_comment(conn:, issue:, comment:)
   end
 
   conn.post do |req|
-    logger.debug "comment_url=#{issue['comment_url']}"
-    req.url "#{URI.parse(issue['comment_url']).path}"
+    logger.debug "comments_url=#{issue['comments_url']}"
+    req.url "#{URI.parse(issue['comments_url']).path}"
     req.headers['Content-Type'] = 'application/json'
     req.headers['Authorization'] = "token #{ENV["GITHUB_OAUTH_TOKEN"]}"
     req.body = { "body" => comment }.to_json
