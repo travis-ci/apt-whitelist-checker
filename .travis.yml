@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-antlr
+    - PACKAGE=rdnssd
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=585
+    - ISSUE_NUMBER=586
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
