@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libscrypt-dev
+    - PACKAGE=libminiupnpc10
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=627
+    - ISSUE_NUMBER=628
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
