@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=liballegro5-dev
+    - PACKAGE=google-mock
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=646
+    - ISSUE_NUMBER=647
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
