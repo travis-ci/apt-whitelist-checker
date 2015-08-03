@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsdl2-ttf-dev
+    - PACKAGE=mp3gain
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=668
+    - ISSUE_NUMBER=669
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
