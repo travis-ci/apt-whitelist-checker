@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsdl2-ttf-dbg
+    - PACKAGE=libsdl2-ttf-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=667
+    - ISSUE_NUMBER=668
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
