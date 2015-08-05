@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsdl-ttf2.0-dev
+    - PACKAGE=heroku-toolbelt
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=717
+    - ISSUE_NUMBER=375
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
