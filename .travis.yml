@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsdl-mixer1.2-dev
+    - PACKAGE=libsdl-net1.2-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=715
+    - ISSUE_NUMBER=716
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
