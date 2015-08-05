@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=liburcu-dev
+    - PACKAGE=coinor-libcbc-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=700
+    - ISSUE_NUMBER=701
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
