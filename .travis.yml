@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libxapian-dev
+    - PACKAGE=amd-libopencl1
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=741
+    - ISSUE_NUMBER=742
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
