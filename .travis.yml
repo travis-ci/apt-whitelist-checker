@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libpci-dev
+    - PACKAGE=libdbus-1-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=757
+    - ISSUE_NUMBER=758
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
