@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python3-virtualenv
+    - PACKAGE=python3-setuptools
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=770
+    - ISSUE_NUMBER=771
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
