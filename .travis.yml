@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libgts-dev
+    - PACKAGE=beanstalkd
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=779
+    - ISSUE_NUMBER=780
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
