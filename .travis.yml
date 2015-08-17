@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=postgresql-plpython-9.4
+    - PACKAGE=luacheck
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=784
+    - ISSUE_NUMBER=785
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
