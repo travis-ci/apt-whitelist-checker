@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libogg-dev
+    - PACKAGE=gnupg-agent
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=782
+    - ISSUE_NUMBER=783
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
