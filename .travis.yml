@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libflann-dev
+    - PACKAGE=gtk-doc-tools
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=763
+    - ISSUE_NUMBER=764
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
