@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gtk-doc-tools
+    - PACKAGE=libjpeg62
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=764
+    - ISSUE_NUMBER=765
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
