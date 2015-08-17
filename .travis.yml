@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gcc-4.9-arm-linux-gnueabi
+    - PACKAGE=jimsh
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=802
+    - ISSUE_NUMBER=803
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
