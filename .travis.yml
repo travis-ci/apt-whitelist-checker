@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libglfw-dev
+    - PACKAGE=alsa-utils
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=862
+    - ISSUE_NUMBER=863
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
