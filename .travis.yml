@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=xserver-xorg-video-dummy
+    - PACKAGE=cx-freeze
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=855
+    - ISSUE_NUMBER=856
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
