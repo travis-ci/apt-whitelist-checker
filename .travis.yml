@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=xpra
+    - PACKAGE=libfox-1.6-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=852
+    - ISSUE_NUMBER=853
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
