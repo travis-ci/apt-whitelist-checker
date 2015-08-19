@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libstemmer-dev
+    - PACKAGE=fpc
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=873
+    - ISSUE_NUMBER=874
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
