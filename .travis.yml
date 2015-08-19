@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=fpc
+    - PACKAGE=fp-utils
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=874
+    - ISSUE_NUMBER=875
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
