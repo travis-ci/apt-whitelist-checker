@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libfox-1.6-dev
+    - PACKAGE=libfxscintilla-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=853
+    - ISSUE_NUMBER=854
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
