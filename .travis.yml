@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gcov
+    - PACKAGE=libglfw-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=861
+    - ISSUE_NUMBER=862
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
