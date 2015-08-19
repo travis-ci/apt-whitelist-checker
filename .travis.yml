@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=alsa-utils
+    - PACKAGE=alsa-oss
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=863
+    - ISSUE_NUMBER=864
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
