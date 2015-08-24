@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=cpp-ethereum
+    - PACKAGE=go-ethereum
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=923
+    - ISSUE_NUMBER=924
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
