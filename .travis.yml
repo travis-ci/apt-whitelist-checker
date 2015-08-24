@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libphash0-dev
+    - PACKAGE=libtidy-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=939
+    - ISSUE_NUMBER=940
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
