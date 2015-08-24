@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=postgresql-plpython-9.4
+    - PACKAGE=vsftpd
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=907
+    - ISSUE_NUMBER=908
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
