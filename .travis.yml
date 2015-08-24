@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-geoip
+    - PACKAGE=tofrodos
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=936
+    - ISSUE_NUMBER=937
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
