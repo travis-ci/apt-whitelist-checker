@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libnlopt-dev
+    - PACKAGE=libjson-c-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=981
+    - ISSUE_NUMBER=982
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
