@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=tcl-tls
+    - PACKAGE=tclxml
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=920
+    - ISSUE_NUMBER=921
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
