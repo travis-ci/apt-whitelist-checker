@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=lua-penlight
+    - PACKAGE=postgresql-9.3-slony1-2
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1014
+    - ISSUE_NUMBER=1015
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
