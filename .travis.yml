@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=lua-filesystem
+    - PACKAGE=lua-penlight
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1013
+    - ISSUE_NUMBER=1014
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
