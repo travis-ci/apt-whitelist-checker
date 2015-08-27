@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=puppet
+    - PACKAGE=beanstalkd
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1010
+    - ISSUE_NUMBER=1011
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
