@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=postgresql-9.3-slony1-2
+    - PACKAGE=python-libvirt
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1015
+    - ISSUE_NUMBER=1016
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
