@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsdl-gfx1.2-dev
+    - PACKAGE=nco
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1000
+    - ISSUE_NUMBER=1002
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
