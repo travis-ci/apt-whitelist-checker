@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsctp-dev
+    - PACKAGE=libradiusclient-ng-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1017
+    - ISSUE_NUMBER=1018
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
