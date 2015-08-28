@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=init-system-helpers
+    - PACKAGE=inotify-tools
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1048
+    - ISSUE_NUMBER=1051
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
