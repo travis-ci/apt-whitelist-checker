@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libdbusmenu-glib4
+    - PACKAGE=libindicator7
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1054
+    - ISSUE_NUMBER=1055
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
