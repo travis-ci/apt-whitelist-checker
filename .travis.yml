@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=puredata-dev
+    - PACKAGE=lzip
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1105
+    - ISSUE_NUMBER=1106
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
