@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libspatialindex-dev
+    - PACKAGE=libspatialindex1
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1100
+    - ISSUE_NUMBER=1101
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
