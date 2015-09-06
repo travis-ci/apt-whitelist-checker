@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=ubuntu-sdk
+    - PACKAGE=libsamplerate-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1124
+    - ISSUE_NUMBER=1126
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
