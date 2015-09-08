@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libcairomm-1.0-dev
+    - PACKAGE=ubuntu-sdk-libs-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1133
+    - ISSUE_NUMBER=1134
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
