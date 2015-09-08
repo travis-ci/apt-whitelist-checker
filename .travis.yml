@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=qtbase5-dev
+    - PACKAGE=libestr-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1135
+    - ISSUE_NUMBER=1136
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
