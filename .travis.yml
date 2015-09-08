@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=librelp-dev
+    - PACKAGE=liblogging-stdlog-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1137
+    - ISSUE_NUMBER=1138
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
