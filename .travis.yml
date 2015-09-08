@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=ubuntu-sdk-libs-dev
+    - PACKAGE=qtbase5-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1134
+    - ISSUE_NUMBER=1135
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
