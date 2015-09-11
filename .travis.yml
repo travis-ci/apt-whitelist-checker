@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=exif
+    - PACKAGE=libasio-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1160
+    - ISSUE_NUMBER=1161
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
