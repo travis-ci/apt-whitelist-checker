@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsdl2-net-dev
+    - PACKAGE=exif
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1159
+    - ISSUE_NUMBER=1160
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
