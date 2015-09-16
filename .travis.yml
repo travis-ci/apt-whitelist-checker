@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libamd2.2.0
+    - PACKAGE=libumf5.4.0
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1183
+    - ISSUE_NUMBER=1184
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
