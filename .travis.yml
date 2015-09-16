@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libopenal-dev:i386
+    - PACKAGE=linkchecker
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1186
+    - ISSUE_NUMBER=1187
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
