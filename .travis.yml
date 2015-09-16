@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=clang-3.8
+    - PACKAGE=libamd2.2.0
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1168
+    - ISSUE_NUMBER=1183
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
