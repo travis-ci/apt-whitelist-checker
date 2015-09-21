@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=mysql-server-5.6
+    - PACKAGE=twm
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1206
+    - ISSUE_NUMBER=1207
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
