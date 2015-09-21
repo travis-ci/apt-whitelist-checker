@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gputils
+    - PACKAGE=autogen
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1224
+    - ISSUE_NUMBER=1225
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
