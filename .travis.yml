@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libnuma-dev
+    - PACKAGE=python-networkx
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1219
+    - ISSUE_NUMBER=1220
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
