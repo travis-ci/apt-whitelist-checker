@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libmpdclient-dev
+    - PACKAGE=python-ply
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1226
+    - ISSUE_NUMBER=1227
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
