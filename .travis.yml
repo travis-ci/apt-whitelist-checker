@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libxml++2.6-dev
+    - PACKAGE=f2c
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1214
+    - ISSUE_NUMBER=1215
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
