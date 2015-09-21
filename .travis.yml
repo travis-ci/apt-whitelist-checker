@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-networkx
+    - PACKAGE=udisks2
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1220
+    - ISSUE_NUMBER=1221
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
