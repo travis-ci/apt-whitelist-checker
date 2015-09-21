@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-ply
+    - PACKAGE=python3-ply
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1227
+    - ISSUE_NUMBER=1228
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
