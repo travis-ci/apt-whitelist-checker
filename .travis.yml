@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=unicode-data
+    - PACKAGE=luasec
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1256
+    - ISSUE_NUMBER=1257
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
