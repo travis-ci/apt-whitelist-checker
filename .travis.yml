@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-psycopg2
+    - PACKAGE=mongodb-org-shell
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1282
+    - ISSUE_NUMBER=1283
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
