@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=mongodb-org-shell
+    - PACKAGE=llvm-toolchain-3.6
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1283
+    - ISSUE_NUMBER=1285
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
