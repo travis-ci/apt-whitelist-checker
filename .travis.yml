@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libxml-libxml-perl
+    - PACKAGE=libxml-libxslt-perl
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1294
+    - ISSUE_NUMBER=1295
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
