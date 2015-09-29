@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libpng++-dev
+    - PACKAGE=libxdo-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1291
+    - ISSUE_NUMBER=1292
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
