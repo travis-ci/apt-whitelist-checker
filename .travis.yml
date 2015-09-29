@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libio-socket-ssl-perl
+    - PACKAGE=libgit2-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1302
+    - ISSUE_NUMBER=1303
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
