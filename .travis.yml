@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libmath-bigint-perl
+    - PACKAGE=libpng++-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1290
+    - ISSUE_NUMBER=1291
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
