@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=emacs24-el
+    - PACKAGE=emacs-snapshot
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1335
+    - ISSUE_NUMBER=1336
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
