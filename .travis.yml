@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsubunit-dev
+    - PACKAGE=libglfw3-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1331
+    - ISSUE_NUMBER=1332
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
