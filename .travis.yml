@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libglade2-dev
+    - PACKAGE=libglpk-java
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1329
+    - ISSUE_NUMBER=1330
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
