@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=pdns-backend-pgsql
+    - PACKAGE=python-mpltoolkits.basemap
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1384
+    - ISSUE_NUMBER=1387
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
