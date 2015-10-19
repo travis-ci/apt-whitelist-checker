@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=fftw3-dev
+    - PACKAGE=gnustep-devel
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1362
+    - ISSUE_NUMBER=1363
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
