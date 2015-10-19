@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-netcdf
+    - PACKAGE=libstxxl-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1354
+    - ISSUE_NUMBER=1355
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
