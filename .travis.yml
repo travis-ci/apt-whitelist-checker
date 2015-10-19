@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libt1-dev
+    - PACKAGE=libc-client2007e-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1412
+    - ISSUE_NUMBER=1413
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
