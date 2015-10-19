@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-bottle
+    - PACKAGE=python-statsmodels
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1374
+    - ISSUE_NUMBER=1375
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
