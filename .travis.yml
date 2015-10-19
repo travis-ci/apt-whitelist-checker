@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=genext2fs
+    - PACKAGE=qemu-kvm-extras
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1415
+    - ISSUE_NUMBER=1416
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
