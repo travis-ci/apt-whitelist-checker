@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libglu-dev
+    - PACKAGE=libreoffice-writer
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1352
+    - ISSUE_NUMBER=1353
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
