@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libc-client2007e-dev
+    - PACKAGE=libxcb-image0-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1413
+    - ISSUE_NUMBER=1414
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
