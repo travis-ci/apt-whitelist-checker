@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-geopandas
+    - PACKAGE=python-fiona
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1376
+    - ISSUE_NUMBER=1377
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
