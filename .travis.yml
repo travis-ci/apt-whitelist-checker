@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libxcb-image0-dev
+    - PACKAGE=genext2fs
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1414
+    - ISSUE_NUMBER=1415
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
