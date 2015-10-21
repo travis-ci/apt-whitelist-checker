@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsigc++-2.0-dev
+    - PACKAGE=weka
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1494
+    - ISSUE_NUMBER=1495
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
