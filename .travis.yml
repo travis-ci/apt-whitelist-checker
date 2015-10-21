@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libtest-valgrind-perl
+    - PACKAGE=libsigc++-2.0-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1493
+    - ISSUE_NUMBER=1494
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
