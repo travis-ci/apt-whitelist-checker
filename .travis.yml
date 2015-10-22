@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=petsc-dev
+    - PACKAGE=libsrtp0-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1535
+    - ISSUE_NUMBER=1536
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
