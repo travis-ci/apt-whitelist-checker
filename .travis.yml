@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=clamav
+    - PACKAGE=lilypond
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1539
+    - ISSUE_NUMBER=1540
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
