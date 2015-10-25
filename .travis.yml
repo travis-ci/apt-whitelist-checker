@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libparse-yapp-perl
+    - PACKAGE=libtext-multimarkdown-perl
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1531
+    - ISSUE_NUMBER=1559
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
