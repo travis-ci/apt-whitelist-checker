@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libproxy-dev
+    - PACKAGE=libcanberra-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1567
+    - ISSUE_NUMBER=1568
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
