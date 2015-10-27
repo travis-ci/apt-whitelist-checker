@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=elasticsearch-1.7.3
+    - PACKAGE=python-twisted
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1564
+    - ISSUE_NUMBER=1565
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
