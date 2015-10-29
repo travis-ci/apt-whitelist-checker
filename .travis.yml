@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-pypdf
+    - PACKAGE=libsqliteodbc
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1596
+    - ISSUE_NUMBER=1597
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
