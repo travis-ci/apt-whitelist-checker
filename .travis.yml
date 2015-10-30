@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=php5-gearman
+    - PACKAGE=php5-mcrypt
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1607
+    - ISSUE_NUMBER=1608
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
