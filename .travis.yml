@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=redland-utils
+    - PACKAGE=raptor2-utils
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1616
+    - ISSUE_NUMBER=1617
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
