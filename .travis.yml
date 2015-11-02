@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=docbook2x
+    - PACKAGE=liblockdev1-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1630
+    - ISSUE_NUMBER=1631
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
