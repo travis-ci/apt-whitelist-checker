@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=php5-imagick
+    - PACKAGE=libmagickcore5-extra
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1625
+    - ISSUE_NUMBER=1626
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
