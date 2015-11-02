@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libbox2d-dev
+    - PACKAGE=libdbus-1-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1623
+    - ISSUE_NUMBER=1624
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
