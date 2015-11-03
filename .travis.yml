@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gcc-avr
+    - PACKAGE=fonts-ipafont-mincho
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1643
+    - ISSUE_NUMBER=1646
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
