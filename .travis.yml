@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-bs4
+    - PACKAGE=libsundials-serial
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1641
+    - ISSUE_NUMBER=1642
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
