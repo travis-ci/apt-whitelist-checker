@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libghc-sha-dev
+    - PACKAGE=libghc-stm-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1666
+    - ISSUE_NUMBER=1667
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
