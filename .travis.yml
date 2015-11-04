@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libghc-network-dev
+    - PACKAGE=libghc-parsec3-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1663
+    - ISSUE_NUMBER=1664
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
