@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=rpm2cpio
+    - PACKAGE=python-rpm
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1695
+    - ISSUE_NUMBER=1696
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
