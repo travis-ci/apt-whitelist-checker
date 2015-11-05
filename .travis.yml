@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-magic
+    - PACKAGE=python-enchant
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1697
+    - ISSUE_NUMBER=1698
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
