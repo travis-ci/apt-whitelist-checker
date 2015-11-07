@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsamplerate0-dev
+    - PACKAGE=libjack-jackd2-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1707
+    - ISSUE_NUMBER=1708
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
