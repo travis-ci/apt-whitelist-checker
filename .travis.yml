@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libantlr3c-dev
+    - PACKAGE=libgoogle-glog-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1734
+    - ISSUE_NUMBER=1735
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
