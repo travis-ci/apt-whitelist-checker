@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=screen
+    - PACKAGE=libdb5.1-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1736
+    - ISSUE_NUMBER=1737
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
