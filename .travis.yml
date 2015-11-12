@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=antlr3
+    - PACKAGE=libantlr3c-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1733
+    - ISSUE_NUMBER=1734
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
