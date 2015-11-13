@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=xfonts-100dpi
+    - PACKAGE=xfonts-75dpi
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1756
+    - ISSUE_NUMBER=1757
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
