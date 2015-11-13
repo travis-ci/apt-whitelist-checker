@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=arduino-mk
+    - PACKAGE=tor
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1751
+    - ISSUE_NUMBER=1753
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
