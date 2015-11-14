@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=msttcorefonts
+    - PACKAGE=splint
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1758
+    - ISSUE_NUMBER=1767
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
