@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gerbv
+    - PACKAGE=kcov
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1770
+    - ISSUE_NUMBER=1772
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
