@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libclang1-3.5
+    - PACKAGE=libclang1-3.3
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1783
+    - ISSUE_NUMBER=1784
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
