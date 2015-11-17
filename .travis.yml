@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=bioperl-run
+    - PACKAGE=pngquant
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1787
+    - ISSUE_NUMBER=1788
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
