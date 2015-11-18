@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=phpmd
+    - PACKAGE=php-codesniffer
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1804
+    - ISSUE_NUMBER=1805
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
