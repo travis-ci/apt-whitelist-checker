@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libmnl0
+    - PACKAGE=squid
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1809
+    - ISSUE_NUMBER=1810
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
