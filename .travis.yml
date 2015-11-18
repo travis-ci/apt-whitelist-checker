@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=liblog-log4perl-perl
+    - PACKAGE=phpmd
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1802
+    - ISSUE_NUMBER=1804
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
