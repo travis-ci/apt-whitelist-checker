@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libimobiledevice-utils
+    - PACKAGE=libqt5serialport5-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1829
+    - ISSUE_NUMBER=1830
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
