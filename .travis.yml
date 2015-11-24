@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libusb-1.0-dev
+    - PACKAGE=libimobiledevice-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1827
+    - ISSUE_NUMBER=1828
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
