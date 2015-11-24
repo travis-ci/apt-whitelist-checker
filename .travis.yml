@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libopenmpi1.6
+    - PACKAGE=libupnp-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1825
+    - ISSUE_NUMBER=1826
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
