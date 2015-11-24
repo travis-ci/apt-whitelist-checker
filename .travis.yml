@@ -8,9 +8,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libident-dev
+    - PACKAGE=libtolua++5.1-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1836
+    - ISSUE_NUMBER=1837
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
