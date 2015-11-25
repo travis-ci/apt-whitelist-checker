@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libpython3.5-dev:i386
+    - PACKAGE=unoconv
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1842
+    - ISSUE_NUMBER=1843
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
