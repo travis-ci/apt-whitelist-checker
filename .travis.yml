@@ -1,6 +1,8 @@
 language: ruby
 
-sudo: 9000
+sudo: required
+
+dist: trusty
 
 git:
   depth: 99999
