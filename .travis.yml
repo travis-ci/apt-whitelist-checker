@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libqt5serialport5-dev
+    - PACKAGE=python-dbus-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1830
+    - ISSUE_NUMBER=1831
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
