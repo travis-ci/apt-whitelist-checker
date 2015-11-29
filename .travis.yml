@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libdbus-1-dev
+    - PACKAGE=libv4l-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1877
+    - ISSUE_NUMBER=1878
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
