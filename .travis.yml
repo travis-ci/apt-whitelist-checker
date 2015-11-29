@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=flvtool2
+    - PACKAGE=libdbus-1-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1876
+    - ISSUE_NUMBER=1877
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
