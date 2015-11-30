@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=msp430mcu
+    - PACKAGE=libsvn-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1888
+    - ISSUE_NUMBER=1890
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
