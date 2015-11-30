@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=msp430-libc
+    - PACKAGE=msp430mcu
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1887
+    - ISSUE_NUMBER=1888
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
