@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libxmlrpc-c++8-dev
+    - PACKAGE=softhsm2
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1899
+    - ISSUE_NUMBER=1900
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
