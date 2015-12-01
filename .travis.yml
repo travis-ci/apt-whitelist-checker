@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=clang-tidy-3.5
+    - PACKAGE=ninja-build
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1907
+    - ISSUE_NUMBER=1908
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
