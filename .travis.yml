@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libmpg123-dev
+    - PACKAGE=libmms-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1941
+    - ISSUE_NUMBER=1942
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
