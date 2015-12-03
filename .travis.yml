@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libidn2-0-dev
+    - PACKAGE=libmpcdec-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1927
+    - ISSUE_NUMBER=1929
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
