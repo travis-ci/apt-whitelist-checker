@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libvisual-0.4-dev
+    - PACKAGE=libjack-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1936
+    - ISSUE_NUMBER=1937
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
