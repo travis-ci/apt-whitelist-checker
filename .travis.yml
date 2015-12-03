@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libmodplug-dev
+    - PACKAGE=libdiscid0-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1943
+    - ISSUE_NUMBER=1944
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
