@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python3-xlib
+    - PACKAGE=pike7.8
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1966
+    - ISSUE_NUMBER=1967
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
