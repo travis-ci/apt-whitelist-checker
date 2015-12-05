@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libavahi-client-dev
+    - PACKAGE=libavahi-glib-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1983
+    - ISSUE_NUMBER=1984
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
