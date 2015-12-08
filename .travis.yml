@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libkqueue0
+    - PACKAGE=libibverbs1
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2025
+    - ISSUE_NUMBER=2026
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
