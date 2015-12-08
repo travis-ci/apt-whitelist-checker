@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libkqueue-dev
+    - PACKAGE=libkqueue0
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2024
+    - ISSUE_NUMBER=2025
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
