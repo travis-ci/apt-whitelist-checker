@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libdiscid0-dev
+    - PACKAGE=libfreexl-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1944
+    - ISSUE_NUMBER=2039
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
