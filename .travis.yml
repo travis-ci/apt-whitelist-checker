@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=r-cran-randomforest
+    - PACKAGE=postgresql-9.1-plproxy
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2052
+    - ISSUE_NUMBER=2053
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
