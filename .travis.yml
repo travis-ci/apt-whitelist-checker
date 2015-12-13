@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libtokyocabinet-dev
+    - PACKAGE=libcpl-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2065
+    - ISSUE_NUMBER=2066
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
