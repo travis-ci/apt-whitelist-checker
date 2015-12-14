@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python3-gobject
+    - PACKAGE=libhmsbeagle1v5
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2073
+    - ISSUE_NUMBER=2074
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
