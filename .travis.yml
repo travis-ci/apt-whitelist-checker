@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python3-wheel
+    - PACKAGE=nsca-client
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2084
+    - ISSUE_NUMBER=2085
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
