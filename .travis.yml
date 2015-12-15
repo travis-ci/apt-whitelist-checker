@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libesmtp-dev
+    - PACKAGE=libriemann-client-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2087
+    - ISSUE_NUMBER=2088
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
