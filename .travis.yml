@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=source-highlight
+    - PACKAGE=cmake
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2078
+    - ISSUE_NUMBER=2079
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
