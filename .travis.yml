@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gem2deb
+    - PACKAGE=libcpputest-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2081
+    - ISSUE_NUMBER=2082
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
