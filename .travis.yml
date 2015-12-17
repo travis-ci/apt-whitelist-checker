@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=frc-toolchain
+    - PACKAGE=python3-bsddb3
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2107
+    - ISSUE_NUMBER=2108
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
