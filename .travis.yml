@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libshell-command-perl
+    - PACKAGE=cowsay
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2114
+    - ISSUE_NUMBER=2115
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
