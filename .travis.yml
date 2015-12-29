@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libcloog-ppl0
+    - PACKAGE=lua-cjson
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2134
+    - ISSUE_NUMBER=2135
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
