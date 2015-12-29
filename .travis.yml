@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libreoffice-writer
+    - PACKAGE=libcloog-ppl0
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=1353
+    - ISSUE_NUMBER=2134
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
