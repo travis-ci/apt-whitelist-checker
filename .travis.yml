@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=cabal-install-1.24
+    - PACKAGE=ghc-8.0.1
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2144
+    - ISSUE_NUMBER=2145
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
