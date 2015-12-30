@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=ghc-8.0.1
+    - PACKAGE=libzbar-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2145
+    - ISSUE_NUMBER=2146
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
