@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libx11-xbc-dev
+    - PACKAGE=libqt5x11extras5-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2161
+    - ISSUE_NUMBER=2162
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
