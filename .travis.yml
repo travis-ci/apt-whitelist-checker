@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libmpv-dev
+    - PACKAGE=timelimit
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2165
+    - ISSUE_NUMBER=2166
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
