@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libtommath-dev
+    - PACKAGE=python-lockfile
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2171
+    - ISSUE_NUMBER=2172
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
