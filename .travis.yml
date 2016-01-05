@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-lockfile
+    - PACKAGE=jshon
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2172
+    - ISSUE_NUMBER=2173
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
