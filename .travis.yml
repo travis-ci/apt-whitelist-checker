@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=r-cran-rcpp
+    - PACKAGE=openmpi-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2184
+    - ISSUE_NUMBER=2185
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
