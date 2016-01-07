@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=dejagnu
+    - PACKAGE=texlive-backports
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2193
+    - ISSUE_NUMBER=2194
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
