@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=alex-3.1.7
+    - PACKAGE=python-mako
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2210
+    - ISSUE_NUMBER=2211
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
