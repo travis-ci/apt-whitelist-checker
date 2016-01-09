@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gfortran-4.8:i386
+    - PACKAGE=alex-3.1.7
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2181
+    - ISSUE_NUMBER=2210
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
