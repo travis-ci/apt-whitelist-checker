@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gir1.2-wnck-3.0
+    - PACKAGE=desktop-file-utils
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2217
+    - ISSUE_NUMBER=2219
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
