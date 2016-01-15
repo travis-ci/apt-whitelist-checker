@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libbrlapi-dev
+    - PACKAGE=libiscsi-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2256
+    - ISSUE_NUMBER=2257
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
