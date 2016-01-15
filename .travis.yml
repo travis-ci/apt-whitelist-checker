@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libiscsi-dev
+    - PACKAGE=liblttng-ust-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2257
+    - ISSUE_NUMBER=2258
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
