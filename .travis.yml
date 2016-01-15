@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libgcrypt-dev
+    - PACKAGE=osmosis
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2265
+    - ISSUE_NUMBER=2267
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
