@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libusb-1.0-0-dev
+    - PACKAGE=libvte-2.90-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2262
+    - ISSUE_NUMBER=2263
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
