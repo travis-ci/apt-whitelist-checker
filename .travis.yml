@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=coinor-libcoinutils-dev
+    - PACKAGE=libdaemon-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2280
+    - ISSUE_NUMBER=2281
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
