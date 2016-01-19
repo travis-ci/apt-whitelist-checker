@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libstatgrab-dev
+    - PACKAGE=mongodb-org-tools
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2286
+    - ISSUE_NUMBER=2287
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
