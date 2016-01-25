@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=g++-4.5-multilib
+    - PACKAGE=libstdc++6:i386
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2311
+    - ISSUE_NUMBER=88
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
