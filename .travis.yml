@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libboost1.55-all-dev:i386
+    - PACKAGE=libhttp-parser-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2318
+    - ISSUE_NUMBER=2319
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
