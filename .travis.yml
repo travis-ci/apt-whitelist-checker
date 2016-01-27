@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=tk8.6
+    - PACKAGE=tcl8.6
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2328
+    - ISSUE_NUMBER=2329
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
