@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-lxml
+    - PACKAGE=pdftk
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2338
+    - ISSUE_NUMBER=2339
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
