@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=autoconf2.13
+    - PACKAGE=libppl-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2348
+    - ISSUE_NUMBER=2349
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
