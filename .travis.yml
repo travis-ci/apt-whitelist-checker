@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libopusfile-dev
+    - PACKAGE=FreeFem++
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2350
+    - ISSUE_NUMBER=2351
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
