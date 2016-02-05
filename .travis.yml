@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libxmltok1-dev
+    - PACKAGE=libvirt-bin
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2384
+    - ISSUE_NUMBER=2385
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
