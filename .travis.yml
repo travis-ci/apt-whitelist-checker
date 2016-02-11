@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=graphviz
+    - PACKAGE=bibutils
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2340
+    - ISSUE_NUMBER=2406
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
