@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=ptex-jtex
+    - PACKAGE=calibre
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2426
+    - ISSUE_NUMBER=2427
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
