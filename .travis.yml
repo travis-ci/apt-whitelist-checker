@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libasyncns-dev
+    - PACKAGE=ptex-jtex
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2424
+    - ISSUE_NUMBER=2426
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
