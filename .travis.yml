@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libbobcat-dev
+    - PACKAGE=minisat
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2433
+    - ISSUE_NUMBER=2434
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
