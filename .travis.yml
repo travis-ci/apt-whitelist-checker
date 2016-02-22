@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libowfat-dev
+    - PACKAGE=pep8
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2440
+    - ISSUE_NUMBER=2442
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
