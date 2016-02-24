@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=apt-build
+    - PACKAGE=bridge-utils
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2459
+    - ISSUE_NUMBER=2460
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
