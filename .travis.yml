@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=oracle-java7-unlimited-jce-policy
+    - PACKAGE=a2ps
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2452
+    - ISSUE_NUMBER=2455
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
