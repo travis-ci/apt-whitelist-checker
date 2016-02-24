@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=cfengine2
+    - PACKAGE=chkconfig
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2464
+    - ISSUE_NUMBER=2465
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
