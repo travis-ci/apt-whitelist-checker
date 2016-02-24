@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=dsniff
+    - PACKAGE=iputils-arping
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2461
+    - ISSUE_NUMBER=2462
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
