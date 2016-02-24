@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=yara
+    - PACKAGE=libvomsapi1
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2474
+    - ISSUE_NUMBER=2475
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
