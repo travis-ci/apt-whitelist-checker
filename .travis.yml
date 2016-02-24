@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=cksfv
+    - PACKAGE=cvsps
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2467
+    - ISSUE_NUMBER=2468
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
