@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gnome-mplayer
+    - PACKAGE=gphoto2
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2508
+    - ISSUE_NUMBER=2509
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
