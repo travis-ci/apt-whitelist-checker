@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=ipmitool
+    - PACKAGE=ipv6calc
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2518
+    - ISSUE_NUMBER=2519
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
