@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=openswan
+    - PACKAGE=g++-4.6-multilib
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2521
+    - ISSUE_NUMBER=2522
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
