@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=iperf
+    - PACKAGE=ipmitool
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2517
+    - ISSUE_NUMBER=2518
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
