@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=iftop
+    - PACKAGE=iperf
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2516
+    - ISSUE_NUMBER=2517
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
