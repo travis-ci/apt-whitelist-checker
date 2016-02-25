@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=ipv6calc
+    - PACKAGE=open-iscsi-utils
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2519
+    - ISSUE_NUMBER=2520
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
