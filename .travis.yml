@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=kplayer
+    - PACKAGE=libuser
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2550
+    - ISSUE_NUMBER=2551
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
