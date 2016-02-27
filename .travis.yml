@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=mdadm
+    - PACKAGE=mii-diag
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2563
+    - ISSUE_NUMBER=2564
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
