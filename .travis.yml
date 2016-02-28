@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=sharutils
+    - PACKAGE=sitecopy
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2587
+    - ISSUE_NUMBER=2588
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
