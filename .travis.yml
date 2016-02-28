@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=sysbench
+    - PACKAGE=xserver-xorg-input-synaptics
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2590
+    - ISSUE_NUMBER=2591
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
