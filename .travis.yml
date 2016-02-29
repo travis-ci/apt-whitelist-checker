@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libxkbcommon
+    - PACKAGE=libclang-3.6-dev:i386
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2601
+    - ISSUE_NUMBER=2623
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
