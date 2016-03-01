@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=golang-go
+    - PACKAGE=supervisor
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2632
+    - ISSUE_NUMBER=2633
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
