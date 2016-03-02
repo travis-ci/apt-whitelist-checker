@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libcimcclient0-dev
+    - PACKAGE=apport
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2641
+    - ISSUE_NUMBER=2642
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
