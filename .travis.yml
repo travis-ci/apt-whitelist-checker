@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=daemontools
+    - PACKAGE=libxcb-sync0-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2634
+    - ISSUE_NUMBER=2630
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
