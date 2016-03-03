@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=faketime
+    - PACKAGE=libdbd-mysql
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2646
+    - ISSUE_NUMBER=2647
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
