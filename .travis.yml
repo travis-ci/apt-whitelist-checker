@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=xfslibs-dev
+    - PACKAGE=php5-geoip
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2659
+    - ISSUE_NUMBER=2660
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
