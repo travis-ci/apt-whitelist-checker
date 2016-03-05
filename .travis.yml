@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=docbook-mathml
+    - PACKAGE=llvm-3.9
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2664
+    - ISSUE_NUMBER=2670
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
