@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=llvm-3.9-dev
+    - PACKAGE=emacs24-gtk
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2671
+    - ISSUE_NUMBER=2672
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
