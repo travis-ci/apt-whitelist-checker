@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libvte-dev
+    - PACKAGE=libwnck-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2675
+    - ISSUE_NUMBER=2677
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
