@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=cdbs
+    - PACKAGE=c2hs
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2689
+    - ISSUE_NUMBER=2690
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
