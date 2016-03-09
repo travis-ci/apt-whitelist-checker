@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libavl-dev
+    - PACKAGE=pamtester
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2681
+    - ISSUE_NUMBER=2687
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
