@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=lldb-3.4
+    - PACKAGE=libmbedtls-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2712
+    - ISSUE_NUMBER=2713
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
