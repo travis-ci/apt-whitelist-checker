@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libupower-glib-dev
+    - PACKAGE=wayland
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2724
+    - ISSUE_NUMBER=2725
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
