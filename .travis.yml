@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libxxf86vm-dev
+    - PACKAGE=libupower-glib-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2721
+    - ISSUE_NUMBER=2724
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
