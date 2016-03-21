@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=clamav-deamon
+    - PACKAGE=libsystemd-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2729
+    - ISSUE_NUMBER=2730
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
