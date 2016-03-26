@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=javahelp2
+    - PACKAGE=pv
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2749
+    - ISSUE_NUMBER=2750
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
