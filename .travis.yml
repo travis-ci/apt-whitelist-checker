@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=puredata-dev
+    - PACKAGE=libdevel-trace-perl
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2775
+    - ISSUE_NUMBER=2776
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
