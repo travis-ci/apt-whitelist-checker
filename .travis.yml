@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=kernel-package
+    - PACKAGE=libmpc.so.3
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2773
+    - ISSUE_NUMBER=2774
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
