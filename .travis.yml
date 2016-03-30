@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=uuid-runtime
+    - PACKAGE=kernel-package
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2772
+    - ISSUE_NUMBER=2773
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
