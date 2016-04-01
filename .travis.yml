@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libnfs-dev
+    - PACKAGE=qttranslations5-l10n
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2788
+    - ISSUE_NUMBER=2791
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
