@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=qttranslations5-l10n
+    - PACKAGE=mono-snapshot-common
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2791
+    - ISSUE_NUMBER=2793
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
