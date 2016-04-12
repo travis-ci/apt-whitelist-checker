@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=seqtk
+    - PACKAGE=libc6-dev-arm64-cross
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2811
+    - ISSUE_NUMBER=2812
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
