@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libc6-dev-arm64-cross
+    - PACKAGE=lldb-3.3
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2812
+    - ISSUE_NUMBER=2815
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
