@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=yasm
+    - PACKAGE=libexodusii-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2817
+    - ISSUE_NUMBER=2821
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
