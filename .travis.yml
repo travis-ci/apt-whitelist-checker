@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=yasm
+    - PACKAGE=mongodb-org-tools
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2817
+    - ISSUE_NUMBER=2825
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
