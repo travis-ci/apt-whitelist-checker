@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=mongodb-org-tools
+    - PACKAGE=omniidl
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2825
+    - ISSUE_NUMBER=2826
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
