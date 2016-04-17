@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libc6-dev-arm64-cross
+    - PACKAGE=lua-ldoc
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2842
+    - ISSUE_NUMBER=2843
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
