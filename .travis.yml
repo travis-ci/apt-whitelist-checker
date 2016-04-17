@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libxcb-test0-dev
+    - PACKAGE=libxdg-basedir-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2845
+    - ISSUE_NUMBER=2846
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
