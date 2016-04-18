@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python3-flask
+    - PACKAGE=libxcb-xtest0-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2856
+    - ISSUE_NUMBER=2857
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
