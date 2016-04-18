@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libshp-dev
+    - PACKAGE=libsndfile
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2858
+    - ISSUE_NUMBER=2859
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
