@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libxcb-xtest0-dev
+    - PACKAGE=libshp-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2857
+    - ISSUE_NUMBER=2858
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
