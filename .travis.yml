@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=neko
+    - PACKAGE=autoconf2.13
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2867
+    - ISSUE_NUMBER=2869
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
