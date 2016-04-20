@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libgcrypt20
+    - PACKAGE=gvfs-bin
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2872
+    - ISSUE_NUMBER=2873
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
