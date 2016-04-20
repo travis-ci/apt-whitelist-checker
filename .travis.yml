@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libmetis-dev
+    - PACKAGE=librpm3
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2874
+    - ISSUE_NUMBER=2875
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
