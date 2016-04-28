@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=qtlocation5-dev
+    - PACKAGE=libseccomp-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2900
+    - ISSUE_NUMBER=2903
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
