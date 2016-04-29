@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libgnome2-dev
+    - PACKAGE=libgoocanvas-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2913
+    - ISSUE_NUMBER=2914
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
