@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=g++-5-mingw-w64-i686
+    - PACKAGE=gcc-5-mingw-w64-x86-64
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2909
+    - ISSUE_NUMBER=2910
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
