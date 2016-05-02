@@ -34,6 +34,8 @@ case $CHECK_RESULT in
 			curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
 				-d "{ \"body\": \"***This is an automated comment.***\r\n\r\nFailed to create a commit and a PR. This usually means that there has been a commit that resolved this request.\r\nInparticular, check https://github.com/travis-ci/apt-package-whitelist/commit/${COMMIT}\" }" \
 				${GITHUB_ISSUES_URL}/comments
+		elif [ $? -eq $EXIT_DUPLICATE_EXISTS ]; then
+			warn "Duplicate exists"
 		fi
 		popd
 		;;
@@ -46,6 +48,12 @@ case $CHECK_RESULT in
 		cp packages apt-package-whitelist # so make_pr.sh can find it
 		pushd apt-package-whitelist
 		env GITHUB_OAUTH_TOKEN=${GITHUB_OAUTH_TOKEN} ./make_pr.sh -s -y ${ISSUE_REPO} ${ISSUE_NUMBER}
+
+		if [ $? -eq $EXIT_DUPLICATE_EXISTS ]; then
+			warn "Duplicate exists"
+			break
+		fi
+
 		cat <<-EOF > comment_payload
 {
 	"body" : "***This is an automated comment.***\r\n\r\nRan tests and found setuid bits by purely textual search. Further analysis is required.\r\n\r\nIf these are found to be benign, examine http://github.com/travis-ci/apt-package-whitelist/compare/test-apt-package-whitelist-${ISSUE_NUMBER} and its PR.\r\n\r\nPackages found: $(< packages)\r\n\r\nSee ${BUILD_URL} for details."
