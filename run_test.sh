@@ -36,6 +36,7 @@ case $CHECK_RESULT in
 				${GITHUB_ISSUES_URL}/comments
 		elif [ $? -eq $EXIT_DUPLICATE_EXISTS ]; then
 			warn "Duplicate exists"
+			exit $EXIT_DUPLICATE_EXISTS
 		fi
 		popd
 		;;
@@ -51,7 +52,7 @@ case $CHECK_RESULT in
 
 		if [ $? -eq $EXIT_DUPLICATE_EXISTS ]; then
 			warn "Duplicate exists"
-			break
+			exit $EXIT_DUPLICATE_EXISTS
 		fi
 
 		cat <<-EOF > comment_payload
