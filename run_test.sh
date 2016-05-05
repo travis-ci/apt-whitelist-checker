@@ -34,6 +34,9 @@ case $CHECK_RESULT in
 			curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
 				-d "{ \"body\": \"***This is an automated comment.***\r\n\r\nFailed to create a commit and a PR. This usually means that there has been a commit that resolved this request.\r\nInparticular, check https://github.com/travis-ci/apt-package-whitelist/commit/${COMMIT}\" }" \
 				${GITHUB_ISSUES_URL}/comments
+			curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
+				-d "[\"apt-whitelist-check-run\"]" \
+				${GITHUB_ISSUES_URL}/labels
 		elif [ $? -eq $EXIT_DUPLICATE_EXISTS ]; then
 			warn "Duplicate exists"
 			exit $EXIT_DUPLICATE_EXISTS
