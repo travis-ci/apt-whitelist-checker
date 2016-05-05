@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libxmmsclient++-glib-dev
+    - PACKAGE=libirrlicht1.8
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2921
+    - ISSUE_NUMBER=2931
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
