@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libgee-dev
+    - PACKAGE=libgee-0.8-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2943
+    - ISSUE_NUMBER=2944
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
