@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libX11-dev
+    - PACKAGE=libblocksruntime-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2947
+    - ISSUE_NUMBER=2949
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
