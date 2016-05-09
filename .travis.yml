@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libkpathsea-dev
+    - PACKAGE=postgresql-9.5-postgis-2.2
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2968
+    - ISSUE_NUMBER=2969
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
