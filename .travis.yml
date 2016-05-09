@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=latexml
+    - PACKAGE=python-unittest2
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2962
+    - ISSUE_NUMBER=2963
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
