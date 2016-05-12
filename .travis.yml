@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=liblog4cplus-dev
+    - PACKAGE=liberasurecode-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=2994
+    - ISSUE_NUMBER=2995
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
