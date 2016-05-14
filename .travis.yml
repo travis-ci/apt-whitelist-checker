@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libargtable2-dev
+    - PACKAGE=libuuid-tiny-perl
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3006
+    - ISSUE_NUMBER=3007
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
