@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=swig3.0
+    - PACKAGE=libusb-1.0-0
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3016
+    - ISSUE_NUMBER=3017
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
