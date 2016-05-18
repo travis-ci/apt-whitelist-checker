@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libgstreamer-plugins-base1.0-dev
+    - PACKAGE=g++-6
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3020
+    - ISSUE_NUMBER=3021
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
