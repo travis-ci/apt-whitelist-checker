@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python3-dnspython
+    - PACKAGE=python-xapian
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3013
+    - ISSUE_NUMBER=3015
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
