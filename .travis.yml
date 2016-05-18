@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libusb-1.0-0
+    - PACKAGE=libusb-1.0-0-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3017
+    - ISSUE_NUMBER=3018
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
