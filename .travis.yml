@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-stdnum
+    - PACKAGE=python-irc
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3027
+    - ISSUE_NUMBER=3028
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
