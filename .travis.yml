@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-unicodecsv
+    - PACKAGE=python-stdnum
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3026
+    - ISSUE_NUMBER=3027
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
