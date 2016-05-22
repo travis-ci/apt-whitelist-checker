@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libgpac-dev
+    - PACKAGE=libbtparse-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3036
+    - ISSUE_NUMBER=3037
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
