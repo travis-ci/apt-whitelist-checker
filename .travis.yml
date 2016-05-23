@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libbtparse-dev
+    - PACKAGE=libhdf5-7
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3037
+    - ISSUE_NUMBER=3042
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
