@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python3-blockdiag
+    - PACKAGE=ghc-8.0.2
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3043
+    - ISSUE_NUMBER=3045
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
