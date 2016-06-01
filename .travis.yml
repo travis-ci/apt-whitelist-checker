@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libogre-dev
+    - PACKAGE=iproute2
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3055
+    - ISSUE_NUMBER=3056
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
