@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-flake8
+    - PACKAGE=python-flickrapi
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3080
+    - ISSUE_NUMBER=3081
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
