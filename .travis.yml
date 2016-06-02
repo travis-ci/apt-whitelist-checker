@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-enum34
+    - PACKAGE=python-pycparser
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3067
+    - ISSUE_NUMBER=3068
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
