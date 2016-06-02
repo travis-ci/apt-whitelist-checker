@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-flickrapi
+    - PACKAGE=python-urllib3
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3081
+    - ISSUE_NUMBER=3082
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
