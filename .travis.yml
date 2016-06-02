@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=pydocstyle
+    - PACKAGE=python-mccabe
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3086
+    - ISSUE_NUMBER=3087
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
