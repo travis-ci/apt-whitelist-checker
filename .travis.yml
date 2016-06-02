@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-urllib3
+    - PACKAGE=python-ndg-httpsclient
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3082
+    - ISSUE_NUMBER=3083
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
