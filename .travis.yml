@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-crontab
+    - PACKAGE=python-requests-oauthlib
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3064
+    - ISSUE_NUMBER=3065
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
