@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-bz2file
+    - PACKAGE=python-crontab
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3063
+    - ISSUE_NUMBER=3064
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
