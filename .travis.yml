@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=pep257
+    - PACKAGE=python-chardet
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3088
+    - ISSUE_NUMBER=3116
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
