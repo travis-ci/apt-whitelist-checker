@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=httpd
+    - PACKAGE=httpd-tools
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3122
+    - ISSUE_NUMBER=3123
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
