@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libstxxl-dev:i386
+    - PACKAGE=libstxxl1:i386
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3129
+    - ISSUE_NUMBER=3130
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
