@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libgdal-dev:i386
+    - PACKAGE=libluabind-dev:i386
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3133
+    - ISSUE_NUMBER=3134
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
