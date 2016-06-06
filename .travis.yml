@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libzip-dev:i386
+    - PACKAGE=libtbb-dev:i386
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3131
+    - ISSUE_NUMBER=3132
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
