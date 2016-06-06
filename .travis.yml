@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=ghc-ppa-tools
+    - PACKAGE=apache2-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3127
+    - ISSUE_NUMBER=3128
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
