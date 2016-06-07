@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libphonon4qt5-dev
+    - PACKAGE=libphonon4qt5experimental4
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3143
+    - ISSUE_NUMBER=3144
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
