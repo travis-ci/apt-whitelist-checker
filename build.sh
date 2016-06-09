@@ -22,7 +22,7 @@ apt-cache policy ${PKG}
 apt-get source ${PKG} 2>&1 | tee apt-get-result.log
 fold_end fetch_src_pkg
 
-if egrep 'Unable to find a source package for' apt-get-result.log 2>/dev/null; then
+if egrep 'Unable to (find a source package for|locate package)' apt-get-result.log 2>/dev/null; then
 	exit $EXIT_SOURCE_NOT_FOUND
 fi
 
