@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libwxgtk3.0-dev
+    - PACKAGE=mapnik
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3157
+    - ISSUE_NUMBER=3158
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
