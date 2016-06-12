@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=mapnik-util
+    - PACKAGE=snmp
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3160
+    - ISSUE_NUMBER=3163
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
