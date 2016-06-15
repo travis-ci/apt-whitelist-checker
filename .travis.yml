@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=mecab-ipadic-utf8
+    - PACKAGE=bedtools
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3167
+    - ISSUE_NUMBER=3169
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
