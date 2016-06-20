@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libpng16
+    - PACKAGE=libqd-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3171
+    - ISSUE_NUMBER=3172
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
