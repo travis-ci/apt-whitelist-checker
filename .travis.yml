@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libqd-dev
+    - PACKAGE=krb5-user
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3172
+    - ISSUE_NUMBER=3173
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
