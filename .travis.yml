@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=nekotools
+    - PACKAGE=r-cran-rsymphony
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3184
+    - ISSUE_NUMBER=3185
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
