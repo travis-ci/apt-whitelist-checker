@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=r-cran-rsymphony
+    - PACKAGE=python-polib
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3185
+    - ISSUE_NUMBER=3187
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
