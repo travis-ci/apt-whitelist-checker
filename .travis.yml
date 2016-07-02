@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-polib
+    - PACKAGE=binutils-arm-none-eabi
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3187
+    - ISSUE_NUMBER=3188
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
