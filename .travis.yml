@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libunity-dev
+    - PACKAGE=libva-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3191
+    - ISSUE_NUMBER=3192
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
