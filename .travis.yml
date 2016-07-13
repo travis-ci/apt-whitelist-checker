@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=mingw-w64-i686-dev
+    - PACKAGE=libewf
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3202
+    - ISSUE_NUMBER=3205
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
