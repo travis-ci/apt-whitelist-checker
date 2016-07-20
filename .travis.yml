@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=ghc-7.0.4-dyn
+    - PACKAGE=ghc-7.2.2-prof
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3230
+    - ISSUE_NUMBER=3231
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
