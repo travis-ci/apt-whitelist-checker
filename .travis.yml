@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=hugo
+    - PACKAGE=ghc-7.0.4-prof
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3227
+    - ISSUE_NUMBER=3229
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
