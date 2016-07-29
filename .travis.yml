@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-pymc
+    - PACKAGE=cscope
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3253
+    - ISSUE_NUMBER=3254
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
