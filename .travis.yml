@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=nethogs
+    - PACKAGE=network-manager
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3269
+    - ISSUE_NUMBER=3270
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
