@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=xvnc4viewer
+    - PACKAGE=zopfli
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3271
+    - ISSUE_NUMBER=3272
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
