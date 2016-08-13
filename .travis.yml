@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libvulkan-dev
+    - PACKAGE=posh
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3277
+    - ISSUE_NUMBER=3278
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
