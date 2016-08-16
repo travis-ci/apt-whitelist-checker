@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=openssh-blacklist
+    - PACKAGE=openssh-blacklist-extra
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3292
+    - ISSUE_NUMBER=3293
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
