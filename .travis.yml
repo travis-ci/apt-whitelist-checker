@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-pysnmp4
+    - PACKAGE=deutex
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3331
+    - ISSUE_NUMBER=3332
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
