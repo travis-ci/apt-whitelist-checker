@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=automake1.11
+    - PACKAGE=paml
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3315
+    - ISSUE_NUMBER=3316
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
