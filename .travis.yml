@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=zipalign
+    - PACKAGE=autoconf2.64
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3313
+    - ISSUE_NUMBER=3314
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
