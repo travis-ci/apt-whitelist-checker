@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=exiftool
+    - PACKAGE=anki
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3338
+    - ISSUE_NUMBER=3341
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
