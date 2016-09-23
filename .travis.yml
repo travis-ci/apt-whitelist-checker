@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libjson-spirit-dev
+    - PACKAGE=libucl1
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3346
+    - ISSUE_NUMBER=3347
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
