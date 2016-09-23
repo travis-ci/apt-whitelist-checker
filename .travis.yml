@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsystemd-journal-dev
+    - PACKAGE=grub2-common
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3327
+    - ISSUE_NUMBER=3328
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
