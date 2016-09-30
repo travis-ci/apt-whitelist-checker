@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libcrypt-ssleay-perl
+    - PACKAGE=librados-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3380
+    - ISSUE_NUMBER=3382
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
