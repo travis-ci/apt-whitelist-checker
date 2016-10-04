@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libdc1394-22-dev
+    - PACKAGE=root-system
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3394
+    - ISSUE_NUMBER=3396
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
