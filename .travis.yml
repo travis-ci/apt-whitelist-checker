@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=swig2.0
+    - PACKAGE=libsbc-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3409
+    - ISSUE_NUMBER=3411
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
