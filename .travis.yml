@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libfdk-aac-dev
+    - PACKAGE=libortp-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3412
+    - ISSUE_NUMBER=3413
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
