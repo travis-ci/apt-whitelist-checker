@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libuninameslist-dev
+    - PACKAGE=mummer
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3439
+    - ISSUE_NUMBER=3444
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
