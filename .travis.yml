@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsane:i386
+    - PACKAGE=node-less
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3451
+    - ISSUE_NUMBER=3454
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
