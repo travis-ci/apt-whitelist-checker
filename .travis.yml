@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=datefudge
+    - PACKAGE=libgphoto2-2:i386
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3448
+    - ISSUE_NUMBER=3450
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
