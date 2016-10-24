@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=node-less
+    - PACKAGE=libglew1.6-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3454
+    - ISSUE_NUMBER=3457
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
