@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libvtk5-dev
+    - PACKAGE=g++-4.8-arm-linux-gnueabihf
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3463
+    - ISSUE_NUMBER=3464
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
