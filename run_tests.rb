@@ -16,7 +16,7 @@ travis_api = 'https://api.travis-ci.org'
 owner      = 'travis-ci'
 repo       = ENV['REPO'] || begin; puts "ENV['REPO'] undefined"; exit; end
 SINCE      = '2015-07-01'
-DIST       = %w(precise trusty)
+DISTS      = %w(precise trusty)
 
 @logger = Logger.new(STDOUT)
 log_level = ENV['LOG_LEVEL'] || 'warn'
