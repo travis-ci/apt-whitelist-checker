@@ -21,7 +21,7 @@ before_install:
   - sudo apt-get install -yqq sshpass
   - if ! command -v docker ; then curl -sSL https://get.docker.io | bash; fi
   - sudo usermod -a -G docker travis
-  - if [ $DIST = 'precise' ]; then IMAGE=quay.io/travisci/travis-node-js; else IMAGE=travisci/ci-connie; fi
+  - if [[ $DIST = 'precise' ]]; then IMAGE=quay.io/travisci/travis-node-js; else IMAGE=travisci/ci-connie; fi
   - docker pull $IMAGE:latest
   - jq --version || sudo curl -sSL -o /usr/local/bin/jq http://stedolan.github.io/jq/download/linux64/jq && sudo chmod 0755 /usr/local/bin/jq
   - docker images | grep -q -E '^travis\\s+\\bnode-js\\b\\s+' || docker tag ${IMAGE}:latest travis:node-js
