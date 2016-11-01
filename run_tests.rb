@@ -16,6 +16,7 @@ travis_api = 'https://api.travis-ci.org'
 owner      = 'travis-ci'
 repo       = ENV['REPO'] || begin; puts "ENV['REPO'] undefined"; exit; end
 SINCE      = '2015-07-01'
+DIST       = %w(precise trusty)
 
 @logger = Logger.new(STDOUT)
 log_level = ENV['LOG_LEVEL'] || 'warn'
@@ -96,7 +97,7 @@ loop do
     logger.info "issue=#{t['html_url']}"
     logger.debug "title=#{title}"
 
-    match_data = /\A(?i:APT(?<source> source)? whitelist request for (?<package_name>.+))\z/.match(title)
+    match_data = /\A(?i:APT(?<source> source)? whitelist request for (?<package_name>\S+)( in (?<dist>#{DISTS.join('|')}))?)\z/.match(title)
 
     next unless match_data
 
@@ -106,6 +107,8 @@ loop do
     end
 
     pkg = match_data[:package_name]
+
+    dist = match_data[:dist] || 'precise'
 
     if match_data[:source]
       logger.debug "message=source_request"
@@ -146,6 +149,7 @@ have to open another one for those.
     system("sed -i -e 's/PACKAGE=.*/PACKAGE=#{pkg}/' .travis.yml")
     system("sed -i -e 's|ISSUE_REPO=.*|ISSUE_REPO=#{repo}|' .travis.yml")
     system("sed -i -e 's/ISSUE_NUMBER=.*/ISSUE_NUMBER=#{issue_number}/' .travis.yml")
+    system("sed -i -e 's/DIST=.*/DIST=#{dist}/' .travis.yml")
 
     comment = "Run test for #{owner}/#{repo}##{issue_number}. (#{pkg})"
 
