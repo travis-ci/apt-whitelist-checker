@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=mpg123
+    - PACKAGE=haveged
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3466
-    - DIST=precise
+    - ISSUE_NUMBER=3465
+    - DIST=Trusty
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
