@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=cvlc
+    - PACKAGE=inspec
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3467
+    - ISSUE_NUMBER=3468
     - DIST=precise
 
 before_install:
