@@ -30,6 +30,7 @@ before_install:
   - docker ps
   - for key_type in rsa dsa ecdsa; do docker exec $(< docker_id) ssh-keygen -f /etc/ssh/ssh_host_${key_type}_key -N '' -t ${key_type} || true; done
   - docker exec -it $(< docker_id) service ssh restart
+  - sleep 5
   - until ruby -rsocket -rtimeout -e "Timeout::timeout(30) { TCPSocket.new('$(< docker_ip_address)',22) }"; do sleep 1; echo -n .; done
 
 install:
