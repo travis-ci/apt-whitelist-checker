@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-pil
+    - PACKAGE=haveged
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3481
+    - ISSUE_NUMBER=3465
     - DIST=Trusty
 
 before_install:
