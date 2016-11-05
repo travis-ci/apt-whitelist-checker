@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=ucspi-tcp
+    - PACKAGE=autoconf
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3485
-    - DIST=precise
+    - ISSUE_NUMBER=3486
+    - DIST=Trusty
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
