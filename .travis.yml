@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libespeak1
+    - PACKAGE=libpcap-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3489
+    - ISSUE_NUMBER=3490
     - DIST=Trusty
 
 before_install:
