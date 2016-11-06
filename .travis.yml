@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libssl-dev
+    - PACKAGE=libgsl0-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3493
+    - ISSUE_NUMBER=3494
     - DIST=Trusty
 
 before_install:
