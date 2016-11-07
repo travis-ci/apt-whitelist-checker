@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libtool
+    - PACKAGE=libespeak1
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3488
+    - ISSUE_NUMBER=3489
     - DIST=Trusty
 
 before_install:
