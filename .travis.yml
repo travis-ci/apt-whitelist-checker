@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsctp-dev
+    - PACKAGE=libncurses5-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3491
+    - ISSUE_NUMBER=3492
     - DIST=Trusty
 
 before_install:
