@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libleveldb-dev
+    - PACKAGE=libcereal-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3497
+    - ISSUE_NUMBER=3498
     - DIST=precise
 
 before_install:
