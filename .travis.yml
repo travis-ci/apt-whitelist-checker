@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libleveldb-dev
+    - PACKAGE=libudns-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3497
+    - ISSUE_NUMBER=3499
     - DIST=precise
 
 before_install:
