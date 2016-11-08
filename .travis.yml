@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libcereal-dev
+    - PACKAGE=texlive-latex-unicode-math
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3498
+    - ISSUE_NUMBER=3501
     - DIST=precise
 
 before_install:
