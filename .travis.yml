@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libncurses5-dev
+    - PACKAGE=libssl-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3492
+    - ISSUE_NUMBER=3493
     - DIST=trusty
 
 before_install:
