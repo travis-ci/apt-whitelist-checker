@@ -10,10 +10,10 @@ GITHUB_ISSUES_URL="https://api.github.com/repos/travis-ci/${ISSUE_REPO}/issues/$
 
 echo "Copying build.sh"
 cp build.sh common.sh add_sources.rb $HOME/build
-docker exec $(< docker_id) mv $HOME/build/{build.sh,common.sh,add_sources.rb} $HOME
+docker exec -u travis $(< docker_id) mv $HOME/build/{build.sh,common.sh,add_sources.rb} $HOME
 
 echo "Running build.sh"
-docker exec $(< docker_id) bash build.sh ${PACKAGE}
+docker exec -u travis $(< docker_id) bash build.sh ${PACKAGE}
 
 CHECK_RESULT=$?
 
