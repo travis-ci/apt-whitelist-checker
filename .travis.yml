@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libpcre3-dev
+    - PACKAGE=python-pytest
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3477
+    - ISSUE_NUMBER=3479
     - DIST=trusty
 
 before_install:
