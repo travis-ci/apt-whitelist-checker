@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libudns-dev
+    - PACKAGE=paxctl
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3499
+    - ISSUE_NUMBER=3500
     - DIST=precise
 
 before_install:
