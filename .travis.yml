@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsdl2-dev
+    - PACKAGE=libspeexdsp-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3505
-    - DIST=trusty
+    - ISSUE_NUMBER=3506
+    - DIST=precise
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
