@@ -108,7 +108,7 @@ loop do
 
     pkg = match_data[:package_name]
 
-    dist = match_data[:dist] || 'precise'
+    dist = match_data[:dist].downcase || 'precise'
 
     if match_data[:source]
       logger.debug "message=source_request"
