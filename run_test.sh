@@ -28,7 +28,7 @@ case $CHECK_RESULT in
 		git clone https://github.com/travis-ci/apt-package-whitelist.git
 		cp packages apt-package-whitelist # so make_pr.sh can find it
 		pushd apt-package-whitelist
-		env GITHUB_OAUTH_TOKEN=${GITHUB_OAUTH_TOKEN} ./make_pr.sh -y ${ISSUE_REPO} ${ISSUE_NUMBER}
+		env GITHUB_OAUTH_TOKEN=${GITHUB_OAUTH_TOKEN} ./make_pr.sh -y ${ISSUE_REPO} ${ISSUE_NUMBER} ${DIST}
 		if [ $? -eq $EXIT_NOTHING_TO_COMMIT ]; then
 			COMMIT=$(git blame ubuntu-precise | grep ${PACKAGE} | cut -f1 -d' ' | sort | uniq | head -1)
 			curl -X POST -sS -H "Content-Type: application/json" -H "Authorization: token ${GITHUB_OAUTH_TOKEN}" \
@@ -51,7 +51,7 @@ case $CHECK_RESULT in
 		git clone https://github.com/travis-ci/apt-package-whitelist.git
 		cp packages apt-package-whitelist # so make_pr.sh can find it
 		pushd apt-package-whitelist
-		env GITHUB_OAUTH_TOKEN=${GITHUB_OAUTH_TOKEN} ./make_pr.sh -s -y ${ISSUE_REPO} ${ISSUE_NUMBER}
+		env GITHUB_OAUTH_TOKEN=${GITHUB_OAUTH_TOKEN} ./make_pr.sh -s -y ${ISSUE_REPO} ${ISSUE_NUMBER} ${DIST}
 
 		if [ $? -eq $EXIT_DUPLICATE_EXISTS ]; then
 			warn "Duplicate exists"
