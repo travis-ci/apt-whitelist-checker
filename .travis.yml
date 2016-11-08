@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=fonts-lmodern
+    - PACKAGE=ucspi-tcp
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3484
+    - ISSUE_NUMBER=3485
     - DIST=precise
 
 before_install:
