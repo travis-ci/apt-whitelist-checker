@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libpcap-dev
+    - PACKAGE=libaspell-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3470
+    - ISSUE_NUMBER=3471
     - DIST=precise
 
 before_install:
