@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-pil
+    - PACKAGE=libcereal-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3481
-    - DIST=Trusty
+    - ISSUE_NUMBER=3498
+    - DIST=precise
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
