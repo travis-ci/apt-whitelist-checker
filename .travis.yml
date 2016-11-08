@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-pil
+    - PACKAGE=automake
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3481
+    - ISSUE_NUMBER=3487
     - DIST=trusty
 
 before_install:
