@@ -151,7 +151,7 @@ have to open another one for those.
     system("sed -i -e 's/ISSUE_NUMBER=.*/ISSUE_NUMBER=#{issue_number}/' .travis.yml")
     system("sed -i -e 's/DIST=.*/DIST=#{dist}/' .travis.yml")
 
-    comment = "Run test for #{owner}/#{repo}##{issue_number}. (#{pkg})"
+    comment = "Run test for #{owner}/#{repo}##{issue_number} in dist #{dist}. (#{pkg})"
 
     system("git add .travis.yml")
     system("git commit -m '#{comment}'")
