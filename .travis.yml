@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libleveldb-dev
+    - PACKAGE=libsdl2-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3497
-    - DIST=precise
+    - ISSUE_NUMBER=3505
+    - DIST=trusty
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
