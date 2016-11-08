@@ -8,12 +8,12 @@ BUILD_URL="https://travis-ci.org/${TRAVIS_REPO_SLUG}/builds/${TRAVIS_BUILD_ID}"
 ISSUE_REPO=${ISSUE_REPO:-"apt-package-whitelist"} # name of the repo that has issues, under "travis-ci"
 GITHUB_ISSUES_URL="https://api.github.com/repos/travis-ci/${ISSUE_REPO}/issues/${ISSUE_NUMBER}"
 
-echo "Pushing build.sh"
-sshpass -p travis scp $SSH_OPTS build.sh  travis@$(< docker_ip_address):.
-sshpass -p travis scp $SSH_OPTS common.sh travis@$(< docker_ip_address):.
-sshpass -p travis scp $SSH_OPTS add_sources.rb travis@$(< docker_ip_address):.
+echo "Copying build.sh"
+cp build.sh common.sh add_sources.rb $HOME/build
+docker exec $(< docker_id) mv $HOME/build/{build.sh,common.sh,add_sources.rb} $HOME
+
 echo "Running build.sh"
-sshpass -p travis ssh -n -t -t $SSH_OPTS travis@$(< docker_ip_address) "bash build.sh ${PACKAGE}"
+docker exec $(< docker_id) bash build.sh ${PACKAGE}
 
 CHECK_RESULT=$?
 
