@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libhunspell-dev
+    - PACKAGE=gcc-mingw-w64-i686
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3472
+    - ISSUE_NUMBER=3474
     - DIST=precise
 
 before_install:
