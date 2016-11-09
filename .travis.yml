@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=google-cloud-sdk
+    - PACKAGE=g++-4.8
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3515
+    - ISSUE_NUMBER=3516
     - DIST=trusty
 
 before_install:
