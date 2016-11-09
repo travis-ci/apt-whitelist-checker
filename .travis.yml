@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libswscale-dev
+    - PACKAGE=libsdl2-mixer-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3534
+    - ISSUE_NUMBER=3535
     - DIST=trusty
 
 before_install:
