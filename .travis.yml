@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libpcap-dev
+    - PACKAGE=libsctp-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3490
+    - ISSUE_NUMBER=3491
     - DIST=trusty
 
 before_install:
