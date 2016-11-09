@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=qt5-default
+    - PACKAGE=liblz4-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3520
+    - ISSUE_NUMBER=3521
     - DIST=trusty
 
 before_install:
