@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsdl2-dev
+    - PACKAGE=libspeexdsp-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3505
+    - ISSUE_NUMBER=3508
     - DIST=trusty
 
 before_install:
