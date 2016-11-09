@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=sbt
+    - PACKAGE=yasm
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3572
+    - ISSUE_NUMBER=3573
     - DIST=trusty
 
 before_install:
