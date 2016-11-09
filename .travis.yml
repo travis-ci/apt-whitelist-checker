@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libfreetype6-dev:i386
+    - PACKAGE=qt5-default
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3582
+    - ISSUE_NUMBER=3583
     - DIST=trusty
 
 before_install:
