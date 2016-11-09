@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsdl2-image-dev
+    - PACKAGE=libavformat-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3532
+    - ISSUE_NUMBER=3533
     - DIST=trusty
 
 before_install:
