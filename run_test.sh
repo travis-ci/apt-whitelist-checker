@@ -18,7 +18,7 @@ docker exec -u travis $(< docker_id) bash ${HOME}/build.sh ${PACKAGE}
 CHECK_RESULT=$?
 
 if [ $CHECK_RESULT -ne $EXIT_SOURCE_NOT_FOUND ]; then
-	sshpass -p travis scp $SSH_OPTS travis@$(< ${TRAVIS_BUILD_DIR}/docker_ip_address):/var/tmp/deb-sources/packages .
+  cp /var/tmp/deb-sources/packages .
 fi
 
 case $CHECK_RESULT in
