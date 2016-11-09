@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=latex-xcolor
+    - PACKAGE=fonts-lmodern
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3483
+    - ISSUE_NUMBER=3484
     - DIST=precise
 
 before_install:
