@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsdl2
+    - PACKAGE=libsdl2-ttf-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3512
+    - ISSUE_NUMBER=3509
     - DIST=trusty
 
 before_install:
