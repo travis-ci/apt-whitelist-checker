@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-enum34
+    - PACKAGE=python-pil
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3480
+    - ISSUE_NUMBER=3481
     - DIST=trusty
 
 before_install:
