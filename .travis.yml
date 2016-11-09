@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsdl2
+    - PACKAGE=haveged
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3512
+    - ISSUE_NUMBER=3465
     - DIST=trusty
 
 before_install:
