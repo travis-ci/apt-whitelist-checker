@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=haveged
+    - PACKAGE=inspec
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3465
-    - DIST=trusty
+    - ISSUE_NUMBER=3468
+    - DIST=precise
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
