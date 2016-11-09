@@ -10,6 +10,7 @@ fold_end ruby19
 
 export DEBIAN_FRONTEND=noninteractive
 fold_start apt_src "Add APT sources"
+cd
 wget https://raw.githubusercontent.com/travis-ci/apt-source-whitelist/master/ubuntu.json
 ruby1.9.1 -rjson add_sources.rb
 mkdir -p /var/tmp/deb-sources
