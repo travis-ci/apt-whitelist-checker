@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=mp3val
+    - PACKAGE=libleveldb-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3496
+    - ISSUE_NUMBER=3497
     - DIST=precise
 
 before_install:
