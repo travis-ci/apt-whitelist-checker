@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gcc-mingw-w64-i686
+    - PACKAGE=libev-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3474
+    - ISSUE_NUMBER=3475
     - DIST=precise
 
 before_install:
