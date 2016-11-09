@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=yasm
+    - PACKAGE=libusb-1.0-0
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3573
+    - ISSUE_NUMBER=3574
     - DIST=trusty
 
 before_install:
