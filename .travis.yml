@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libusb-1.0-0-dev
+    - PACKAGE=liblzo2-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3522
+    - ISSUE_NUMBER=3523
     - DIST=trusty
 
 before_install:
