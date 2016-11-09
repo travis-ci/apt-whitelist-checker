@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libglew-dev
+    - PACKAGE=freeglut3-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3524
+    - ISSUE_NUMBER=3525
     - DIST=trusty
 
 before_install:
