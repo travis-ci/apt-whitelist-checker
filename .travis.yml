@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=freeglut3-dev
+    - PACKAGE=libopenblas-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3525
+    - ISSUE_NUMBER=3526
     - DIST=trusty
 
 before_install:
