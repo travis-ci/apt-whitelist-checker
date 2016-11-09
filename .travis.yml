@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=liblz4-dev
+    - PACKAGE=libusb-1.0-0-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3521
+    - ISSUE_NUMBER=3522
     - DIST=trusty
 
 before_install:
