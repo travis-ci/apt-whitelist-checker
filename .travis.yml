@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libopenblas-dev
+    - PACKAGE=libspeexdsp-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3526
+    - ISSUE_NUMBER=3528
     - DIST=trusty
 
 before_install:
