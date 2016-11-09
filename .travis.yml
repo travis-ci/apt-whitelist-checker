@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=g++-4.8
+    - PACKAGE=clang-3.5
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3516
+    - ISSUE_NUMBER=3517
     - DIST=trusty
 
 before_install:
