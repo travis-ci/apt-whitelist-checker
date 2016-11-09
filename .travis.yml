@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libcereal-dev
+    - PACKAGE=libudns-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3498
+    - ISSUE_NUMBER=3499
     - DIST=precise
 
 before_install:
