@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=clang-3.5
+    - PACKAGE=gcc-mingw-w64-i686
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3517
+    - ISSUE_NUMBER=3518
     - DIST=trusty
 
 before_install:
