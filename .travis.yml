@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libboost-all-dev
+    - PACKAGE=qt5-default
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3519
+    - ISSUE_NUMBER=3520
     - DIST=trusty
 
 before_install:
