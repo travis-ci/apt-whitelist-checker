@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gcc-mingw-w64-i686
+    - PACKAGE=libboost-all-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3518
+    - ISSUE_NUMBER=3519
     - DIST=trusty
 
 before_install:
