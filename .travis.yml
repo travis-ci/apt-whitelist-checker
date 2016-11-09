@@ -25,7 +25,7 @@ before_install:
   - docker pull ${IMAGE}
   - jq --version || sudo curl -sSL -o /usr/local/bin/jq http://stedolan.github.io/jq/download/linux64/jq && sudo chmod 0755 /usr/local/bin/jq
   - docker images | grep -q -E '^travis\\s+\\bnode-js\\b\\s+' || docker tag ${IMAGE} travis:node-js
-  - docker run -v /var/tmp:/var/tmp -v /home/travis/build:/home/travis/build -d travis:node-js | tee docker_id
+  - docker run -v /var/tmp:/var/tmp -v /home/travis:/home/travis -d travis:node-js | tee docker_id
   - docker inspect $(< docker_id) | jq -r .[0].NetworkSettings.IPAddress | tee docker_ip_address
   - docker ps
 
