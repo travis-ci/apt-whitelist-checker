@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libclang-3.5-dev
+    - PACKAGE=libusb-1.0-0-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3595
+    - ISSUE_NUMBER=3596
     - DIST=trusty
 
 before_install:
