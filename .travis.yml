@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=clang-3.5
+    - PACKAGE=swig
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3584
+    - ISSUE_NUMBER=3587
     - DIST=trusty
 
 before_install:
