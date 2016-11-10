@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=swig
+    - PACKAGE=pngquant
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3587
+    - ISSUE_NUMBER=3588
     - DIST=trusty
 
 before_install:
