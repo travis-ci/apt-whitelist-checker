@@ -9,6 +9,6 @@ successes = sources.select do |src|
   if src['key_url']
     system("curl -sSL #{src['key_url'].untaint.inspect} | sudo -E env LANG=C.UTF-8 apt-key add -") && system("sudo -E env LANG=C.UTF-8 apt-add-repository -y #{src['sourceline'].untaint.inspect}")
   else
-    system("sudo -E apt-add-repository -y #{src['sourceline'].untaint.inspect}")
+    system("sudo -E env LANG=C.UTF-8 apt-add-repository -y #{src['sourceline'].untaint.inspect}")
   end
 end
