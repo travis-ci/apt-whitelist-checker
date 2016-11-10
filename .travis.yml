@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=oracle-java8-set-default
+    - PACKAGE=libclang-3.5-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3594
+    - ISSUE_NUMBER=3595
     - DIST=trusty
 
 before_install:
