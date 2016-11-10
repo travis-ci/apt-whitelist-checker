@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-babel
+    - PACKAGE=oracle-java8-set-default
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3592
-    - DIST=trusty
+    - ISSUE_NUMBER=3593
+    - DIST=precise
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
