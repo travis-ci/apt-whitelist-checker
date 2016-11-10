@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=librrd-dev
+    - PACKAGE=libboost1.58-all-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3598
-    - DIST=trusty
+    - ISSUE_NUMBER=3599
+    - DIST=precise
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
