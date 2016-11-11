@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libevent-dev
+    - PACKAGE=gnuradio
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3607
+    - ISSUE_NUMBER=3608
     - DIST=trusty
 
 before_install:
