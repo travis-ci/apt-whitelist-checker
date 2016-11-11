@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libcppunit-dev
+    - PACKAGE=libpython-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3610
+    - ISSUE_NUMBER=3611
     - DIST=trusty
 
 before_install:
