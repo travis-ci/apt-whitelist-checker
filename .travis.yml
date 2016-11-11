@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gnuradio
+    - PACKAGE=gnuradio-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3608
+    - ISSUE_NUMBER=3609
     - DIST=trusty
 
 before_install:
