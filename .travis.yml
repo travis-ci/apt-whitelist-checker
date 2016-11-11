@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libboost1.58-all-dev
+    - PACKAGE=gnupg2
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3599
+    - ISSUE_NUMBER=3604
     - DIST=precise
 
 before_install:
