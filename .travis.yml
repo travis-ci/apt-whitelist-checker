@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=doxygen
+    - PACKAGE=qt4-default
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3612
+    - ISSUE_NUMBER=3621
     - DIST=trusty
 
 before_install:
