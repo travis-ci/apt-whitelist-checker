@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gcc-4.9
+    - PACKAGE=g++-4.9
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3624
+    - ISSUE_NUMBER=3625
     - DIST=trusty
 
 before_install:
