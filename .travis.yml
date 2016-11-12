@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=g++-4.9
+    - PACKAGE=gfortran-4.9
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3625
+    - ISSUE_NUMBER=3626
     - DIST=trusty
 
 before_install:
