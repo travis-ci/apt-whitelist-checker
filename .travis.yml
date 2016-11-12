@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libzip-dev
+    - PACKAGE=gcc-4.9
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3623
+    - ISSUE_NUMBER=3624
     - DIST=trusty
 
 before_install:
