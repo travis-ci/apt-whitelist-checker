@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libglm-dev
+    - PACKAGE=libsdl2-image-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3632
+    - ISSUE_NUMBER=3633
     - DIST=trusty
 
 before_install:
