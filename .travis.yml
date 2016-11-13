@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libgirepository1.0-dev
+    - PACKAGE=valgrind
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3634
+    - ISSUE_NUMBER=3635
     - DIST=trusty
 
 before_install:
