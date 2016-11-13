@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libphysfs-dev
+    - PACKAGE=libglm-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3631
+    - ISSUE_NUMBER=3632
     - DIST=trusty
 
 before_install:
