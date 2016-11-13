@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsdl2-image-dev
+    - PACKAGE=libgirepository1.0-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3633
+    - ISSUE_NUMBER=3634
     - DIST=trusty
 
 before_install:
