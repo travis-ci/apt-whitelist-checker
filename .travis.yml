@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=avfs
+    - PACKAGE=libphysfs-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3630
+    - ISSUE_NUMBER=3631
     - DIST=trusty
 
 before_install:
