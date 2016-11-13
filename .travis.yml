@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=valgrind
+    - PACKAGE=libvpx-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3635
+    - ISSUE_NUMBER=3636
     - DIST=trusty
 
 before_install:
