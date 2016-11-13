@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gfortran-4.9
+    - PACKAGE=avfs
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3626
+    - ISSUE_NUMBER=3630
     - DIST=trusty
 
 before_install:
