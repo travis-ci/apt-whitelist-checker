@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libvpx-dev
+    - PACKAGE=gcc-arm-none-eabi
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3636
+    - ISSUE_NUMBER=3643
     - DIST=trusty
 
 before_install:
