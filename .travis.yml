@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=zeroc-ice35
+    - PACKAGE=python-numpy
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3645
+    - ISSUE_NUMBER=3646
     - DIST=trusty
 
 before_install:
