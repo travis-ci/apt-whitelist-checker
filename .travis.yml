@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libelf-dev
+    - PACKAGE=devscripts
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3652
+    - ISSUE_NUMBER=3653
     - DIST=trusty
 
 before_install:
