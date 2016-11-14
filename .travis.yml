@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libdw-dev
+    - PACKAGE=libdw1
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3650
+    - ISSUE_NUMBER=3651
     - DIST=trusty
 
 before_install:
