@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libgtest-dev
+    - PACKAGE=libdw-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3649
+    - ISSUE_NUMBER=3650
     - DIST=trusty
 
 before_install:
