@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-yaml
+    - PACKAGE=libgtest-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3648
+    - ISSUE_NUMBER=3649
     - DIST=trusty
 
 before_install:
