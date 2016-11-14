@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gcc-arm-none-eabi
+    - PACKAGE=libnewlib-arm-none-eabi
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3643
+    - ISSUE_NUMBER=3644
     - DIST=trusty
 
 before_install:
