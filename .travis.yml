@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-tables
+    - PACKAGE=python-yaml
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3647
+    - ISSUE_NUMBER=3648
     - DIST=trusty
 
 before_install:
