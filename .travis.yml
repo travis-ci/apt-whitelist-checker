@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-numpy
+    - PACKAGE=python-tables
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3646
+    - ISSUE_NUMBER=3647
     - DIST=trusty
 
 before_install:
