@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=clang-3.6
+    - PACKAGE=chrpath
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3670
+    - ISSUE_NUMBER=3671
     - DIST=trusty
 
 before_install:
