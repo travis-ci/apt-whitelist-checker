@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=graphviz
+    - PACKAGE=linux-headers-4.4.0-47-generic
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3684
-    - DIST=trusty
+    - ISSUE_NUMBER=3685
+    - DIST=precise
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
