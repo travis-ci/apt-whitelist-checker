@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=mysql-server-5.6
+    - PACKAGE=xorg-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3682
+    - ISSUE_NUMBER=3683
     - DIST=trusty
 
 before_install:
