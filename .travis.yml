@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libaio-dev
+    - PACKAGE=libjudy-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3674
+    - ISSUE_NUMBER=3675
     - DIST=trusty
 
 before_install:
