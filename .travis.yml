@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gdb
+    - PACKAGE=libaio-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3673
+    - ISSUE_NUMBER=3674
     - DIST=trusty
 
 before_install:
