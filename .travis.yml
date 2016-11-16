@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=tesseract-ocr
+    - PACKAGE=libtiff-tools
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3688
+    - ISSUE_NUMBER=3691
     - DIST=trusty
 
 before_install:
