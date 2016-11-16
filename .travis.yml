@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsnappy-dev
+    - PACKAGE=tesseract-ocr
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3687
+    - ISSUE_NUMBER=3688
     - DIST=trusty
 
 before_install:
