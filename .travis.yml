@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=chrpath
+    - PACKAGE=dpatch
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3671
+    - ISSUE_NUMBER=3672
     - DIST=trusty
 
 before_install:
