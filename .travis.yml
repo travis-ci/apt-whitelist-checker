@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=dpatch
+    - PACKAGE=gdb
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3672
+    - ISSUE_NUMBER=3673
     - DIST=trusty
 
 before_install:
