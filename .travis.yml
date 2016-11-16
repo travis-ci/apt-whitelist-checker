@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libjemalloc-dev
+    - PACKAGE=mysql-server-5.6
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3680
+    - ISSUE_NUMBER=3682
     - DIST=trusty
 
 before_install:
