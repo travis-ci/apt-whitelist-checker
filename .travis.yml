@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=xorg-dev
+    - PACKAGE=graphviz
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3683
+    - ISSUE_NUMBER=3684
     - DIST=trusty
 
 before_install:
