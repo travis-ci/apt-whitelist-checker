@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=linux-headers-4.4.0-47-generic
+    - PACKAGE=trimmomatic
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3685
+    - ISSUE_NUMBER=3686
     - DIST=precise
 
 before_install:
