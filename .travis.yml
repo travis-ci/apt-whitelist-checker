@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libfabric
+    - PACKAGE=libgflags-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3665
-    - DIST=precise
+    - ISSUE_NUMBER=3668
+    - DIST=trusty
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
