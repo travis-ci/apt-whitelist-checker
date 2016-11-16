@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libjudy-dev
+    - PACKAGE=libpam0g-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3675
+    - ISSUE_NUMBER=3676
     - DIST=trusty
 
 before_install:
