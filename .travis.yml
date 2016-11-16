@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libreadline-gplv2-dev
+    - PACKAGE=libnuma-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3677
+    - ISSUE_NUMBER=3678
     - DIST=trusty
 
 before_install:
