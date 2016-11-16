@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libgflags-dev
+    - PACKAGE=libsnappy-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3668
+    - ISSUE_NUMBER=3669
     - DIST=trusty
 
 before_install:
