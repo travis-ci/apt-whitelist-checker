@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=google-chrome-stable
+    - PACKAGE=lib32bz2-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3710
-    - DIST=trusty
+    - ISSUE_NUMBER=3711
+    - DIST=precise
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
