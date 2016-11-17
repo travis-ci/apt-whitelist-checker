@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=lib32bz2-dev
+    - PACKAGE=libuv-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3711
+    - ISSUE_NUMBER=3712
     - DIST=precise
 
 before_install:
