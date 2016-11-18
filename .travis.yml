@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libswresample-dev
+    - PACKAGE=gcc-4.9
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3716
-    - DIST=precise
+    - ISSUE_NUMBER=3718
+    - DIST=trusty
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
