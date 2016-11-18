@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libuv-dev
+    - PACKAGE=google-chrome-beta
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3712
-    - DIST=precise
+    - ISSUE_NUMBER=3715
+    - DIST=trusty
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
