@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=liblua5.1
+    - PACKAGE=liblapacke-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3734
+    - ISSUE_NUMBER=3735
     - DIST=trusty
 
 before_install:
