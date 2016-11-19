@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libqt5webkit5-dev
+    - PACKAGE=libqca2-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3729
+    - ISSUE_NUMBER=3730
     - DIST=trusty
 
 before_install:
