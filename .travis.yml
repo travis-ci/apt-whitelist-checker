@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libphonon4qt5experimental4
+    - PACKAGE=libdbusmenu-qt5-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3725
+    - ISSUE_NUMBER=3726
     - DIST=trusty
 
 before_install:
