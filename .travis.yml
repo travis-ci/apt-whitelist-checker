@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libpulse-dev
+    - PACKAGE=libphonon4qt5experimental4
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3724
+    - ISSUE_NUMBER=3725
     - DIST=trusty
 
 before_install:
