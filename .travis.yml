@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libfftw3-dev
+    - PACKAGE=libpulse-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3723
+    - ISSUE_NUMBER=3724
     - DIST=trusty
 
 before_install:
