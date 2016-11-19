@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python3-pyqt4
+    - PACKAGE=liblua5.1
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3733
+    - ISSUE_NUMBER=3734
     - DIST=trusty
 
 before_install:
