@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=qtscript5-dev
+    - PACKAGE=qttools5-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3727
+    - ISSUE_NUMBER=3728
     - DIST=trusty
 
 before_install:
