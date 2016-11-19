@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libmono-system-core4.0-cil
+    - PACKAGE=python3-pyqt4
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3732
+    - ISSUE_NUMBER=3733
     - DIST=trusty
 
 before_install:
