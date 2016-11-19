@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=qttools5-dev
+    - PACKAGE=libqt5webkit5-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3728
+    - ISSUE_NUMBER=3729
     - DIST=trusty
 
 before_install:
