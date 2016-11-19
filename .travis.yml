@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libmono-system-drawing4.0-cil
+    - PACKAGE=libmono-system-core4.0-cil
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3731
+    - ISSUE_NUMBER=3732
     - DIST=trusty
 
 before_install:
