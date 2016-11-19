@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libqca2-dev
+    - PACKAGE=libmono-system-drawing4.0-cil
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3730
+    - ISSUE_NUMBER=3731
     - DIST=trusty
 
 before_install:
