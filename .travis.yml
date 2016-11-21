@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=lib32ncurses5-dev
+    - PACKAGE=9base
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3747
+    - ISSUE_NUMBER=3750
     - DIST=precise
 
 before_install:
