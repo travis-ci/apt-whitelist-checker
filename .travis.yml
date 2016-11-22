@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=9base
+    - PACKAGE=wine
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3750
-    - DIST=precise
+    - ISSUE_NUMBER=3752
+    - DIST=trusty
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
