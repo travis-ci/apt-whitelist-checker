@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=icnsutils
+    - PACKAGE=graphicsmagick
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3764
+    - ISSUE_NUMBER=3765
     - DIST=trusty
 
 before_install:
