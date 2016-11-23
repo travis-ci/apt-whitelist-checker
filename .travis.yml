@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=texlive-latex-extra
+    - PACKAGE=texlive-fonts-recommended
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3758
+    - ISSUE_NUMBER=3759
     - DIST=trusty
 
 before_install:
