@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=texlive-fonts-recommended
+    - PACKAGE=latex-beamer
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3759
+    - ISSUE_NUMBER=3761
     - DIST=trusty
 
 before_install:
