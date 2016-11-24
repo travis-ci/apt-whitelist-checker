@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libjsoncpp-dev
+    - PACKAGE=rna-star
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3772
+    - ISSUE_NUMBER=3777
     - DIST=trusty
 
 before_install:
