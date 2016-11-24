@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=p7zip-full
+    - PACKAGE=lftp
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3780
+    - ISSUE_NUMBER=3781
     - DIST=trusty
 
 before_install:
