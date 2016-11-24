@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=lftp
+    - PACKAGE=gcc-4.8-multilib-arm-linux-gnueabihf
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3781
+    - ISSUE_NUMBER=3782
     - DIST=trusty
 
 before_install:
