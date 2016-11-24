@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=pov-wkhtmltopdf
+    - PACKAGE=p7zip-full
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3779
-    - DIST=precise
+    - ISSUE_NUMBER=3780
+    - DIST=trusty
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
