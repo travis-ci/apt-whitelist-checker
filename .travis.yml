@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gcc-4.8-multilib-arm-linux-gnueabihf
+    - PACKAGE=gcc-arm-linux-gnueabihf
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3782
+    - ISSUE_NUMBER=3783
     - DIST=trusty
 
 before_install:
