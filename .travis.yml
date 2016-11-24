@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=rna-star
+    - PACKAGE=samtools
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3777
+    - ISSUE_NUMBER=3778
     - DIST=trusty
 
 before_install:
