@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gcc-multilib
+    - PACKAGE=libjsoncpp-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3766
+    - ISSUE_NUMBER=3772
     - DIST=trusty
 
 before_install:
