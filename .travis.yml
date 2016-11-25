@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gcc-arm-linux-gnueabihf
+    - PACKAGE=lmodern
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3783
+    - ISSUE_NUMBER=3789
     - DIST=trusty
 
 before_install:
