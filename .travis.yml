@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=lmodern
+    - PACKAGE=help2man
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3789
+    - ISSUE_NUMBER=3790
     - DIST=trusty
 
 before_install:
