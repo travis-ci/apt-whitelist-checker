@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=help2man
+    - PACKAGE=gfortran
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3790
+    - ISSUE_NUMBER=3791
     - DIST=trusty
 
 before_install:
