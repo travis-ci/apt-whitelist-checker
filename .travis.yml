@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gfortran
+    - PACKAGE=libpcre++-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3791
+    - ISSUE_NUMBER=3794
     - DIST=trusty
 
 before_install:
