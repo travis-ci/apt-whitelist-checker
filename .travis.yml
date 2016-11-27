@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libpcre++-dev
+    - PACKAGE=libevdev-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3794
+    - ISSUE_NUMBER=3796
     - DIST=trusty
 
 before_install:
