@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libevdev-dev
+    - PACKAGE=libevdev2
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3796
+    - ISSUE_NUMBER=3797
     - DIST=trusty
 
 before_install:
