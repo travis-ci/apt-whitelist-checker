@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=netmask
+    - PACKAGE=libssh2-1-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3805
-    - DIST=precise
+    - ISSUE_NUMBER=3807
+    - DIST=trusty
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
