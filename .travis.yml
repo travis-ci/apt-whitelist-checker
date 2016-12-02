@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=liblzo2-2
+    - PACKAGE=acpica-tools
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3813
-    - DIST=precise
+    - ISSUE_NUMBER=3815
+    - DIST=trusty
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
