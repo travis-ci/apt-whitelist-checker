@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=seabios
+    - PACKAGE=checkpolicy
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3816
+    - ISSUE_NUMBER=3817
     - DIST=trusty
 
 before_install:
