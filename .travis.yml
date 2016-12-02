@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=dh-virtualenv
+    - PACKAGE=liblzo2-2
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3812
-    - DIST=trusty
+    - ISSUE_NUMBER=3813
+    - DIST=precise
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
