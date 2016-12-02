@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=acpica-tools
+    - PACKAGE=seabios
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3815
+    - ISSUE_NUMBER=3816
     - DIST=trusty
 
 before_install:
