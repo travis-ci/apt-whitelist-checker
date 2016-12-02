@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gcc-defaults
+    - PACKAGE=devscripts
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3808
+    - ISSUE_NUMBER=3811
     - DIST=trusty
 
 before_install:
