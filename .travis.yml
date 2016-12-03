@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=checkpolicy
+    - PACKAGE=gcc-avr
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3817
+    - ISSUE_NUMBER=3814
     - DIST=trusty
 
 before_install:
