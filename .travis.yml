@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=iverilog
+    - PACKAGE=avr-libc
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3826
+    - ISSUE_NUMBER=3827
     - DIST=trusty
 
 before_install:
