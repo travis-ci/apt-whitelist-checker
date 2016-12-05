@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gcc-avr
+    - PACKAGE=docbook-xsl-saxon
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3814
-    - DIST=trusty
+    - ISSUE_NUMBER=3825
+    - DIST=precise
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
