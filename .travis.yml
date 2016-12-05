@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=avr-libc
+    - PACKAGE=libnacl-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3827
+    - ISSUE_NUMBER=3828
     - DIST=trusty
 
 before_install:
