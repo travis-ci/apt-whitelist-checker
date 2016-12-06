@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsaxonhe-java
+    - PACKAGE=docbook-xsl-saxon
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3843
+    - ISSUE_NUMBER=3844
     - DIST=trusty
 
 before_install:
