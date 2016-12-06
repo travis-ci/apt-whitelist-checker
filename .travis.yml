@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=lua-filesystem
+    - PACKAGE=srecord
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3834
+    - ISSUE_NUMBER=3835
     - DIST=trusty
 
 before_install:
