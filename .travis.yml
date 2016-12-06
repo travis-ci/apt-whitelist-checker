@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=docbook-xsl-ns
+    - PACKAGE=libsaxonb-java
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3840
+    - ISSUE_NUMBER=3841
     - DIST=trusty
 
 before_install:
