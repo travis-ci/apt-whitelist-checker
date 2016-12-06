@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=docbook-xsl-saxon
+    - PACKAGE=libappindicator1
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3844
+    - ISSUE_NUMBER=3845
     - DIST=trusty
 
 before_install:
