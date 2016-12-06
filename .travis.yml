@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libappindicator1
+    - PACKAGE=fonts-liberation
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3845
+    - ISSUE_NUMBER=3846
     - DIST=trusty
 
 before_install:
