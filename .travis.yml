@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=google-chrome-stable
+    - PACKAGE=rpm
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3847
+    - ISSUE_NUMBER=3848
     - DIST=trusty
 
 before_install:
