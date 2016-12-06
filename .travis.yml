@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=lua5.1
+    - PACKAGE=python-serial
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3829
+    - ISSUE_NUMBER=3833
     - DIST=trusty
 
 before_install:
