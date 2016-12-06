@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-serial
+    - PACKAGE=lua-filesystem
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3833
+    - ISSUE_NUMBER=3834
     - DIST=trusty
 
 before_install:
