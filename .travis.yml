@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=xsltproc
+    - PACKAGE=docbook-xsl-ns
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3839
+    - ISSUE_NUMBER=3840
     - DIST=trusty
 
 before_install:
