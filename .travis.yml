@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=fop
+    - PACKAGE=libsaxonhe-java
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3842
+    - ISSUE_NUMBER=3843
     - DIST=trusty
 
 before_install:
