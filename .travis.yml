@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libnacl-dev
+    - PACKAGE=lua5.1
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3828
+    - ISSUE_NUMBER=3829
     - DIST=trusty
 
 before_install:
