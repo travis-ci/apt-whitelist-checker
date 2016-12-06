@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=fonts-liberation
+    - PACKAGE=google-chrome-stable
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3846
+    - ISSUE_NUMBER=3847
     - DIST=trusty
 
 before_install:
