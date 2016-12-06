@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsaxonb-java
+    - PACKAGE=fop
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3841
+    - ISSUE_NUMBER=3842
     - DIST=trusty
 
 before_install:
