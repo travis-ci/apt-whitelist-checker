@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=srecord
+    - PACKAGE=liblua5.1-filesystem0
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3835
+    - ISSUE_NUMBER=3836
     - DIST=trusty
 
 before_install:
