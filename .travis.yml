@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=rpm
+    - PACKAGE=xsltproc
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3848
+    - ISSUE_NUMBER=3862
     - DIST=trusty
 
 before_install:
