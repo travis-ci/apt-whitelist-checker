@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libusb-dev
+    - PACKAGE=binutils-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3869
+    - ISSUE_NUMBER=3870
     - DIST=trusty
 
 before_install:
