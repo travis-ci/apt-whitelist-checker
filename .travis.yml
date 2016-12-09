@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=xsltproc
+    - PACKAGE=lua5.2
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3862
+    - ISSUE_NUMBER=3865
     - DIST=trusty
 
 before_install:
