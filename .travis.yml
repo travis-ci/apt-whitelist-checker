@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=hunspell-en-au
+    - PACKAGE=libusb-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3868
-    - DIST=precise
+    - ISSUE_NUMBER=3869
+    - DIST=trusty
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
