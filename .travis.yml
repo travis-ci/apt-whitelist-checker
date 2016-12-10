@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=binutils-dev
+    - PACKAGE=latex-make
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3870
-    - DIST=trusty
+    - ISSUE_NUMBER=3873
+    - DIST=precise
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
