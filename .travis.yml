@@ -12,8 +12,8 @@ env:
     - DEBIAN_FRONTEND=noninteractive
     - PACKAGE=latex-make
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3873
-    - DIST=precise
+    - ISSUE_NUMBER=3874
+    - DIST=trusty
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
