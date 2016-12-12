@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libnoise-dev
+    - PACKAGE=rapidjson-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3877
+    - ISSUE_NUMBER=3878
     - DIST=precise
 
 before_install:
