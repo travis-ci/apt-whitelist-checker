@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsystemd-daemon-dev
+    - PACKAGE=libarchive-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3882
+    - ISSUE_NUMBER=3883
     - DIST=trusty
 
 before_install:
