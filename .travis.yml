@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libarchive-dev
+    - PACKAGE=libeigen3-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3883
+    - ISSUE_NUMBER=3884
     - DIST=trusty
 
 before_install:
