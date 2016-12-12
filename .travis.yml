@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libzmq-dev
+    - PACKAGE=libsystemd-daemon-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3881
+    - ISSUE_NUMBER=3882
     - DIST=trusty
 
 before_install:
