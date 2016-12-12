@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=liblzma-dev
+    - PACKAGE=libsnappy-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3879
+    - ISSUE_NUMBER=3880
     - DIST=trusty
 
 before_install:
