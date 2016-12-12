@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsnappy-dev
+    - PACKAGE=libzmq-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3880
+    - ISSUE_NUMBER=3881
     - DIST=trusty
 
 before_install:
