@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libeigen3-dev
+    - PACKAGE=libgeoip-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3884
+    - ISSUE_NUMBER=3892
     - DIST=trusty
 
 before_install:
