@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=lua-5.3
+    - PACKAGE=libgmime-2.6-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3894
-    - DIST=precise
+    - ISSUE_NUMBER=3895
+    - DIST=trusty
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
