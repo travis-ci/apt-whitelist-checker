@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libextlib-ocaml
+    - PACKAGE=libextlib-ocaml-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3910
+    - ISSUE_NUMBER=3911
     - DIST=precise
 
 before_install:
