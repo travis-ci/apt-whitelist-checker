@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=lebiniou
+    - PACKAGE=libatdgen-ocaml-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3912
+    - ISSUE_NUMBER=3913
     - DIST=precise
 
 before_install:
