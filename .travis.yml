@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libperl-critic-perl
+    - PACKAGE=libextlib-ocaml
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3909
-    - DIST=trusty
+    - ISSUE_NUMBER=3910
+    - DIST=precise
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
