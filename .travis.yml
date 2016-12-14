@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libtiff-dev
+    - PACKAGE=libyojson-ocaml
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3900
+    - ISSUE_NUMBER=3903
     - DIST=precise
 
 before_install:
