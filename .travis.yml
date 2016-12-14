@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python3-scipy
+    - PACKAGE=libgtk-3-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3905
+    - ISSUE_NUMBER=3906
     - DIST=trusty
 
 before_install:
