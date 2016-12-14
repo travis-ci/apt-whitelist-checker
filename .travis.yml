@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libextlib-ocaml-dev
+    - PACKAGE=lebiniou
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3911
+    - ISSUE_NUMBER=3912
     - DIST=precise
 
 before_install:
