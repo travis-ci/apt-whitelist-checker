@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-scipy
+    - PACKAGE=python3-scipy
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3904
+    - ISSUE_NUMBER=3905
     - DIST=trusty
 
 before_install:
