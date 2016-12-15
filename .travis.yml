@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=google-chrome-unstable
+    - PACKAGE=zsh
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3923
+    - ISSUE_NUMBER=3924
     - DIST=trusty
 
 before_install:
