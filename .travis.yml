@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libatdgen-ocaml-dev
+    - PACKAGE=python3-scipy
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3913
-    - DIST=precise
+    - ISSUE_NUMBER=3905
+    - DIST=trusty
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
