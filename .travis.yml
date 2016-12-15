@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=zsh
+    - PACKAGE=libsdl1.2-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3924
+    - ISSUE_NUMBER=3926
     - DIST=trusty
 
 before_install:
