@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsdl1.2-dev
+    - PACKAGE=linux-headers
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3926
-    - DIST=trusty
+    - ISSUE_NUMBER=3927
+    - DIST=precise
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
