@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gcc-7
+    - PACKAGE=libfribidi-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3933
+    - ISSUE_NUMBER=3934
     - DIST=trusty
 
 before_install:
