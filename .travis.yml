@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=zsync
+    - PACKAGE=gcc-7
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3932
+    - ISSUE_NUMBER=3933
     - DIST=trusty
 
 before_install:
