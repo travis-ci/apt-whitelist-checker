@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsfml-dev
+    - PACKAGE=libnoise-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3938
+    - ISSUE_NUMBER=3939
     - DIST=trusty
 
 before_install:
