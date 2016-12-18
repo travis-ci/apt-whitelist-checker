@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libharfbuzz-dev
+    - PACKAGE=libsfml-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3935
+    - ISSUE_NUMBER=3938
     - DIST=trusty
 
 before_install:
