@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=mysql-server-5.7
+    - PACKAGE=libsystemd-daemon-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3943
+    - ISSUE_NUMBER=3944
     - DIST=trusty
 
 before_install:
