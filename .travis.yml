@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsystemd-daemon-dev
+    - PACKAGE=libcrack2-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3944
+    - ISSUE_NUMBER=3945
     - DIST=trusty
 
 before_install:
