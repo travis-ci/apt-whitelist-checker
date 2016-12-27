@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libcrack2-dev
+    - PACKAGE=libisl10
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3945
+    - ISSUE_NUMBER=3947
     - DIST=trusty
 
 before_install:
