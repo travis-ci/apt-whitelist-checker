@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libisl10
+    - PACKAGE=python-docutils
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3947
+    - ISSUE_NUMBER=3949
     - DIST=trusty
 
 before_install:
