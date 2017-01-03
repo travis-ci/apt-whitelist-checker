@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=fluxbox
+    - PACKAGE=lcov
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3975
+    - ISSUE_NUMBER=3976
     - DIST=trusty
 
 before_install:
