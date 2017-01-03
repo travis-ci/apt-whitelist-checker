@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libgssdp-1.0-dev
+    - PACKAGE=libspeechd-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3968
+    - ISSUE_NUMBER=3969
     - DIST=trusty
 
 before_install:
