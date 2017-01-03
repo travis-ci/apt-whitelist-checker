@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gnome-icon-theme-extras
+    - PACKAGE=gnome-icon-theme-symbolic
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3963
+    - ISSUE_NUMBER=3964
     - DIST=trusty
 
 before_install:
