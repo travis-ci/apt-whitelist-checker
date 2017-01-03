@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libxcb-util0-dev
+    - PACKAGE=libxcb-randr0-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3955
+    - ISSUE_NUMBER=3956
     - DIST=trusty
 
 before_install:
