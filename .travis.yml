@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libcanberra-dev
+    - PACKAGE=libpurple-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3961
+    - ISSUE_NUMBER=3962
     - DIST=trusty
 
 before_install:
