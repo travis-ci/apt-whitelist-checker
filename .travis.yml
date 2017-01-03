@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=docbook-xml
+    - PACKAGE=uuid-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3952
+    - ISSUE_NUMBER=3953
     - DIST=trusty
 
 before_install:
