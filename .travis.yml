@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gnome-icon-theme-symbolic
+    - PACKAGE=pidgin-data
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3964
+    - ISSUE_NUMBER=3965
     - DIST=trusty
 
 before_install:
