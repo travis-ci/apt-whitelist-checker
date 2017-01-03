@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libstartup-notification0-dev
+    - PACKAGE=libxcb-icccm4-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3970
+    - ISSUE_NUMBER=3971
     - DIST=trusty
 
 before_install:
