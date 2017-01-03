@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=pidgin-data
+    - PACKAGE=libavahi-glib-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3965
+    - ISSUE_NUMBER=3966
     - DIST=trusty
 
 before_install:
