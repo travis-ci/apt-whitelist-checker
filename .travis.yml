@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libxcb-xkb-dev
+    - PACKAGE=discount
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3973
+    - ISSUE_NUMBER=3974
     - DIST=trusty
 
 before_install:
