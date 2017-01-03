@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=discount
+    - PACKAGE=fluxbox
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3974
+    - ISSUE_NUMBER=3975
     - DIST=trusty
 
 before_install:
