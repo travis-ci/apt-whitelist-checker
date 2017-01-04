@@ -154,7 +154,7 @@ have to open another one for those.
     comment = "Run test for #{owner}/#{repo}##{issue_number} in dist #{dist}. (#{pkg})"
 
     system("git add .travis.yml")
-    system("git commit -m '#{comment}'")
+    system("git commit --allow-empty -m '#{comment}'")
     system("git push origin default")
 
   end
