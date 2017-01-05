@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gprbuild
+    - PACKAGE=docbook-xml
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3950
+    - ISSUE_NUMBER=3952
     - DIST=trusty
 
 before_install:
