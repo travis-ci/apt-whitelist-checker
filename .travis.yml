@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libavahi-glib-dev
+    - PACKAGE=libdbus-1-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3966
+    - ISSUE_NUMBER=3967
     - DIST=trusty
 
 before_install:
