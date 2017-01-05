@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libxcb-icccm4-dev
+    - PACKAGE=libxcb-xinerama0-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3971
+    - ISSUE_NUMBER=3972
     - DIST=trusty
 
 before_install:
