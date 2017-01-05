@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsndfile1-dev
+    - PACKAGE=libcanberra-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3960
+    - ISSUE_NUMBER=3961
     - DIST=trusty
 
 before_install:
