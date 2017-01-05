@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libxcb-shape0-dev
+    - PACKAGE=libxcb-ewmh-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3957
+    - ISSUE_NUMBER=3958
     - DIST=trusty
 
 before_install:
