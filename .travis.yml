@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libspeechd-dev
+    - PACKAGE=libstartup-notification0-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3969
+    - ISSUE_NUMBER=3970
     - DIST=trusty
 
 before_install:
