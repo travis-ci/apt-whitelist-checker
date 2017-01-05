@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=lcov
+    - PACKAGE=gnat
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=3976
+    - ISSUE_NUMBER=4003
     - DIST=trusty
 
 before_install:
