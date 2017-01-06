@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gnat
+    - PACKAGE=xutils-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4003
+    - ISSUE_NUMBER=4007
     - DIST=trusty
 
 before_install:
