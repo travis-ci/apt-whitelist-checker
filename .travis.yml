@@ -12,8 +12,8 @@ env:
     - DEBIAN_FRONTEND=noninteractive
     - PACKAGE=debian-archive-keyring
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4013
-    - DIST=precise
+    - ISSUE_NUMBER=4014
+    - DIST=trusty
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
