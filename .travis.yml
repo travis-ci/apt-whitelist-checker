@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python3-mysql.connector
+    - PACKAGE=debian-archive-keyring
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4011
-    - DIST=trusty
+    - ISSUE_NUMBER=4013
+    - DIST=precise
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
