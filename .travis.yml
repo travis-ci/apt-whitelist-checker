@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=debian-archive-keyring
+    - PACKAGE=libgmp-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4014
+    - ISSUE_NUMBER=4017
     - DIST=trusty
 
 before_install:
