@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libmagic-dev
+    - PACKAGE=coccinelle
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4019
-    - DIST=trusty
+    - ISSUE_NUMBER=4020
+    - DIST=precise
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
