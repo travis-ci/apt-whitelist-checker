@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=coccinelle
+    - PACKAGE=libtre-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4020
+    - ISSUE_NUMBER=4023
     - DIST=precise
 
 before_install:
