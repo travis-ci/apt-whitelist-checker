@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libtre-dev
+    - PACKAGE=mingw-w64
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4023
-    - DIST=precise
+    - ISSUE_NUMBER=4025
+    - DIST=trusty
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
