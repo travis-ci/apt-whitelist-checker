@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=mingw-w64
+    - PACKAGE=upx-ucl
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4025
+    - ISSUE_NUMBER=4027
     - DIST=trusty
 
 before_install:
