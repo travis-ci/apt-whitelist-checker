@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-wxgtk2.8
+    - PACKAGE=rng-tools
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4028
+    - ISSUE_NUMBER=4029
     - DIST=trusty
 
 before_install:
