@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=upx-ucl
+    - PACKAGE=python-wxgtk2.8
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4027
+    - ISSUE_NUMBER=4028
     - DIST=trusty
 
 before_install:
