@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=rng-tools
+    - PACKAGE=clang-5.0
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4029
-    - DIST=trusty
+    - ISSUE_NUMBER=4033
+    - DIST=precise
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
