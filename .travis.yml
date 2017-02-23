@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libcunit1-dev
+    - PACKAGE=djvulibre-bin
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4035
+    - ISSUE_NUMBER=4036
     - DIST=trusty
 
 before_install:
