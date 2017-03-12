@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=djvulibre-bin
+    - PACKAGE=ghc-8.2.1
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4036
-    - DIST=trusty
+    - ISSUE_NUMBER=4041
+    - DIST=precise
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
