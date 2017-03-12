@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=ghc-8.2.1
+    - PACKAGE=cabal-install-2.0
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4041
+    - ISSUE_NUMBER=4042
     - DIST=precise
 
 before_install:
