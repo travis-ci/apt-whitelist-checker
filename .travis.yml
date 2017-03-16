@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libconsole-bridge-dev
+    - PACKAGE=libdbus-glib-1-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4045
+    - ISSUE_NUMBER=4046
     - DIST=trusty
 
 before_install:
