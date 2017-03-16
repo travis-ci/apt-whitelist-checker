@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=cabal-install-2.0
+    - PACKAGE=libconsole-bridge-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4042
-    - DIST=precise
+    - ISSUE_NUMBER=4045
+    - DIST=trusty
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
