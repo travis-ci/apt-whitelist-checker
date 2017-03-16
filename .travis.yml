@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libdbus-glib-1-dev
+    - PACKAGE=libsodium-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4046
+    - ISSUE_NUMBER=4047
     - DIST=trusty
 
 before_install:
