@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsodium-dev
+    - PACKAGE=autoconf-archive
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4047
+    - ISSUE_NUMBER=4050
     - DIST=trusty
 
 before_install:
