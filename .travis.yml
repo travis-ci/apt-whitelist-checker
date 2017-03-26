@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libvips-dev
+    - PACKAGE=inkscape
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4056
+    - ISSUE_NUMBER=4057
     - DIST=trusty
 
 before_install:
