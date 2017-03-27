@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=inkscape
+    - PACKAGE=libaprutil1-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4057
+    - ISSUE_NUMBER=4060
     - DIST=trusty
 
 before_install:
