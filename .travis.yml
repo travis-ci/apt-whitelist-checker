@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libaprutil1-dev
+    - PACKAGE=libqt5qml-quickcontrols
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4060
+    - ISSUE_NUMBER=4062
     - DIST=trusty
 
 before_install:
