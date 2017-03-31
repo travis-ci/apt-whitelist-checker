@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=ninja-build
+    - PACKAGE=qflow
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4063
+    - ISSUE_NUMBER=4066
     - DIST=trusty
 
 before_install:
