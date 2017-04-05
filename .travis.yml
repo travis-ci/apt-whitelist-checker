@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=qflow
+    - PACKAGE=libvulkan1
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4066
+    - ISSUE_NUMBER=4067
     - DIST=trusty
 
 before_install:
