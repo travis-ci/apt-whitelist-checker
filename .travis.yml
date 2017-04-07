@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsdl2-mixer-2.0-0
+    - PACKAGE=libvulkan-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4069
+    - ISSUE_NUMBER=4070
     - DIST=trusty
 
 before_install:
