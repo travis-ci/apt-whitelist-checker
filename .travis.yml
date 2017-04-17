@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libxkbcommon-x11-dev
+    - PACKAGE=jpegoptim
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4085
-    - DIST=precise
+    - ISSUE_NUMBER=4087
+    - DIST=trusty
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
