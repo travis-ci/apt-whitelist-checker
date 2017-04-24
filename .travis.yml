@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libgmp-dev:i386
+    - PACKAGE=libopenmpi-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4090
+    - ISSUE_NUMBER=4091
     - DIST=trusty
 
 before_install:
