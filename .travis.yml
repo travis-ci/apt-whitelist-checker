@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libindicator7
+    - PACKAGE=clickhouse-server-common
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4094
+    - ISSUE_NUMBER=4096
     - DIST=trusty
 
 before_install:
