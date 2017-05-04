@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=clickhouse-server-common
+    - PACKAGE=libviennacl-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4096
+    - ISSUE_NUMBER=4098
     - DIST=trusty
 
 before_install:
