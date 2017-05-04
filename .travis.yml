@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libviennacl-dev
+    - PACKAGE=libviennacl-doc
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4098
+    - ISSUE_NUMBER=4099
     - DIST=trusty
 
 before_install:
