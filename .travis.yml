@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libviennacl-doc
+    - PACKAGE=autopoint
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4099
+    - ISSUE_NUMBER=4102
     - DIST=trusty
 
 before_install:
