@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libdevmapper-dev
+    - PACKAGE=python-requests
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4104
+    - ISSUE_NUMBER=4108
     - DIST=trusty
 
 before_install:
