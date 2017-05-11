@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-requests
+    - PACKAGE=python-sphinx
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4108
+    - ISSUE_NUMBER=4109
     - DIST=trusty
 
 before_install:
