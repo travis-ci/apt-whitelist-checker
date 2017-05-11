@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-sphinx
+    - PACKAGE=libibverbs1
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4109
+    - ISSUE_NUMBER=4110
     - DIST=trusty
 
 before_install:
