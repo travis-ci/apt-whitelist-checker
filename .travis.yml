@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libnl-3-dev
+    - PACKAGE=libnl-genl-3-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4114
+    - ISSUE_NUMBER=4115
     - DIST=trusty
 
 before_install:
