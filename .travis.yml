@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=lib32z1
+    - PACKAGE=lib32ncurses5
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4122
+    - ISSUE_NUMBER=4123
     - DIST=trusty
 
 before_install:
