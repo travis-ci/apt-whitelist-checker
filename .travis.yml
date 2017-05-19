@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libnl-route-3-dev
+    - PACKAGE=ninja-build
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4116
+    - ISSUE_NUMBER=4121
     - DIST=trusty
 
 before_install:
