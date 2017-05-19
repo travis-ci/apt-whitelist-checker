@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=ninja-build
+    - PACKAGE=lib32z1
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4121
+    - ISSUE_NUMBER=4122
     - DIST=trusty
 
 before_install:
