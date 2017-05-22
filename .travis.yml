@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libharfbuzz-dev
+    - PACKAGE=libbullet-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4128
+    - ISSUE_NUMBER=4129
     - DIST=trusty
 
 before_install:
