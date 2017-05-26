@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=ninja-build
+    - PACKAGE=stunnel
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4121
-    - DIST=trusty
+    - ISSUE_NUMBER=4135
+    - DIST=precise
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
