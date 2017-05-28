@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libgc-dev
+    - PACKAGE=libgc1c2:i386
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4137
+    - ISSUE_NUMBER=4138
     - DIST=trusty
 
 before_install:
