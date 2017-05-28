@@ -12,8 +12,8 @@ env:
     - DEBIAN_FRONTEND=noninteractive
     - PACKAGE=libatomic-ops-dev:i386
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4141
-    - DIST=trusty
+    - ISSUE_NUMBER=4142
+    - DIST=precise
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
