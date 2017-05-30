@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-pip
+    - PACKAGE=python3-pip
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4149
+    - ISSUE_NUMBER=4150
     - DIST=trusty
 
 before_install:
