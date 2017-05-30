@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libxkbcommon-x11-dev
+    - PACKAGE=python-pip
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4148
+    - ISSUE_NUMBER=4149
     - DIST=trusty
 
 before_install:
