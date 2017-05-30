@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=ninja-build
+    - PACKAGE=libxkbcommon-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4121
+    - ISSUE_NUMBER=4147
     - DIST=trusty
 
 before_install:
