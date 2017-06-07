@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-nose
+    - PACKAGE=python-mpi4py
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4164
+    - ISSUE_NUMBER=4168
     - DIST=trusty
 
 before_install:
