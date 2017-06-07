@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=ipython
+    - PACKAGE=python-nose
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4163
+    - ISSUE_NUMBER=4164
     - DIST=trusty
 
 before_install:
