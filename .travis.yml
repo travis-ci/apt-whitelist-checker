@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=atlas
+    - PACKAGE=python-wheel
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4176
+    - ISSUE_NUMBER=4177
     - DIST=trusty
 
 before_install:
