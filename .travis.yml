@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libspatialindex-dev
+    - PACKAGE=ninja-build
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4194
+    - ISSUE_NUMBER=4121
     - DIST=trusty
 
 before_install:
