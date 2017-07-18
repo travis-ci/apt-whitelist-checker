@@ -3,23 +3,22 @@
 source `dirname $0`/common.sh
 
 PKG=$1
+: "${APT_SOURCE_WHITELIST_UBUNTU_JSON:=https://raw.githubusercontent.com/travis-ci/apt-source-whitelist/master/ubuntu.json}"
 
 export DEBIAN_FRONTEND=noninteractive
 fold_start apt_src "Add APT sources"
-cd
-wget https://raw.githubusercontent.com/travis-ci/apt-source-whitelist/master/ubuntu.json
-old_IFS=$IFS
-IFS=$'\t'
-jq -r '.[]|[.alias,.sourceline,.key_url]|@tsv' ubuntu.json | \
-while read -r Alias SourceLine KeyURL; do
-        echo "------------------------------"
-        echo "Adding ${Alias}"
-        if [[ "${KeyURL}" != "" ]]; then
-                curl -sSL ${KeyURL} | sudo -E env LANG=C.UTF-8 apt-key add - || continue;
-        fi
-        sudo -E env LANG=C.UTF-8 apt-add-repository -ys ${SourceLine}
-done
-IFS=${old_IFS}
+cd "${HOME}"
+curl -sSL "${APT_SOURCE_WHITELIST_UBUNTU_JSON}" \
+  | jq -r '.[] | [.alias, .sourceline, .key_url] | join(" ")' \
+  | while read -r alias sourceline key_url; do
+      echo "------------------------------"
+      echo "Adding ${alias}"
+      if [[ "${key_url}" ]]; then
+        curl -sSL "${key_url}" \
+          | sudo -E env LANG=C.UTF-8 apt-key add - || continue;
+      fi
+      sudo -E env LANG=C.UTF-8 apt-add-repository -ys "${sourceline}"
+    done
 mkdir -p /var/tmp/deb-sources
 cd /var/tmp/deb-sources
 sudo apt-get update -qq &>/dev/null
