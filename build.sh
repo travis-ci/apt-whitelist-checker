@@ -4,15 +4,22 @@ source `dirname $0`/common.sh
 
 PKG=$1
 
-fold_start ruby19 "Installing Ruby 1.9.1"
-sudo apt-get install ruby1.9.1 -qq
-fold_end ruby19
-
 export DEBIAN_FRONTEND=noninteractive
 fold_start apt_src "Add APT sources"
 cd
 wget https://raw.githubusercontent.com/travis-ci/apt-source-whitelist/master/ubuntu.json
-ruby1.9.1 -rjson add_sources.rb
+old_IFS=$IFS
+IFS=$'\t'
+jq -r '.[]|[.alias,.sourceline,.key_url]|@tsv' ubuntu.json | \
+while read -r Alias SourceLine KeyURL; do
+        echo "------------------------------"
+        echo "Adding ${Alias}"
+        if [[ "${KeyURL}" != "" ]]; then
+                curl -sSL ${KeyURL} | sudo -E env LANG=C.UTF-8 apt-key add - || continue;
+        fi
+        sudo -E env LANG=C.UTF-8 apt-add-repository -ys ${SourceLine}
+done
+IFS=${old_IFS}
 mkdir -p /var/tmp/deb-sources
 cd /var/tmp/deb-sources
 sudo apt-get update -qq &>/dev/null
