@@ -8,8 +8,10 @@ PKG=$1
 export DEBIAN_FRONTEND=noninteractive
 fold_start apt_src "Add APT sources"
 cd "${HOME}"
+OLD_IFS="${IFS}"
+IFS="\t"
 curl -sSL "${APT_SOURCE_WHITELIST_UBUNTU_JSON}" \
-  | jq -r '.[] | [.alias, .sourceline, .key_url] | join(" ")' \
+  | jq -r '.[] | [.alias, .sourceline, .key_url] | @tsv' \
   | while read -r alias sourceline key_url; do
       echo "------------------------------"
       echo "Adding ${alias}"
@@ -19,6 +21,7 @@ curl -sSL "${APT_SOURCE_WHITELIST_UBUNTU_JSON}" \
       fi
       sudo -E env LANG=C.UTF-8 apt-add-repository -ys "${sourceline}"
     done
+IFS="${OLD_IFS}"
 mkdir -p /var/tmp/deb-sources
 cd /var/tmp/deb-sources
 sudo apt-get update -qq &>/dev/null
