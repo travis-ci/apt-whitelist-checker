@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libxss-dev
+    - PACKAGE=libnotify-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4184
+    - ISSUE_NUMBER=4185
     - DIST=trusty
 
 before_install:
