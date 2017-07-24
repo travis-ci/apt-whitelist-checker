@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=g++-7
+    - PACKAGE=catch
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4195
-    - DIST=precise
+    - ISSUE_NUMBER=4196
+    - DIST=trusty
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
