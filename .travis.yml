@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libspatialindex-dev
+    - PACKAGE=catch
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4194
+    - ISSUE_NUMBER=4196
     - DIST=trusty
 
 before_install:
