@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=hunspell-ru
+    - PACKAGE=biber
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4212
+    - ISSUE_NUMBER=4214
     - DIST=trusty
 
 before_install:
