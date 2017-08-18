@@ -4,15 +4,11 @@ source `dirname $0`/common.sh
 
 PKG=$1
 
-fold_start ruby19 "Installing Ruby 1.9.1"
-sudo apt-get install ruby1.9.1 -qq
-fold_end ruby19
-
 export DEBIAN_FRONTEND=noninteractive
 fold_start apt_src "Add APT sources"
 cd
 wget https://raw.githubusercontent.com/travis-ci/apt-source-whitelist/master/ubuntu.json
-ruby1.9.1 -rjson add_sources.rb
+ruby -rjson add_sources.rb
 mkdir -p /var/tmp/deb-sources
 cd /var/tmp/deb-sources
 sudo apt-get update -qq &>/dev/null
