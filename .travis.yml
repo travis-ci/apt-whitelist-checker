@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libblas-dev
+    - PACKAGE=libatlas-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4201
+    - ISSUE_NUMBER=4202
     - DIST=trusty
 
 before_install:
