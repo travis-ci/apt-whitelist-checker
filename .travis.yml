@@ -12,8 +12,8 @@ env:
     - DEBIAN_FRONTEND=noninteractive
     - PACKAGE=tomcat-native
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4215
-    - DIST=precise
+    - ISSUE_NUMBER=4216
+    - DIST=trusty
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
