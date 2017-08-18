@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=w3c-linkchecker
+    - PACKAGE=sphinx-rtd-theme
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4207
-    - DIST=precise
+    - ISSUE_NUMBER=4211
+    - DIST=trusty
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
