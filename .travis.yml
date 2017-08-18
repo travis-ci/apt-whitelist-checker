@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libfcgi-dev
+    - PACKAGE=libxss-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4183
+    - ISSUE_NUMBER=4184
     - DIST=trusty
 
 before_install:
