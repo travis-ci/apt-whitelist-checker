@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=clang-5.0
+    - PACKAGE=clang-tidy-5.0
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4071
+    - ISSUE_NUMBER=4072
     - DIST=trusty
 
 before_install:
