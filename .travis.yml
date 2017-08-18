@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libatlas-dev
+    - PACKAGE=softhsm
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4202
+    - ISSUE_NUMBER=4203
     - DIST=trusty
 
 before_install:
