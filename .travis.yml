@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=biber
+    - PACKAGE=tomcat-native
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4214
-    - DIST=trusty
+    - ISSUE_NUMBER=4215
+    - DIST=precise
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
