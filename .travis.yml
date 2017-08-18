@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=terminaltables
+    - PACKAGE=w3c-linkchecker
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4206
-    - DIST=trusty
+    - ISSUE_NUMBER=4207
+    - DIST=precise
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
