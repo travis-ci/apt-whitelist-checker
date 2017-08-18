@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=tomcat-native
+    - PACKAGE=g++-7
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4216
+    - ISSUE_NUMBER=4217
     - DIST=trusty
 
 before_install:
