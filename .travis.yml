@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=catch
+    - PACKAGE=libblas-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4196
+    - ISSUE_NUMBER=4201
     - DIST=trusty
 
 before_install:
