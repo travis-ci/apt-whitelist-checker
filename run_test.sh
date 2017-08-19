@@ -9,8 +9,8 @@ ISSUE_REPO=${ISSUE_REPO:-"apt-package-whitelist"} # name of the repo that has is
 GITHUB_ISSUES_URL="https://api.github.com/repos/travis-ci/${ISSUE_REPO}/issues/${ISSUE_NUMBER}"
 
 echo "Copying build.sh"
-cp build.sh common.sh add_sources.rb $HOME/build
-docker exec -u travis $(< docker_id) mv $HOME/build/{build.sh,common.sh,add_sources.rb} $HOME
+cp build.sh common.sh $HOME/build
+docker exec -u travis $(< docker_id) mv $HOME/build/{build.sh,common.sh} $HOME
 
 echo "Running build.sh"
 docker exec -u travis $(< docker_id) bash ${HOME}/build.sh ${PACKAGE}
