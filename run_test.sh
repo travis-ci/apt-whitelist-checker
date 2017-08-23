@@ -11,6 +11,7 @@ GITHUB_ISSUES_URL="https://api.github.com/repos/travis-ci/${ISSUE_REPO}/issues/$
 if [[ -n $DOCKER ]]; then
 	echo "Copying build.sh"
 	cp build.sh common.sh add_sources.rb $HOME/build
+	docker exec $(< docker_id) chown -R travis /home/travis
 	docker exec -u travis $(< docker_id) mv $HOME/build/{build.sh,common.sh,add_sources.rb} $HOME
 fi
 
