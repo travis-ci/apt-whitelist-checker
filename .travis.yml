@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=tomcat-native
+    - PACKAGE=w3c-linkchecker
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4215
+    - ISSUE_NUMBER=4207
     - DIST=precise
 
 before_install:
