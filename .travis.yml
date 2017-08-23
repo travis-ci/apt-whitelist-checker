@@ -34,7 +34,7 @@ before_install:
     fi
 
 
-install: skipk
+install: skip
 
 script:
   - ./run_test.sh
