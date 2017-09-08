@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=normalize-audio
+    - PACKAGE=libcdk5-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4229
+    - ISSUE_NUMBER=4231
     - DIST=trusty
 
 before_install:
