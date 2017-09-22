@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libcdk5-dev
+    - PACKAGE=unar
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4231
+    - ISSUE_NUMBER=4234
     - DIST=trusty
 
 before_install:
