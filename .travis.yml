@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=unar
+    - PACKAGE=libsdl-sound1.2-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4234
+    - ISSUE_NUMBER=4236
     - DIST=trusty
 
 before_install:
