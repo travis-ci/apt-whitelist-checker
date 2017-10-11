@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=eclipse
+    - PACKAGE=eclipse-cdt
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4240
+    - ISSUE_NUMBER=4241
     - DIST=trusty
 
 before_install:
