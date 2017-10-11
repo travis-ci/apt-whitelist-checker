@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libmariadbclient-dev
+    - PACKAGE=eclipse
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4238
+    - ISSUE_NUMBER=4240
     - DIST=trusty
 
 before_install:
