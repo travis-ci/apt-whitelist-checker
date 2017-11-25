@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=eclipse-cdt
+    - PACKAGE=python-epydoc
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4241
+    - ISSUE_NUMBER=4200
     - DIST=trusty
 
 before_install:
