@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=cmake3
+    - PACKAGE=python-epydoc
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4244
+    - ISSUE_NUMBER=4200
     - DIST=trusty
 
 before_install:
