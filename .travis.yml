@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-epydoc
+    - PACKAGE=libc++-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4200
+    - ISSUE_NUMBER=4247
     - DIST=trusty
 
 before_install:
