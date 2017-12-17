@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libc++-dev
+    - PACKAGE=gcc-powerpc-linux-gnu
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4247
+    - ISSUE_NUMBER=4248
     - DIST=trusty
 
 before_install:
