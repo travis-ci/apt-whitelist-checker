@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libswe-dev
+    - PACKAGE=libc++-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4251
+    - ISSUE_NUMBER=4247
     - DIST=trusty
 
 before_install:
