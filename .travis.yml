@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=postgresql-client-10
+    - PACKAGE=postgresql-10-postgis-2.4
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4255
+    - ISSUE_NUMBER=4256
     - DIST=trusty
 
 before_install:
