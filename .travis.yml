@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libc++-dev
+    - PACKAGE=postgresql-10
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4247
+    - ISSUE_NUMBER=4254
     - DIST=trusty
 
 before_install:
