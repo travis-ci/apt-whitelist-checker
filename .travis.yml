@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=postgresql-10-postgis-2.4
+    - PACKAGE=libc++-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4256
+    - ISSUE_NUMBER=4247
     - DIST=trusty
 
 before_install:
