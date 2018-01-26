@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libc++-dev
+    - PACKAGE=resource-agents
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4247
+    - ISSUE_NUMBER=4261
     - DIST=trusty
 
 before_install:
