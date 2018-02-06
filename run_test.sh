@@ -29,7 +29,7 @@ if [ $CHECK_RESULT -ne $EXIT_SOURCE_NOT_FOUND ]; then
 fi
 
 case $CHECK_RESULT in
-	$EXIT_SUCCSS)
+	$EXIT_SUCCESS)
 		notice "No suspicious bits found."
 		notice "Setting up Git"
 		git clone https://github.com/travis-ci/apt-package-whitelist.git
