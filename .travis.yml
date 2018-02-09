@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=couchbase
+    - PACKAGE=resource-agents
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4262
+    - ISSUE_NUMBER=4261
     - DIST=trusty
 
 before_install:
