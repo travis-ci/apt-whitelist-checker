@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=chromium-chromedriver
+    - PACKAGE=mysql-utilities
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4268
+    - ISSUE_NUMBER=4271
     - DIST=trusty
 
 before_install:
