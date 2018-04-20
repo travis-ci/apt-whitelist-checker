@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libace-dev
+    - PACKAGE=libparted-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4273
+    - ISSUE_NUMBER=4276
     - DIST=trusty
 
 before_install:
