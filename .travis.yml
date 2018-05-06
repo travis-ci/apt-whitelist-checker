@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libparted-dev
+    - PACKAGE=sdcc
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4276
+    - ISSUE_NUMBER=4278
     - DIST=trusty
 
 before_install:
