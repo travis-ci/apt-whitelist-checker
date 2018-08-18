@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libslang2-dev
+    - PACKAGE=lynx
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4312
+    - ISSUE_NUMBER=4313
     - DIST=trusty
 
 before_install:
