@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=lynx
+    - PACKAGE=postgresql-10
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4313
+    - ISSUE_NUMBER=4314
     - DIST=trusty
 
 before_install:
