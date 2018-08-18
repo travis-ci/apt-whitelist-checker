@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=asciidoctor
+    - PACKAGE=docbook-simple
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4306
+    - ISSUE_NUMBER=4308
     - DIST=trusty
 
 before_install:
