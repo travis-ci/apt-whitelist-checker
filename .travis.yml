@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libgss-dev
+    - PACKAGE=liblmdb-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4309
+    - ISSUE_NUMBER=4310
     - DIST=trusty
 
 before_install:
