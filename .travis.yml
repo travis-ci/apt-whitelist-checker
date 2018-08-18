@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=liblmdb-dev
+    - PACKAGE=libqdbm-dev
     - ISSUE_REPO=apt-package-whitelist
-    - ISSUE_NUMBER=4310
+    - ISSUE_NUMBER=4311
     - DIST=trusty
 
 before_install:
