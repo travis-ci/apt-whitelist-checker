@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gcc-multilib
+    - PACKAGE=rna-star
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3766
+    - ISSUE_NUMBER=3777
     - DIST=trusty
 
 before_install:
