@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libc-client2007e-dev
+    - PACKAGE=qemu-kvm-extras
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1413
+    - ISSUE_NUMBER=1416
     - DIST=precise
 
 before_install:
