@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsodium
+    - PACKAGE=referenceassemblies-pcl
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=925
+    - ISSUE_NUMBER=929
     - DIST=precise
 
 before_install:
