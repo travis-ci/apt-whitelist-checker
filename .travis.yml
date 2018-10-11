@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libmozjs-dev
+    - PACKAGE=guile-2.0-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=174
+    - ISSUE_NUMBER=209
     - DIST=precise
 
 before_install:
