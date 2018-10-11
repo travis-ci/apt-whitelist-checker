@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=qemu-system-x86_64
+    - PACKAGE=libwxgtk2.8-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=377
+    - ISSUE_NUMBER=378
     - DIST=precise
 
 before_install:
