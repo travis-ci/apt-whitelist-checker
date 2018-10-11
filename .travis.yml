@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=verilator
+    - PACKAGE=texlive-base
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3755
+    - ISSUE_NUMBER=3756
     - DIST=trusty
 
 before_install:
