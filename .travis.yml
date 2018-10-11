@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=php5-mcrypt
+    - PACKAGE=libmagickcore5-extra
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1608
+    - ISSUE_NUMBER=1626
     - DIST=precise
 
 before_install:
