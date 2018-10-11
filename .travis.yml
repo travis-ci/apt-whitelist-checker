@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=daemontools
+    - PACKAGE=libsnmp30
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2634
+    - ISSUE_NUMBER=2640
     - DIST=precise
 
 before_install:
