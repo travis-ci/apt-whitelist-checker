@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=ubuntu-sdk-libs-dev
+    - PACKAGE=liblognorm1-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1134
+    - ISSUE_NUMBER=1139
     - DIST=precise
 
 before_install:
