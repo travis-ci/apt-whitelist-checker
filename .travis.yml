@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=clisp
+    - PACKAGE=libstdc++-4.9-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=799
+    - ISSUE_NUMBER=850
     - DIST=precise
 
 before_install:
