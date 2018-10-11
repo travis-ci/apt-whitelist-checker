@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libbullet-dev
+    - PACKAGE=libunwind7-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=649
+    - ISSUE_NUMBER=685
     - DIST=precise
 
 before_install:
