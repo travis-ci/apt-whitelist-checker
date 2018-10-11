@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=pngquant
+    - PACKAGE=mongodb-org-server
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3588
+    - ISSUE_NUMBER=3589
     - DIST=trusty
 
 before_install:
