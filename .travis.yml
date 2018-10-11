@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libgtest-dev
+    - PACKAGE=jpegoptim
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4082
+    - ISSUE_NUMBER=4087
     - DIST=trusty
 
 before_install:
