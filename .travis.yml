@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libdbus-1-dev
+    - PACKAGE=libc6:i386
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=66
+    - ISSUE_NUMBER=89
     - DIST=precise
 
 before_install:
