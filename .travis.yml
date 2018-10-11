@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=lilypond
+    - PACKAGE=ircd-irc2
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1540
+    - ISSUE_NUMBER=1541
     - DIST=precise
 
 before_install:
