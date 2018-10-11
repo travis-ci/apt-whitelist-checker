@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=linux-headers
+    - PACKAGE=gcc-7
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3927
-    - DIST=precise
+    - ISSUE_NUMBER=3933
+    - DIST=trusty
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
