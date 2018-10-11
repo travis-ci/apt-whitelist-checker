@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=postgresql-plpython3-9.3
+    - PACKAGE=postgresql-plpython3-9.4
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=486
+    - ISSUE_NUMBER=488
     - DIST=precise
 
 before_install:
