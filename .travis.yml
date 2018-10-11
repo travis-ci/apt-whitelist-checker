@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=chromium-chromedriver
+    - PACKAGE=libace-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4268
+    - ISSUE_NUMBER=4273
     - DIST=trusty
 
 before_install:
