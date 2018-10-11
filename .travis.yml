@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libqt5core5
+    - PACKAGE=lighttpd
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2002
+    - ISSUE_NUMBER=2014
     - DIST=precise
 
 before_install:
