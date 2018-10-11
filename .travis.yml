@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=google-cloud-sdk
+    - PACKAGE=gcc-mingw-w64-i686
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3515
+    - ISSUE_NUMBER=3518
     - DIST=trusty
 
 before_install:
