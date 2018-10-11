@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libvtk5-dev
+    - PACKAGE=python-qgis
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=526
+    - ISSUE_NUMBER=584
     - DIST=precise
 
 before_install:
