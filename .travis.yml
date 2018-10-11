@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=mongodb-org
+    - PACKAGE=r-cran-rserve
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2239
+    - ISSUE_NUMBER=2249
     - DIST=precise
 
 before_install:
