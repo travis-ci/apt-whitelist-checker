@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=nfs-common
+    - PACKAGE=quota
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2581
+    - ISSUE_NUMBER=2582
     - DIST=precise
 
 before_install:
