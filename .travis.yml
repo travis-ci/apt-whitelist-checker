@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=alex-3.1.7
+    - PACKAGE=happy-1.19.5
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3566
+    - ISSUE_NUMBER=3567
     - DIST=trusty
 
 before_install:
