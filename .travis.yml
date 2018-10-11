@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=ghc-8.2.2
+    - PACKAGE=ghc-8.4.2
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4317
+    - ISSUE_NUMBER=4318
     - DIST=trusty
 
 before_install:
