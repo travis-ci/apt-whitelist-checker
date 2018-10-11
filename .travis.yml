@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=softhsm
+    - PACKAGE=terminaltables
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4203
+    - ISSUE_NUMBER=4206
     - DIST=trusty
 
 before_install:
