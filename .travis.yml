@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=inetutils-traceroute
+    - PACKAGE=python3.1-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3322
+    - ISSUE_NUMBER=3324
     - DIST=precise
 
 before_install:
