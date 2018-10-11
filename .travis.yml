@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libutempter-dev
+    - PACKAGE=libvtk5-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=520
+    - ISSUE_NUMBER=526
     - DIST=precise
 
 before_install:
