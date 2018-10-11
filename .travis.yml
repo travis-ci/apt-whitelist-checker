@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=lcab
+    - PACKAGE=zoo
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4290
+    - ISSUE_NUMBER=4291
     - DIST=trusty
 
 before_install:
