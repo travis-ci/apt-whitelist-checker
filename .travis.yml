@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libstdc++-4.9-dev
+    - PACKAGE=qtmobility-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=850
+    - ISSUE_NUMBER=857
     - DIST=precise
 
 before_install:
