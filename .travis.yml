@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libpulse-dev
+    - PACKAGE=liblua5.1-0-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3724
+    - ISSUE_NUMBER=3746
     - DIST=trusty
 
 before_install:
