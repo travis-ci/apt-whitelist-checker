@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=g++-5-mingw-w64-x86-64
+    - PACKAGE=libgnome2-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2911
+    - ISSUE_NUMBER=2913
     - DIST=precise
 
 before_install:
