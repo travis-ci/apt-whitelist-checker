@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsensors4-dev
+    - PACKAGE=libsdl2-mixer-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1142
+    - ISSUE_NUMBER=1157
     - DIST=precise
 
 before_install:
