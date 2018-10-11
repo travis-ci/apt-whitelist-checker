@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=emacs-snapshot
+    - PACKAGE=musl
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=367
+    - ISSUE_NUMBER=369
     - DIST=precise
 
 before_install:
