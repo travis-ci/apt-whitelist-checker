@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=cmake3
+    - PACKAGE=resource-agents
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4244
+    - ISSUE_NUMBER=4261
     - DIST=trusty
 
 before_install:
