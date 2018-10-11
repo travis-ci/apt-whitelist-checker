@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=cups
+    - PACKAGE=libiptcdata-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=411
+    - ISSUE_NUMBER=412
     - DIST=precise
 
 before_install:
