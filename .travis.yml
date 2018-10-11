@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-rpm
+    - PACKAGE=screen
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1696
+    - ISSUE_NUMBER=1736
     - DIST=precise
 
 before_install:
