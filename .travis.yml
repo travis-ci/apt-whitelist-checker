@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=mc
+    - PACKAGE=mcrypt
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2561
+    - ISSUE_NUMBER=2562
     - DIST=precise
 
 before_install:
