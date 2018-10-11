@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libpython3.5-dev:i386
+    - PACKAGE=varnish-4.0
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1842
+    - ISSUE_NUMBER=1845
     - DIST=precise
 
 before_install:
