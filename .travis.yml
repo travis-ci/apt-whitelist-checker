@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-libvirt
+    - PACKAGE=gcc-4.8-arm-linux-gnueabihf
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1016
+    - ISSUE_NUMBER=1063
     - DIST=precise
 
 before_install:
