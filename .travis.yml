@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsdl2-ttf-dev:i386
+    - PACKAGE=libjansson-dev:i386
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3577
+    - ISSUE_NUMBER=3578
     - DIST=trusty
 
 before_install:
