@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=pkg-config
+    - PACKAGE=nsca-client
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2080
+    - ISSUE_NUMBER=2085
     - DIST=precise
 
 before_install:
