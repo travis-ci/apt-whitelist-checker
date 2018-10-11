@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=varnish-4.0
+    - PACKAGE=tshark
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1845
+    - ISSUE_NUMBER=1874
     - DIST=precise
 
 before_install:
