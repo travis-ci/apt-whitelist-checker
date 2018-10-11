@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=tarantool
+    - PACKAGE=libvte-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2673
+    - ISSUE_NUMBER=2675
     - DIST=precise
 
 before_install:
