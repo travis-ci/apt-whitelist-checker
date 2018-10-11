@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=growisofs
+    - PACKAGE=open-iscsi-utils
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2510
+    - ISSUE_NUMBER=2520
     - DIST=precise
 
 before_install:
