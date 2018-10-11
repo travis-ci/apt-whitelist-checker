@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=guile-2.0-dev
+    - PACKAGE=libgettextpo-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=209
+    - ISSUE_NUMBER=212
     - DIST=precise
 
 before_install:
