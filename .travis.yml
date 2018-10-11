@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=stunnel4
+    - PACKAGE=qq
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=403
+    - ISSUE_NUMBER=404
     - DIST=precise
 
 before_install:
