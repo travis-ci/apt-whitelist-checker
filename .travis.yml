@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python3.1-dev
+    - PACKAGE=root-system-bin
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3324
+    - ISSUE_NUMBER=3329
     - DIST=precise
 
 before_install:
