@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=tk8.6
+    - PACKAGE=liblua5.1-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2328
+    - ISSUE_NUMBER=2341
     - DIST=precise
 
 before_install:
