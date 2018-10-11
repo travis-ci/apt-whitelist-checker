@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=dart
+    - PACKAGE=llvm-3.9-tools
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3267
+    - ISSUE_NUMBER=3268
     - DIST=precise
 
 before_install:
