@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libgit2-22
+    - PACKAGE=x11vnc
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3419
+    - ISSUE_NUMBER=3432
     - DIST=precise
 
 before_install:
