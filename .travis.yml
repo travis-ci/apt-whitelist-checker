@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=bcc
+    - PACKAGE=tk8.6
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2320
+    - ISSUE_NUMBER=2328
     - DIST=precise
 
 before_install:
