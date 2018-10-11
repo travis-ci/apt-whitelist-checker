@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=qq
+    - PACKAGE=tcpdump
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=404
+    - ISSUE_NUMBER=405
     - DIST=precise
 
 before_install:
