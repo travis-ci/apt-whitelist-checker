@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=rdnssd
+    - PACKAGE=nvidia-cuda-toolkit
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=586
+    - ISSUE_NUMBER=587
     - DIST=precise
 
 before_install:
