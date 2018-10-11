@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=sphinx-rtd-theme
+    - PACKAGE=hunspell-ru
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4211
+    - ISSUE_NUMBER=4212
     - DIST=trusty
 
 before_install:
