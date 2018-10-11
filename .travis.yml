@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libcmocka-dev
+    - PACKAGE=cpp-coveralls
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1169
+    - ISSUE_NUMBER=1185
     - DIST=precise
 
 before_install:
