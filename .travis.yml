@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=haproxy
+    - PACKAGE=mpd
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3948
-    - DIST=trusty
+    - ISSUE_NUMBER=4009
+    - DIST=precise
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
