@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=kdelibs5-dev
+    - PACKAGE=inetutils-traceroute
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3319
+    - ISSUE_NUMBER=3322
     - DIST=precise
 
 before_install:
