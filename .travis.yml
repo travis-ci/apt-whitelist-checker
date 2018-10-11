@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libgnutls28-dev
+    - PACKAGE=libslang2-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1420
+    - ISSUE_NUMBER=1422
     - DIST=precise
 
 before_install:
