@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=postgresql-client-10
+    - PACKAGE=cabal-install-2.2
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4315
+    - ISSUE_NUMBER=4316
     - DIST=trusty
 
 before_install:
