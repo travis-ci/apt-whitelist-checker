@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libdb5.1-dev
+    - PACKAGE=tor
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1737
+    - ISSUE_NUMBER=1753
     - DIST=precise
 
 before_install:
