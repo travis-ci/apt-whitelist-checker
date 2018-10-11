@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=x11vnc
+    - PACKAGE=libgphoto2-2-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3432
+    - ISSUE_NUMBER=3447
     - DIST=precise
 
 before_install:
