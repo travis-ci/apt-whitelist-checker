@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libopenmpi-1.6
+    - PACKAGE=squid
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1806
+    - ISSUE_NUMBER=1810
     - DIST=precise
 
 before_install:
