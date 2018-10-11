@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libunwind7-dev
+    - PACKAGE=libvirt-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=685
+    - ISSUE_NUMBER=723
     - DIST=precise
 
 before_install:
