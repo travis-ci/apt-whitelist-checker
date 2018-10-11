@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=cluster-glue-dev
+    - PACKAGE=libX11-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2936
+    - ISSUE_NUMBER=2947
     - DIST=precise
 
 before_install:
