@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libqdbm-dev
+    - PACKAGE=libmpc.so.3
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2762
+    - ISSUE_NUMBER=2774
     - DIST=precise
 
 before_install:
