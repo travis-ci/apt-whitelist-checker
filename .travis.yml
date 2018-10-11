@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=couchbase
+    - PACKAGE=gnome-keyring
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4262
+    - ISSUE_NUMBER=4265
     - DIST=trusty
 
 before_install:
