@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libwxgtk2.8-dev
+    - PACKAGE=stack
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=378
+    - ISSUE_NUMBER=379
     - DIST=precise
 
 before_install:
