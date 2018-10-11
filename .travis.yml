@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=clamav
+    - PACKAGE=lilypond
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1539
+    - ISSUE_NUMBER=1540
     - DIST=precise
 
 before_install:
