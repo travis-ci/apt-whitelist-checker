@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=bluez
+    - PACKAGE=cfengine2
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2463
+    - ISSUE_NUMBER=2464
     - DIST=precise
 
 before_install:
