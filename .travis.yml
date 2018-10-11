@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libdbus-1-dev
+    - PACKAGE=libgtksourceview-3.0-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=758
+    - ISSUE_NUMBER=762
     - DIST=precise
 
 before_install:
