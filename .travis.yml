@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=liballegro5-dev
+    - PACKAGE=libbullet-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=646
+    - ISSUE_NUMBER=649
     - DIST=precise
 
 before_install:
