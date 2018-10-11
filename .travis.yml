@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libharfbuzz-dev
+    - PACKAGE=libisl10
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3935
+    - ISSUE_NUMBER=3947
     - DIST=trusty
 
 before_install:
