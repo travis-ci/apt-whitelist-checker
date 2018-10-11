@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libc6-i686:i386
+    - PACKAGE=syslog-ng
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=985
+    - ISSUE_NUMBER=1009
     - DIST=precise
 
 before_install:
