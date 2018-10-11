@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libgc1c2:i386
+    - PACKAGE=libatomic-ops-dev:i386
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4138
+    - ISSUE_NUMBER=4141
     - DIST=trusty
 
 before_install:
