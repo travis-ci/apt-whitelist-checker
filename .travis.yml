@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=mongodb-org-server
+    - PACKAGE=libusb-1.0-0-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3589
+    - ISSUE_NUMBER=3596
     - DIST=trusty
 
 before_install:
