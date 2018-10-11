@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libadns1-dev
+    - PACKAGE=libcmocka-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1166
+    - ISSUE_NUMBER=1169
     - DIST=precise
 
 before_install:
