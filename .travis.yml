@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=binutils-mingw-w64-x86-64
+    - PACKAGE=gcc-mingw-w64
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4188
+    - ISSUE_NUMBER=4189
     - DIST=trusty
 
 before_install:
