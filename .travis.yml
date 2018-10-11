@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python2.7-dbg
+    - PACKAGE=python3.2-dbg
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=394
+    - ISSUE_NUMBER=399
     - DIST=precise
 
 before_install:
