@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=liblua5.1-0-dev
+    - PACKAGE=csound
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3746
-    - DIST=trusty
+    - ISSUE_NUMBER=3754
+    - DIST=precise
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
