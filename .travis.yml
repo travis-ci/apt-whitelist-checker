@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libxmlrpc-core-c3-dev
+    - PACKAGE=clang-tidy-3.5
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1898
+    - ISSUE_NUMBER=1907
     - DIST=precise
 
 before_install:
