@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=rcs
+    - PACKAGE=liblua5.1-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1598
+    - ISSUE_NUMBER=1605
     - DIST=precise
 
 before_install:
