@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=amd-libopencl1
+    - PACKAGE=libdbus-1-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=742
+    - ISSUE_NUMBER=758
     - DIST=precise
 
 before_install:
