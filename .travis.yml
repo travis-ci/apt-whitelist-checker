@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=clang++
+    - PACKAGE=zeromq
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1405
+    - ISSUE_NUMBER=1407
     - DIST=precise
 
 before_install:
