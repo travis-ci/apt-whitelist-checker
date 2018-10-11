@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gcc-8
+    - PACKAGE=arc
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4283
+    - ISSUE_NUMBER=4288
     - DIST=trusty
 
 before_install:
