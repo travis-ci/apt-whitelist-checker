@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=msitools
+    - PACKAGE=libxml++-3.0-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4298
+    - ISSUE_NUMBER=4300
     - DIST=trusty
 
 before_install:
