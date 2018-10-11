@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=julia
+    - PACKAGE=libgit2-22
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3418
+    - ISSUE_NUMBER=3419
     - DIST=precise
 
 before_install:
