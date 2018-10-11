@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsnmp30
+    - PACKAGE=emacs24-gtk
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2640
+    - ISSUE_NUMBER=2672
     - DIST=precise
 
 before_install:
