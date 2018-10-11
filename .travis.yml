@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libr3-dev
+    - PACKAGE=libr3-0
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4192
+    - ISSUE_NUMBER=4193
     - DIST=trusty
 
 before_install:
