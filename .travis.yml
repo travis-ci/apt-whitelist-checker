@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=root-system-bin
+    - PACKAGE=libsodium
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3329
+    - ISSUE_NUMBER=3343
     - DIST=precise
 
 before_install:
