@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=emscripten
+    - PACKAGE=nim
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2122
+    - ISSUE_NUMBER=2131
     - DIST=precise
 
 before_install:
