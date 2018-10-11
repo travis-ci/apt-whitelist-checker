@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=mpd
+    - PACKAGE=libsodium-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4009
-    - DIST=precise
+    - ISSUE_NUMBER=4047
+    - DIST=trusty
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
