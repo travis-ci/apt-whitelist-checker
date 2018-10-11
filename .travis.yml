@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=extlinux
+    - PACKAGE=bind9-host
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1269
+    - ISSUE_NUMBER=1293
     - DIST=precise
 
 before_install:
