@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libvirt-dev
+    - PACKAGE=libmysqld-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=723
+    - ISSUE_NUMBER=724
     - DIST=precise
 
 before_install:
