@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libmediainfo0
+    - PACKAGE=cracklib2
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2918
+    - ISSUE_NUMBER=2928
     - DIST=precise
 
 before_install:
