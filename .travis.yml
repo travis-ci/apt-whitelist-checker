@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=iputils-ping
+    - PACKAGE=libmonosgen-2.0-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=932
+    - ISSUE_NUMBER=938
     - DIST=precise
 
 before_install:
