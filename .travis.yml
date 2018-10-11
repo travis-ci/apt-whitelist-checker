@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=ghc-7.8.4
+    - PACKAGE=cabal-install-1.18
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3568
+    - ISSUE_NUMBER=3569
     - DIST=trusty
 
 before_install:
