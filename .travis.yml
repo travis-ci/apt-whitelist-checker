@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=wine1.7
+    - PACKAGE=clang++
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1401
+    - ISSUE_NUMBER=1405
     - DIST=precise
 
 before_install:
