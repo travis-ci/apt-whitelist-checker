@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libdbus-dev
+    - PACKAGE=libdpkg-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2378
+    - ISSUE_NUMBER=2383
     - DIST=precise
 
 before_install:
