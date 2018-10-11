@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=samba4-dev
+    - PACKAGE=nfs-common
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2567
+    - ISSUE_NUMBER=2581
     - DIST=precise
 
 before_install:
