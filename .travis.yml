@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=syslog-ng
+    - PACKAGE=postgresql-9.3-slony1-2
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1009
+    - ISSUE_NUMBER=1015
     - DIST=precise
 
 before_install:
