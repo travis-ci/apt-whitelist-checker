@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=golang-go
+    - PACKAGE=daemontools
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2632
+    - ISSUE_NUMBER=2634
     - DIST=precise
 
 before_install:
