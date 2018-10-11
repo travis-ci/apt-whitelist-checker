@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libtokyocabinet-dev
+    - PACKAGE=iputils-ping
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=931
+    - ISSUE_NUMBER=932
     - DIST=precise
 
 before_install:
