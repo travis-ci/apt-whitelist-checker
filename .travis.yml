@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libavformat-dev
+    - PACKAGE=libswscale-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3533
+    - ISSUE_NUMBER=3534
     - DIST=trusty
 
 before_install:
