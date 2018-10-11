@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=mpich-bin
+    - PACKAGE=iceweasel
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=406
+    - ISSUE_NUMBER=407
     - DIST=precise
 
 before_install:
