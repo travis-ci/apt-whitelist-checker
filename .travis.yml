@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libgettextpo-dev
+    - PACKAGE=libwxgtk3.0-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=212
+    - ISSUE_NUMBER=217
     - DIST=precise
 
 before_install:
