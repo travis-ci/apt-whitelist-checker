@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gcc-4.8-arm-linux-gnueabihf
+    - PACKAGE=libcap-ng-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1063
+    - ISSUE_NUMBER=1096
     - DIST=precise
 
 before_install:
