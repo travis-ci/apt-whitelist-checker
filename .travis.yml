@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gkrellm
+    - PACKAGE=gnokii-cli
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2505
+    - ISSUE_NUMBER=2507
     - DIST=precise
 
 before_install:
