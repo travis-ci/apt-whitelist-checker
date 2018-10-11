@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libclang-3.3-dev
+    - PACKAGE=libopenmpi-1.6
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1782
+    - ISSUE_NUMBER=1806
     - DIST=precise
 
 before_install:
