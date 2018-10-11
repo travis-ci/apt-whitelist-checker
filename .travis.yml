@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libstdc++-5-dev
+    - PACKAGE=librrd-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3597
+    - ISSUE_NUMBER=3598
     - DIST=trusty
 
 before_install:
