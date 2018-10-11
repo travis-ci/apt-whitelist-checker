@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=hhvm-dev
+    - PACKAGE=f2c
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1212
+    - ISSUE_NUMBER=1215
     - DIST=precise
 
 before_install:
