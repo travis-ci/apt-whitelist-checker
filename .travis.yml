@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=postgresql-plpython3-9.4
+    - PACKAGE=nmap
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=488
+    - ISSUE_NUMBER=502
     - DIST=precise
 
 before_install:
