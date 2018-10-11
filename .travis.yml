@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libbfd-dev
+    - PACKAGE=libcdio-cdda-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1921
+    - ISSUE_NUMBER=1940
     - DIST=precise
 
 before_install:
