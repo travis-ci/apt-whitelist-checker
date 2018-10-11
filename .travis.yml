@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=wine-mono
+    - PACKAGE=hevea
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4198
+    - ISSUE_NUMBER=4199
     - DIST=trusty
 
 before_install:
