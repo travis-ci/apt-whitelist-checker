@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libwxgtk3.0-dev
+    - PACKAGE=mapnik
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3157
+    - ISSUE_NUMBER=3158
     - DIST=precise
 
 before_install:
