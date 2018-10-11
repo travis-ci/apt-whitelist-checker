@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=dict
+    - PACKAGE=python-openwsman
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2469
+    - ISSUE_NUMBER=2499
     - DIST=precise
 
 before_install:
