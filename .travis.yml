@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libpyside-dev
+    - PACKAGE=amd-libopencl1
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=739
+    - ISSUE_NUMBER=742
     - DIST=precise
 
 before_install:
