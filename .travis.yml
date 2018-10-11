@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-openwsman
+    - PACKAGE=finger
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2499
+    - ISSUE_NUMBER=2503
     - DIST=precise
 
 before_install:
