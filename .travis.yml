@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=autopoint
+    - PACKAGE=pkg-config
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2076
+    - ISSUE_NUMBER=2080
     - DIST=precise
 
 before_install:
