@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=tesseract-ocr
+    - PACKAGE=google-chrome-stable
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3688
+    - ISSUE_NUMBER=3710
     - DIST=trusty
 
 before_install:
