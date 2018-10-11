@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libclang-3.5-dev
+    - PACKAGE=libclang-3.3-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1780
+    - ISSUE_NUMBER=1782
     - DIST=precise
 
 before_install:
