@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=lua5.1
+    - PACKAGE=srecord
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3829
+    - ISSUE_NUMBER=3835
     - DIST=trusty
 
 before_install:
