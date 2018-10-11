@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gdb
+    - PACKAGE=libreadline-gplv2-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3673
+    - ISSUE_NUMBER=3677
     - DIST=trusty
 
 before_install:
