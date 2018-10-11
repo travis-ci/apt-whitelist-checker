@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=mlocate
+    - PACKAGE=libwxgtk3.0-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3155
+    - ISSUE_NUMBER=3157
     - DIST=precise
 
 before_install:
