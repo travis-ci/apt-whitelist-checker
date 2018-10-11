@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libcryptopp-dev
+    - PACKAGE=libgcrypt-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2264
+    - ISSUE_NUMBER=2265
     - DIST=precise
 
 before_install:
