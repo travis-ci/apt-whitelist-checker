@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=mosquitto
+    - PACKAGE=beanstalkd
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=777
+    - ISSUE_NUMBER=780
     - DIST=precise
 
 before_install:
