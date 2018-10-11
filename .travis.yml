@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=tshark
+    - PACKAGE=flvtool2
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1874
+    - ISSUE_NUMBER=1876
     - DIST=precise
 
 before_install:
