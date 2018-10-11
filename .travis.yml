@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libwebkitgtk-dev
+    - PACKAGE=binutils-mingw-w64-x86-64
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4186
+    - ISSUE_NUMBER=4188
     - DIST=trusty
 
 before_install:
