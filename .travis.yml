@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=live-image-rescue
+    - PACKAGE=mariadb-server
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2746
+    - ISSUE_NUMBER=2753
     - DIST=precise
 
 before_install:
