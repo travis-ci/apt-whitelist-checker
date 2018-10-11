@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=openswan
+    - PACKAGE=libmpfi
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2521
+    - ISSUE_NUMBER=2548
     - DIST=precise
 
 before_install:
