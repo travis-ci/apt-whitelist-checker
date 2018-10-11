@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libc6:i386
+    - PACKAGE=g++-4.9-multilib:i386
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=89
+    - ISSUE_NUMBER=97
     - DIST=precise
 
 before_install:
