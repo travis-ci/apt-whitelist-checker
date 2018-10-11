@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libslang2-dev
+    - PACKAGE=mmdv-bin
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1422
+    - ISSUE_NUMBER=1431
     - DIST=precise
 
 before_install:
