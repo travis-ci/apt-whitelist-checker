@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsvn-dev
+    - PACKAGE=libxmlrpc-core-c3-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1890
+    - ISSUE_NUMBER=1898
     - DIST=precise
 
 before_install:
