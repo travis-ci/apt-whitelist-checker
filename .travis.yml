@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=nsca-client
+    - PACKAGE=frc-toolchain
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2085
+    - ISSUE_NUMBER=2107
     - DIST=precise
 
 before_install:
