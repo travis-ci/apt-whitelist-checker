@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=texlive-appendix
+    - PACKAGE=python-rpm
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1674
+    - ISSUE_NUMBER=1696
     - DIST=precise
 
 before_install:
