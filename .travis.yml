@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libhdf5-7
+    - PACKAGE=mlocate
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3042
+    - ISSUE_NUMBER=3155
     - DIST=precise
 
 before_install:
