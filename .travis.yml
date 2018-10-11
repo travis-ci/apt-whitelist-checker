@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=g++-4.9-multilib:i386
+    - PACKAGE=fp-compiler-2.4.4
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=97
+    - ISSUE_NUMBER=109
     - DIST=precise
 
 before_install:
