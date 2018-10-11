@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libtiff-dev
+    - PACKAGE=google-chrome-unstable
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3900
-    - DIST=precise
+    - ISSUE_NUMBER=3923
+    - DIST=trusty
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
