@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libgphoto2-2-dev
+    - PACKAGE=libgphoto2-2:i386
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3447
+    - ISSUE_NUMBER=3450
     - DIST=precise
 
 before_install:
