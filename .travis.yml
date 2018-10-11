@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=rc
+    - PACKAGE=pike7.8
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1964
+    - ISSUE_NUMBER=1967
     - DIST=precise
 
 before_install:
