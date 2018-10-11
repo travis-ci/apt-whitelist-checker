@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libjack-dev
+    - PACKAGE=ubuntu-sdk-libs-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1127
+    - ISSUE_NUMBER=1134
     - DIST=precise
 
 before_install:
