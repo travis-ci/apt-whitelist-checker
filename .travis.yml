@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libelf-dev
+    - PACKAGE=gdb
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3652
+    - ISSUE_NUMBER=3673
     - DIST=trusty
 
 before_install:
