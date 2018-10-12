@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=clickhouse-server-common
+    - PACKAGE=libdevmapper-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4096
+    - ISSUE_NUMBER=4104
     - DIST=trusty
 
 before_install:
