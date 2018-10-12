@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=postgresql-plpython-9.4
+    - PACKAGE=luacheck
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=784
+    - ISSUE_NUMBER=785
     - DIST=precise
 
 before_install:
