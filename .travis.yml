@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libgsf-1-dev
+    - PACKAGE=gvfs-bin
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1254
+    - ISSUE_NUMBER=1259
     - DIST=precise
 
 before_install:
