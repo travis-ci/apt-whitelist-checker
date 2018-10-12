@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=screen
+    - PACKAGE=libdb5.1-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1736
+    - ISSUE_NUMBER=1737
     - DIST=precise
 
 before_install:
