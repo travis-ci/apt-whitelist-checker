@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libswscale-dev
+    - PACKAGE=alex-3.1.7
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3534
+    - ISSUE_NUMBER=3566
     - DIST=trusty
 
 before_install:
