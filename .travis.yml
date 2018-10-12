@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libqt5gui5
+    - PACKAGE=libace-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=408
+    - ISSUE_NUMBER=410
     - DIST=precise
 
 before_install:
