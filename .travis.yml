@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=openntpd
+    - PACKAGE=lxc-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3282
+    - ISSUE_NUMBER=3318
     - DIST=precise
 
 before_install:
