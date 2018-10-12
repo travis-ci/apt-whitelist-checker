@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=cfengine2
+    - PACKAGE=chrony
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2464
+    - ISSUE_NUMBER=2466
     - DIST=precise
 
 before_install:
