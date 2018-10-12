@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=clang-tidy-3.5
+    - PACKAGE=libseccomp-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1907
+    - ISSUE_NUMBER=1909
     - DIST=precise
 
 before_install:
