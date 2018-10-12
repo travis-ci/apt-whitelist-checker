@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=shellcheck
+    - PACKAGE=lua-5.3
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3867
-    - DIST=trusty
+    - ISSUE_NUMBER=3894
+    - DIST=precise
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
