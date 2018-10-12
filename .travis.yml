@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libmpc.so.3
+    - PACKAGE=mongodb-org-tools
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2774
+    - ISSUE_NUMBER=2825
     - DIST=precise
 
 before_install:
