@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=rethinkdb
+    - PACKAGE=runit
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=428
+    - ISSUE_NUMBER=430
     - DIST=precise
 
 before_install:
