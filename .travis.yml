@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=busted
+    - PACKAGE=sbcl
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=786
+    - ISSUE_NUMBER=789
     - DIST=precise
 
 before_install:
