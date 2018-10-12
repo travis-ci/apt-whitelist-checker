@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libgnome2-dev
+    - PACKAGE=libmediainfo0
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2913
+    - ISSUE_NUMBER=2918
     - DIST=precise
 
 before_install:
