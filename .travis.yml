@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-pivy
+    - PACKAGE=libhdf5-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=414
+    - ISSUE_NUMBER=416
     - DIST=precise
 
 before_install:
