@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=lynx
+    - PACKAGE=ml-lex
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=630
+    - ISSUE_NUMBER=640
     - DIST=precise
 
 before_install:
