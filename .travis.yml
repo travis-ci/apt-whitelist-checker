@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=clang-6.0
+    - PACKAGE=clang-7
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4279
+    - ISSUE_NUMBER=4281
     - DIST=trusty
 
 before_install:
