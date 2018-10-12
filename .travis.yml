@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=jpegoptim
+    - PACKAGE=clickhouse-server-common
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4087
+    - ISSUE_NUMBER=4096
     - DIST=trusty
 
 before_install:
