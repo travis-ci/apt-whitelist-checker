@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libopenmpi1.5-dev
+    - PACKAGE=libopenmpi1.5-bin
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=426
+    - ISSUE_NUMBER=427
     - DIST=precise
 
 before_install:
