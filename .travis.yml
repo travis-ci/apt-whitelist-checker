@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=lensfun-dev
+    - PACKAGE=libspatialite5
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2930
+    - ISSUE_NUMBER=2935
     - DIST=precise
 
 before_install:
