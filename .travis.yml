@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libmount-dev
+    - PACKAGE=libgsf-1-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1217
+    - ISSUE_NUMBER=1254
     - DIST=precise
 
 before_install:
