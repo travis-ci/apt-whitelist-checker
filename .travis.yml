@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libX11-dev
+    - PACKAGE=cvs
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2947
+    - ISSUE_NUMBER=2950
     - DIST=precise
 
 before_install:
