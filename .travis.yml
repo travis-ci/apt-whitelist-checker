@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=texlive-lang-cjk
+    - PACKAGE=cython
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=380
+    - ISSUE_NUMBER=382
     - DIST=precise
 
 before_install:
