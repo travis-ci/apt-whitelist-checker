@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsdl2-mixer-dev
+    - PACKAGE=e2fslibs-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1157
+    - ISSUE_NUMBER=1163
     - DIST=precise
 
 before_install:
