@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libcap-ng-dev
+    - PACKAGE=sagemath-upstream-binary
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=423
+    - ISSUE_NUMBER=424
     - DIST=precise
 
 before_install:
