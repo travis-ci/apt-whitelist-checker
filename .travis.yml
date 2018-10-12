@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=cvs
+    - PACKAGE=fossil
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2950
+    - ISSUE_NUMBER=2952
     - DIST=precise
 
 before_install:
