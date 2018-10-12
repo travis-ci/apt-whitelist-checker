@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libdw1
+    - PACKAGE=libelf-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3651
+    - ISSUE_NUMBER=3652
     - DIST=trusty
 
 before_install:
