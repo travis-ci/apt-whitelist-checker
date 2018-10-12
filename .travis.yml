@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=linux-libc-dev:i386
+    - PACKAGE=llvm-3.9-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4053
+    - ISSUE_NUMBER=4055
     - DIST=trusty
 
 before_install:
