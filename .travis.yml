@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=cabal-install-1.18
+    - PACKAGE=opam
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3569
+    - ISSUE_NUMBER=3570
     - DIST=trusty
 
 before_install:
