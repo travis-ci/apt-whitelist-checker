@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=texlive-base
+    - PACKAGE=texlive-latex-base
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3756
+    - ISSUE_NUMBER=3757
     - DIST=trusty
 
 before_install:
