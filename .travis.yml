@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=iverilog
+    - PACKAGE=lua5.1
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3826
+    - ISSUE_NUMBER=3829
     - DIST=trusty
 
 before_install:
