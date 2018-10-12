@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libgcrypt-dev
+    - PACKAGE=python3.5-dev:i386
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2265
+    - ISSUE_NUMBER=2284
     - DIST=precise
 
 before_install:
