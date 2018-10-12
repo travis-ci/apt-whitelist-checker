@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=g++-7
+    - PACKAGE=gcc-7-base
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4217
+    - ISSUE_NUMBER=4218
     - DIST=trusty
 
 before_install:
