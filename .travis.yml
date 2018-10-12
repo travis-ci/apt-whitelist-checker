@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libopenmpi1.5-bin
+    - PACKAGE=rethinkdb
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=427
+    - ISSUE_NUMBER=428
     - DIST=precise
 
 before_install:
