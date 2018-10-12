@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libclang-3.8-dev:i386
+    - PACKAGE=golang-go
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2627
+    - ISSUE_NUMBER=2632
     - DIST=precise
 
 before_install:
