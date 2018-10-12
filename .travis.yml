@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=sdcc
+    - PACKAGE=clang-6.0
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4278
+    - ISSUE_NUMBER=4279
     - DIST=trusty
 
 before_install:
