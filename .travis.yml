@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=mongodb-org-tools
+    - PACKAGE=fping
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2287
+    - ISSUE_NUMBER=2292
     - DIST=precise
 
 before_install:
