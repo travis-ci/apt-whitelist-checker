@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libvte-2.90-dev
+    - PACKAGE=libcryptopp-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2263
+    - ISSUE_NUMBER=2264
     - DIST=precise
 
 before_install:
