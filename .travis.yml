@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=ghc-8.4.2
+    - PACKAGE=pastebinit
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4318
+    - ISSUE_NUMBER=4325
     - DIST=trusty
 
 before_install:
