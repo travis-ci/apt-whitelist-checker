@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libboost1.48-all-dev
+    - PACKAGE=python-pyside
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=432
+    - ISSUE_NUMBER=433
     - DIST=precise
 
 before_install:
