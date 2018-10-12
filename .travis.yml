@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=llvm-3.9-tools
+    - PACKAGE=nethogs
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3268
+    - ISSUE_NUMBER=3269
     - DIST=precise
 
 before_install:
