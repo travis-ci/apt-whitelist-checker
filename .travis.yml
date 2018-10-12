@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=mailman
+    - PACKAGE=liballegro5-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=644
+    - ISSUE_NUMBER=646
     - DIST=precise
 
 before_install:
