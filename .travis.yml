@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=liblua5.1-lpeg2
+    - PACKAGE=gcc-5-mingw-w64
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2905
+    - ISSUE_NUMBER=2906
     - DIST=precise
 
 before_install:
