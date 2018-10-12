@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libgstreamer1.0-dev
+    - PACKAGE=libhdf5-7
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3019
+    - ISSUE_NUMBER=3042
     - DIST=precise
 
 before_install:
