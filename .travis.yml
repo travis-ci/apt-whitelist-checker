@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=postgresql
+    - PACKAGE=postgresql-contrib
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=725
+    - ISSUE_NUMBER=726
     - DIST=precise
 
 before_install:
