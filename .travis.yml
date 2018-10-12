@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=elasticsearch-1.7.3
+    - PACKAGE=python-twisted
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1564
+    - ISSUE_NUMBER=1565
     - DIST=precise
 
 before_install:
