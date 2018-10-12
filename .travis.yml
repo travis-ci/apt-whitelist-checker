@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=liblua5.1-filesystem0
+    - PACKAGE=libsrecord0
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3837
-    - DIST=precise
+    - ISSUE_NUMBER=3838
+    - DIST=trusty
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
