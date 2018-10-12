@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=llvm-3.9-dev
+    - PACKAGE=libvips-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4055
+    - ISSUE_NUMBER=4056
     - DIST=trusty
 
 before_install:
