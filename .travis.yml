@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=ghc-8.0.1-prof
+    - PACKAGE=ghc-8.0.1-dyn
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3207
+    - ISSUE_NUMBER=3208
     - DIST=precise
 
 before_install:
