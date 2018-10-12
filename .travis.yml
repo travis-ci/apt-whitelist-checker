@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=tclx8.4
+    - PACKAGE=cpp-ethereum
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=919
+    - ISSUE_NUMBER=923
     - DIST=precise
 
 before_install:
