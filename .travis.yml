@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libpng16
+    - PACKAGE=nekotools
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3171
+    - ISSUE_NUMBER=3184
     - DIST=precise
 
 before_install:
