@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsrecord0
+    - PACKAGE=lua5.2
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3838
+    - ISSUE_NUMBER=3865
     - DIST=trusty
 
 before_install:
