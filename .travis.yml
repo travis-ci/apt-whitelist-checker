@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=google-chrome-unstable
+    - PACKAGE=linux-headers
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3923
-    - DIST=trusty
+    - ISSUE_NUMBER=3927
+    - DIST=precise
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
