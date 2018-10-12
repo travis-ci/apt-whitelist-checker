@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=mcrypt
+    - PACKAGE=samba4-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2562
+    - ISSUE_NUMBER=2567
     - DIST=precise
 
 before_install:
