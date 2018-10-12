@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=isc-dhcp-server
+    - PACKAGE=libglib2.0-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=319
+    - ISSUE_NUMBER=347
     - DIST=precise
 
 before_install:
