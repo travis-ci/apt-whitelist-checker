@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=f2c
+    - PACKAGE=libmount-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1215
+    - ISSUE_NUMBER=1217
     - DIST=precise
 
 before_install:
