@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=texlive-latex-base
+    - PACKAGE=gcc-multilib
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3757
+    - ISSUE_NUMBER=3766
     - DIST=trusty
 
 before_install:
