@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libace-dev
+    - PACKAGE=cups
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=410
+    - ISSUE_NUMBER=411
     - DIST=precise
 
 before_install:
