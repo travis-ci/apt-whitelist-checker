@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libev-dev
+    - PACKAGE=latex-xcolor
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3475
+    - ISSUE_NUMBER=3483
     - DIST=precise
 
 before_install:
