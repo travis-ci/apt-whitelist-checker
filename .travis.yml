@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libqt5gui5
+    - PACKAGE=isc-dhcp-server
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=316
+    - ISSUE_NUMBER=319
     - DIST=precise
 
 before_install:
