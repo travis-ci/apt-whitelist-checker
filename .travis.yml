@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=vice
+    - PACKAGE=libavahi-client-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1970
+    - ISSUE_NUMBER=1983
     - DIST=precise
 
 before_install:
