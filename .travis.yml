@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsodium-dev
+    - PACKAGE=libx11-dev:i386
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4047
+    - ISSUE_NUMBER=4051
     - DIST=trusty
 
 before_install:
