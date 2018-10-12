@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=ta-lib
+    - PACKAGE=libboost1.48-all-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=431
+    - ISSUE_NUMBER=432
     - DIST=precise
 
 before_install:
