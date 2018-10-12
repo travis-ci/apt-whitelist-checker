@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=postgresql-plpython-9.3
+    - PACKAGE=vsftpd
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=906
+    - ISSUE_NUMBER=908
     - DIST=precise
 
 before_install:
