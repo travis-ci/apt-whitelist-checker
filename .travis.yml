@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libace-dev
+    - PACKAGE=sdcc
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4273
+    - ISSUE_NUMBER=4278
     - DIST=trusty
 
 before_install:
