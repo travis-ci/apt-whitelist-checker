@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=FreeFem++
+    - PACKAGE=libdbus-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2351
+    - ISSUE_NUMBER=2378
     - DIST=precise
 
 before_install:
