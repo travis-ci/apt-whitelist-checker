@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libmagickcore5-extra
+    - PACKAGE=texlive-core
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1626
+    - ISSUE_NUMBER=1673
     - DIST=precise
 
 before_install:
