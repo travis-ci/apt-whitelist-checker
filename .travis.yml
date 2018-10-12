@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-pygments
+    - PACKAGE=python2.7-dbg
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=391
+    - ISSUE_NUMBER=394
     - DIST=precise
 
 before_install:
