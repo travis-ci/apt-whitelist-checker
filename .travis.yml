@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=linux-headers
+    - PACKAGE=atftp
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2737
+    - ISSUE_NUMBER=2743
     - DIST=precise
 
 before_install:
