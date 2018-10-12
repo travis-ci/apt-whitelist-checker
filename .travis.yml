@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=liblua5.1-dev
+    - PACKAGE=php5-mcrypt
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1605
+    - ISSUE_NUMBER=1608
     - DIST=precise
 
 before_install:
