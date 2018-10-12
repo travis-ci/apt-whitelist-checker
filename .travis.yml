@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=bind9-host
+    - PACKAGE=emacs-snapshot
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1293
+    - ISSUE_NUMBER=1336
     - DIST=precise
 
 before_install:
