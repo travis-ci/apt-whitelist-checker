@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=squid
+    - PACKAGE=libusb-1.0-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1810
+    - ISSUE_NUMBER=1827
     - DIST=precise
 
 before_install:
