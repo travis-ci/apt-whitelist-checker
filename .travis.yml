@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsdl2-image-dev
+    - PACKAGE=libgtest-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3633
+    - ISSUE_NUMBER=3649
     - DIST=trusty
 
 before_install:
