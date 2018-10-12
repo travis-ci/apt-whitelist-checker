@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libexplain-dev
+    - PACKAGE=stunnel4
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=402
+    - ISSUE_NUMBER=403
     - DIST=precise
 
 before_install:
