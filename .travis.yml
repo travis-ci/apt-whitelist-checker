@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=terminaltables
+    - PACKAGE=sphinx-rtd-theme
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4206
+    - ISSUE_NUMBER=4211
     - DIST=trusty
 
 before_install:
