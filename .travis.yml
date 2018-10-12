@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=luacheck
+    - PACKAGE=busted
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=785
+    - ISSUE_NUMBER=786
     - DIST=precise
 
 before_install:
