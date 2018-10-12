@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=liblzma
+    - PACKAGE=autopoint
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2055
+    - ISSUE_NUMBER=2076
     - DIST=precise
 
 before_install:
