@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=librados-dev
+    - PACKAGE=libvte-2.90-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2259
+    - ISSUE_NUMBER=2263
     - DIST=precise
 
 before_install:
