@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libglib2.0-dev
+    - PACKAGE=capnproto
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=347
+    - ISSUE_NUMBER=360
     - DIST=precise
 
 before_install:
