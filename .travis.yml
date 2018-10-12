@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=fdfgen
+    - PACKAGE=libgnutls28-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1418
+    - ISSUE_NUMBER=1420
     - DIST=precise
 
 before_install:
