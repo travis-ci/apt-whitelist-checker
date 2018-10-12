@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=sharutils
+    - PACKAGE=bsdgames
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2587
+    - ISSUE_NUMBER=2592
     - DIST=precise
 
 before_install:
