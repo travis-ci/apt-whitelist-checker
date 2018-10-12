@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=qemu-kvm-extras
+    - PACKAGE=pypdf
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1416
+    - ISSUE_NUMBER=1417
     - DIST=precise
 
 before_install:
