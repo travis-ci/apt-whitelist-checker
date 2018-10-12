@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=latex-xcolor
+    - PACKAGE=texlive-latex-unicode-math
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3483
+    - ISSUE_NUMBER=3501
     - DIST=precise
 
 before_install:
