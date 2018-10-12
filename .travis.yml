@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=librrd-dev
+    - PACKAGE=libphysfs-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3598
+    - ISSUE_NUMBER=3631
     - DIST=trusty
 
 before_install:
