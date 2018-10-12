@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsodium
+    - PACKAGE=liballegro4.2-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3343
+    - ISSUE_NUMBER=3376
     - DIST=precise
 
 before_install:
