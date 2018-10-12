@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=msttcorefonts
+    - PACKAGE=libclang-3.5-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1758
+    - ISSUE_NUMBER=1780
     - DIST=precise
 
 before_install:
