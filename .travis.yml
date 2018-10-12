@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=flvtool2
+    - PACKAGE=libsvn-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1876
+    - ISSUE_NUMBER=1890
     - DIST=precise
 
 before_install:
