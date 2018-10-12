@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=bsdgames
+    - PACKAGE=nis
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2592
+    - ISSUE_NUMBER=2599
     - DIST=precise
 
 before_install:
