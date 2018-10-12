@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=chrony
+    - PACKAGE=dict
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2466
+    - ISSUE_NUMBER=2469
     - DIST=precise
 
 before_install:
