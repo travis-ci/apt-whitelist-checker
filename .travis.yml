@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=tcpdump
+    - PACKAGE=mpich-bin
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=405
+    - ISSUE_NUMBER=406
     - DIST=precise
 
 before_install:
