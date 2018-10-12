@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libudev-dev
+    - PACKAGE=oracle-java8-unlimited-jce-policy
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2449
+    - ISSUE_NUMBER=2451
     - DIST=precise
 
 before_install:
