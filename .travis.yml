@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=cvs
+    - PACKAGE=libmozjs-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=153
+    - ISSUE_NUMBER=174
     - DIST=precise
 
 before_install:
