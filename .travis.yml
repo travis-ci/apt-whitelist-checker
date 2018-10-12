@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libqt5webkit5-dev
+    - PACKAGE=clang-3.8
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=443
+    - ISSUE_NUMBER=474
     - DIST=precise
 
 before_install:
