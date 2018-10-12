@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=cpp-ethereum
+    - PACKAGE=go-ethereum
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=923
+    - ISSUE_NUMBER=924
     - DIST=precise
 
 before_install:
