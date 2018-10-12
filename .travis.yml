@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gcc-5-mingw-w64-x86-64
+    - PACKAGE=g++-5-mingw-w64-x86-64
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2910
+    - ISSUE_NUMBER=2911
     - DIST=precise
 
 before_install:
