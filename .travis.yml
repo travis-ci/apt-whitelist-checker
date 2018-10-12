@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=emacs24-gtk
+    - PACKAGE=tarantool
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2672
+    - ISSUE_NUMBER=2673
     - DIST=precise
 
 before_install:
