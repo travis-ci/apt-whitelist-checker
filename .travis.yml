@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=swi-prolog
+    - PACKAGE=rcs
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1584
+    - ISSUE_NUMBER=1598
     - DIST=precise
 
 before_install:
