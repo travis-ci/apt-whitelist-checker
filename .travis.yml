@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=google-chrome-stable
+    - PACKAGE=google-chrome-beta
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3710
+    - ISSUE_NUMBER=3715
     - DIST=trusty
 
 before_install:
