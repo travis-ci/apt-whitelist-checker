@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=blender
+    - PACKAGE=openscad
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4332
+    - ISSUE_NUMBER=4333
     - DIST=trusty
 
 before_install:
