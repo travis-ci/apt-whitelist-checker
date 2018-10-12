@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python3.5-dev:i386
+    - PACKAGE=mongodb-org-tools
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2284
+    - ISSUE_NUMBER=2287
     - DIST=precise
 
 before_install:
