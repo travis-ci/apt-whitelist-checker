@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libaprutil1-dev
+    - PACKAGE=fpc
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=872
+    - ISSUE_NUMBER=874
     - DIST=precise
 
 before_install:
