@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gvfs-bin
+    - PACKAGE=extlinux
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1259
+    - ISSUE_NUMBER=1269
     - DIST=precise
 
 before_install:
