@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=quota
+    - PACKAGE=sharutils
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2582
+    - ISSUE_NUMBER=2587
     - DIST=precise
 
 before_install:
