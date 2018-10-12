@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=vsftpd
+    - PACKAGE=libunwind7-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=908
+    - ISSUE_NUMBER=911
     - DIST=precise
 
 before_install:
