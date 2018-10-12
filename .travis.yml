@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libiberty-dev
+    - PACKAGE=librados-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2250
+    - ISSUE_NUMBER=2259
     - DIST=precise
 
 before_install:
