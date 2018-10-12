@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=mapnik-util
+    - PACKAGE=libpng16
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3160
+    - ISSUE_NUMBER=3171
     - DIST=precise
 
 before_install:
