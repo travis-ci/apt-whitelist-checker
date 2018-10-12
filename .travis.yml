@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=sagemath-upstream-binary
+    - PACKAGE=libopenmpi1.5-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=424
+    - ISSUE_NUMBER=426
     - DIST=precise
 
 before_install:
