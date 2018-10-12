@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libltdl7-dev
+    - PACKAGE=cppcheck
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4161
+    - ISSUE_NUMBER=4180
     - DIST=trusty
 
 before_install:
