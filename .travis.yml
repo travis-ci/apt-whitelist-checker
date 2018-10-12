@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=mariadb-server
+    - PACKAGE=libqdbm-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2753
+    - ISSUE_NUMBER=2762
     - DIST=precise
 
 before_install:
