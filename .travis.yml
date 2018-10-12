@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libsox-dev
+    - PACKAGE=wine-mono
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4197
+    - ISSUE_NUMBER=4198
     - DIST=trusty
 
 before_install:
