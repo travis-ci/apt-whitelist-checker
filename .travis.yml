@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=texlive-core
+    - PACKAGE=texlive-appendix
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1673
+    - ISSUE_NUMBER=1674
     - DIST=precise
 
 before_install:
