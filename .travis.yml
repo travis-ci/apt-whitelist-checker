@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gnome-keyring
+    - PACKAGE=postgresql-10-postgis-2.4
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4265
+    - ISSUE_NUMBER=4266
     - DIST=trusty
 
 before_install:
