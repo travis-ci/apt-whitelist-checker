@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gcc-mingw-w64-i686
+    - PACKAGE=libavformat-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3518
+    - ISSUE_NUMBER=3533
     - DIST=trusty
 
 before_install:
