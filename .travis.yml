@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libmpfi
+    - PACKAGE=libuser
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2548
+    - ISSUE_NUMBER=2551
     - DIST=precise
 
 before_install:
