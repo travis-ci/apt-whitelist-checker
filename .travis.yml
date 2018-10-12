@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=fossil
+    - PACKAGE=libgstreamer1.0-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2952
+    - ISSUE_NUMBER=3019
     - DIST=precise
 
 before_install:
