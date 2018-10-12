@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=postgresql-9.3-slony1-2
+    - PACKAGE=python-libvirt
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1015
+    - ISSUE_NUMBER=1016
     - DIST=precise
 
 before_install:
