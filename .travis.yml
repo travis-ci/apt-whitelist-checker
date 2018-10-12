@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=mapnik
+    - PACKAGE=mapnik-util
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3158
+    - ISSUE_NUMBER=3160
     - DIST=precise
 
 before_install:
