@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libhdf5-dev
+    - PACKAGE=libwxgtk3.0-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=416
+    - ISSUE_NUMBER=417
     - DIST=precise
 
 before_install:
