@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=e2fslibs-dev
+    - PACKAGE=libadns1-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1163
+    - ISSUE_NUMBER=1166
     - DIST=precise
 
 before_install:
