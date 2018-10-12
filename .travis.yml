@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libatomic-ops-dev:i386
+    - PACKAGE=jpegoptim
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4141
+    - ISSUE_NUMBER=4156
     - DIST=trusty
 
 before_install:
