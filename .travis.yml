@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=nekotools
+    - PACKAGE=libewf
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3184
+    - ISSUE_NUMBER=3205
     - DIST=precise
 
 before_install:
