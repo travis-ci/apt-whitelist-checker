@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=qtbase5-dev
+    - PACKAGE=emacs-snapshot
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=365
+    - ISSUE_NUMBER=367
     - DIST=precise
 
 before_install:
