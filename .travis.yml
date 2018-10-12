@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libwxgtk3.0-dev
+    - PACKAGE=qtbase5-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=217
+    - ISSUE_NUMBER=313
     - DIST=precise
 
 before_install:
