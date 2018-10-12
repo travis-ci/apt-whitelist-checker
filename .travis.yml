@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gcc-arm-linux-gnueabihf
+    - PACKAGE=g++-4.9
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3783
+    - ISSUE_NUMBER=3802
     - DIST=trusty
 
 before_install:
