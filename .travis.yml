@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=mlton
+    - PACKAGE=clisp
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=792
+    - ISSUE_NUMBER=799
     - DIST=precise
 
 before_install:
