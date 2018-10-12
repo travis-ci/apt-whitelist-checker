@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=gcc-6-base
+    - PACKAGE=libpulse-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3722
+    - ISSUE_NUMBER=3724
     - DIST=trusty
 
 before_install:
