@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libvips-dev
+    - PACKAGE=libgtest-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4056
+    - ISSUE_NUMBER=4082
     - DIST=trusty
 
 before_install:
