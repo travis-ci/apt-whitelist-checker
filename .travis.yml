@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libuser
+    - PACKAGE=mc
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2551
+    - ISSUE_NUMBER=2561
     - DIST=precise
 
 before_install:
