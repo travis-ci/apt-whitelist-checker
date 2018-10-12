@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libqca2-dev
+    - PACKAGE=grass-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1988
+    - ISSUE_NUMBER=1989
     - DIST=precise
 
 before_install:
