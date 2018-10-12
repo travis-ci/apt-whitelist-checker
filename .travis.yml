@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=lxc-dev
+    - PACKAGE=kdelibs5-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3318
+    - ISSUE_NUMBER=3319
     - DIST=precise
 
 before_install:
