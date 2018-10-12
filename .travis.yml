@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=g++-4.9
+    - PACKAGE=iverilog
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3802
+    - ISSUE_NUMBER=3826
     - DIST=trusty
 
 before_install:
