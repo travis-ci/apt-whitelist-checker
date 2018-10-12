@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libselinux1-dev
+    - PACKAGE=libpyside-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=734
+    - ISSUE_NUMBER=739
     - DIST=precise
 
 before_install:
