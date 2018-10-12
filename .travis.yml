@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libssl-dev:i386
+    - PACKAGE=libfontconfig1-dev:i386
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3580
+    - ISSUE_NUMBER=3581
     - DIST=trusty
 
 before_install:
