@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libfreetype6-dev:i386
+    - PACKAGE=pngquant
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3582
+    - ISSUE_NUMBER=3588
     - DIST=trusty
 
 before_install:
