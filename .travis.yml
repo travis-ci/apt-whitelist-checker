@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libunwind
+    - PACKAGE=libxcb1-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3239
+    - ISSUE_NUMBER=3251
     - DIST=precise
 
 before_install:
