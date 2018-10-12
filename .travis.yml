@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=liblognorm1-dev
+    - PACKAGE=libsensors4-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1139
+    - ISSUE_NUMBER=1142
     - DIST=precise
 
 before_install:
