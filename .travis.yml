@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=autoconf2.13
+    - PACKAGE=FreeFem++
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2348
+    - ISSUE_NUMBER=2351
     - DIST=precise
 
 before_install:
