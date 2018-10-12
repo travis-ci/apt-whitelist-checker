@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=python-qgis
+    - PACKAGE=rdnssd
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=584
+    - ISSUE_NUMBER=586
     - DIST=precise
 
 before_install:
