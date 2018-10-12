@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=hevea
+    - PACKAGE=softhsm
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4199
+    - ISSUE_NUMBER=4203
     - DIST=trusty
 
 before_install:
