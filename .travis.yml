@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=myspell-en-us
+    - PACKAGE=lynx
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=600
+    - ISSUE_NUMBER=630
     - DIST=precise
 
 before_install:
