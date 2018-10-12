@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=xvnc4viewer
+    - PACKAGE=openntpd
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3271
+    - ISSUE_NUMBER=3282
     - DIST=precise
 
 before_install:
