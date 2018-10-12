@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=go-ethereum
+    - PACKAGE=libsodium
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=924
+    - ISSUE_NUMBER=925
     - DIST=precise
 
 before_install:
