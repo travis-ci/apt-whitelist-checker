@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=nmap
+    - PACKAGE=libutempter-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=502
+    - ISSUE_NUMBER=520
     - DIST=precise
 
 before_install:
