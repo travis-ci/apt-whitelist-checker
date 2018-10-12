@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libxcb-sync0
+    - PACKAGE=lldb-3.4
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2707
+    - ISSUE_NUMBER=2712
     - DIST=precise
 
 before_install:
