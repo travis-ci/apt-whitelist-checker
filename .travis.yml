@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=openmpi-dev
+    - PACKAGE=texlive-backports
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2185
+    - ISSUE_NUMBER=2194
     - DIST=precise
 
 before_install:
