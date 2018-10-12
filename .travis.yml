@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=opam
+    - PACKAGE=texinfo
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3570
+    - ISSUE_NUMBER=3571
     - DIST=trusty
 
 before_install:
