@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libisl10
+    - PACKAGE=libvips-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3947
+    - ISSUE_NUMBER=4056
     - DIST=trusty
 
 before_install:
