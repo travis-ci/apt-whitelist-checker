@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libcurl4-openssl-dev:i386
+    - PACKAGE=libfreetype6-dev:i386
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3579
+    - ISSUE_NUMBER=3582
     - DIST=trusty
 
 before_install:
