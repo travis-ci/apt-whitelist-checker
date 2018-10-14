@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libewf
+    - PACKAGE=libunwind
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3205
+    - ISSUE_NUMBER=3239
     - DIST=precise
 
 before_install:
