@@ -10,10 +10,10 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libev-dev
+    - PACKAGE=libavformat-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3475
-    - DIST=precise
+    - ISSUE_NUMBER=3533
+    - DIST=trusty
 
 before_install:
   - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
