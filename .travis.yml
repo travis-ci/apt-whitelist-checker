@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libfreetype6-dev:i386
+    - PACKAGE=librrd-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3582
+    - ISSUE_NUMBER=3598
     - DIST=trusty
 
 before_install:
