@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=meshlab
+    - PACKAGE=openscad
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4331
+    - ISSUE_NUMBER=4333
     - DIST=trusty
 
 before_install:
