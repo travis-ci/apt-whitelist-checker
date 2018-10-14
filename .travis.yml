@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=chromium-chromedriver
+    - PACKAGE=arc
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4268
+    - ISSUE_NUMBER=4288
     - DIST=trusty
 
 before_install:
