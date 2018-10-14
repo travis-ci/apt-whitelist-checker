@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=php5-mcrypt
+    - PACKAGE=libdiscid0-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1608
+    - ISSUE_NUMBER=1944
     - DIST=precise
 
 before_install:
