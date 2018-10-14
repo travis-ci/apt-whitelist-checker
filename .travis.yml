@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=oce-draw
+    - PACKAGE=nvidia-cuda-toolkit
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=484
+    - ISSUE_NUMBER=587
     - DIST=precise
 
 before_install:
