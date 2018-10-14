@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libvips-dev
+    - PACKAGE=libfcgi-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4056
+    - ISSUE_NUMBER=4183
     - DIST=trusty
 
 before_install:
