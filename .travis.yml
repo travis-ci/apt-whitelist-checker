@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libunwind7-dev
+    - PACKAGE=libgtksourceview-3.0-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=685
+    - ISSUE_NUMBER=762
     - DIST=precise
 
 before_install:
