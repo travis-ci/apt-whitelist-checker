@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=liboce-ocaf-dev
+    - PACKAGE=oce-draw
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=478
+    - ISSUE_NUMBER=484
     - DIST=precise
 
 before_install:
