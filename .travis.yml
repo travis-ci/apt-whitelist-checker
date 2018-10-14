@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libdiscid0-dev
+    - PACKAGE=vice
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1944
+    - ISSUE_NUMBER=1970
     - DIST=precise
 
 before_install:
