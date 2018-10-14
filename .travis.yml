@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libace-dev
+    - PACKAGE=liboce-ocaf-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=410
+    - ISSUE_NUMBER=478
     - DIST=precise
 
 before_install:
