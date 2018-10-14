@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libfcgi-dev
+    - PACKAGE=softhsm
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4183
+    - ISSUE_NUMBER=4203
     - DIST=trusty
 
 before_install:
