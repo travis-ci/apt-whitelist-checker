@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=pastebinit
+    - PACKAGE=meshlab
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4325
+    - ISSUE_NUMBER=4331
     - DIST=trusty
 
 before_install:
