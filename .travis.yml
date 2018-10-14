@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=wayland
+    - PACKAGE=liblua5.1-lpeg2
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2725
+    - ISSUE_NUMBER=2905
     - DIST=precise
 
 before_install:
