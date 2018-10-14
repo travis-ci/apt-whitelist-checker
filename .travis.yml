@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=liblua5.1-lpeg2
+    - PACKAGE=libmediainfo0
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2905
+    - ISSUE_NUMBER=2918
     - DIST=precise
 
 before_install:
