@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=tarantool
+    - PACKAGE=libxcb-sync0
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2673
+    - ISSUE_NUMBER=2707
     - DIST=precise
 
 before_install:
