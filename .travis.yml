@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libswscale-dev
+    - PACKAGE=libcurl4-openssl-dev:i386
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=3534
+    - ISSUE_NUMBER=3579
     - DIST=trusty
 
 before_install:
