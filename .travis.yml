@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libxwiimote-dev
+    - PACKAGE=asciidoctor
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4302
+    - ISSUE_NUMBER=4306
     - DIST=trusty
 
 before_install:
