@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libxcb-sync0
+    - PACKAGE=wayland
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2707
+    - ISSUE_NUMBER=2725
     - DIST=precise
 
 before_install:
