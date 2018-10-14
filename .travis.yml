@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libreoffice-writer
+    - PACKAGE=swi-prolog
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1353
+    - ISSUE_NUMBER=1584
     - DIST=precise
 
 before_install:
