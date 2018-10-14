@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=cracklib2
+    - PACKAGE=mapnik
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2928
+    - ISSUE_NUMBER=3158
     - DIST=precise
 
 before_install:
