@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=hunspell-ru
+    - PACKAGE=chromium-chromedriver
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4212
+    - ISSUE_NUMBER=4268
     - DIST=trusty
 
 before_install:
