@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=librados-dev
+    - PACKAGE=libatlas3gf-base
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=2259
+    - ISSUE_NUMBER=2407
     - DIST=precise
 
 before_install:
