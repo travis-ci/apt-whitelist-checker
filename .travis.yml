@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=zoo
+    - PACKAGE=git-ftp
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4291
+    - ISSUE_NUMBER=4296
     - DIST=trusty
 
 before_install:
