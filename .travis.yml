@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=libunwind7-dev
+    - PACKAGE=sdcc
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=911
+    - ISSUE_NUMBER=1209
     - DIST=precise
 
 before_install:
