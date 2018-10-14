@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=git-ftp
+    - PACKAGE=libserial-dev
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=4296
+    - ISSUE_NUMBER=4301
     - DIST=trusty
 
 before_install:
