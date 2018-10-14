@@ -10,9 +10,9 @@ git:
 env:
   global:
     - DEBIAN_FRONTEND=noninteractive
-    - PACKAGE=sdcc
+    - PACKAGE=libreoffice-writer
     - ISSUE_REPO=apt-package-safelist
-    - ISSUE_NUMBER=1209
+    - ISSUE_NUMBER=1353
     - DIST=precise
 
 before_install:
